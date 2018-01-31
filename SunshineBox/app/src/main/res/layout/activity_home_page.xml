@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_page_background"
+    tools:context="shaolizhi.sunshinebox.ui.home_page.HomePageActivity"
+    android:id="@+id/relativeLayout">
+
+    <ImageButton
+        android:id="@+id/home_page_act_imagebutton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="#00ffffff"
+        android:contentDescription="@string/home_page_act_string7"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="110dp"
+        android:text="@string/home_page_act_string2"
+        android:textColor="#f9f9f9"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="160dp"
+        android:layout_marginStart="48dp"
+        android:background="@drawable/shape_trans_button"
+        android:text="@string/home_page_act_string3"
+        android:textColor="#f9f9f9"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginStart="48dp"
+        android:background="@drawable/shape_trans_button"
+        android:text="@string/home_page_act_string4"
+        android:textColor="#f9f9f9"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <Button
+        android:id="@+id/home_page_act_button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginStart="320dp"
+        android:background="@drawable/shape_trans_button"
+        android:text="@string/home_page_act_string5"
+        android:textColor="#f9f9f9"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="160dp"
+        android:layout_marginStart="320dp"
+        android:background="@drawable/shape_trans_button"
+        android:text="@string/home_page_act_string6"
+        android:textColor="#f9f9f9"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</android.support.constraint.ConstraintLayout>

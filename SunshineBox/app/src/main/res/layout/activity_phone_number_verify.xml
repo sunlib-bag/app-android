@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/phone_number_verify_act_constraintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6bcab2"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="shaolizhi.sunshinebox.ui.phone_number_verify.PhoneNumberVerifyActivity">
+
+    <ImageButton
+        android:id="@+id/phone_number_verify_act_imagebutton1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#6bcab2"
+        android:contentDescription="@string/phone_number_verify_act_string11"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/phone_number_verify_act_string2"
+        android:textColor="#f9f9f9"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/phone_number_verify_act_edittext1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="150dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="160dp"
+        android:hint="@string/phone_number_verify_act_string1"
+        android:inputType="phone"
+        android:paddingBottom="5dp"
+        android:paddingEnd="80dp"
+        android:paddingStart="180dp"
+        android:textColor="#f9f9f9"
+        android:textColorHint="#96f9f9f9"
+        android:textSize="30sp"
+        android:theme="@style/MyEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="169dp"
+        android:text="@string/phone_number_verify_act_string3"
+        android:textColor="#f9f9f9"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/phone_number_verify_act_button1"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="660dp"
+        android:layout_marginTop="190dp"
+        android:background="@drawable/shape_white_button"
+        android:text="@string/phone_number_verify_act_string9"
+        android:textColor="#6bcab2"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/phone_number_verify_act_edittext2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="150dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="240dp"
+        android:hint="@string/phone_number_verify_act_string10"
+        android:inputType="phone"
+        android:paddingBottom="5dp"
+        android:paddingEnd="80dp"
+        android:paddingStart="180dp"
+        android:textColor="#f9f9f9"
+        android:textColorHint="#96f9f9f9"
+        android:textSize="30sp"
+        android:theme="@style/MyEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="249dp"
+        android:text="@string/phone_number_verify_act_string7"
+        android:textColor="#f9f9f9"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/phone_number_verify_act_button2"
+        android:layout_width="640dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="370dp"
+        android:background="@drawable/shape_white_button"
+        android:text="@string/phone_number_verify_act_string8"
+        android:textColor="#6bcab2"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

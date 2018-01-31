@@ -1,0 +1,80 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:6164863894198736358",
+      "lastPropertyId": "14:1084365289759270611",
+      "name": "Courses",
+      "properties": [
+        {
+          "id": "1:8407701297652900290",
+          "name": "id"
+        },
+        {
+          "id": "2:805179444249896986",
+          "name": "course_id"
+        },
+        {
+          "id": "3:1333639119399598259",
+          "name": "course_type"
+        },
+        {
+          "id": "4:6974851191916261800",
+          "name": "course_video"
+        },
+        {
+          "id": "5:5670903184302586064",
+          "name": "course_name"
+        },
+        {
+          "id": "6:8899206602274156479",
+          "name": "last_modification_time"
+        },
+        {
+          "id": "7:1773442134669238224",
+          "name": "video_storage_address"
+        },
+        {
+          "id": "8:8338597386777231609",
+          "name": "audio_storage_address"
+        },
+        {
+          "id": "10:8867546885730053229",
+          "name": "course_audio"
+        },
+        {
+          "id": "11:3876495877073636504",
+          "name": "is_audio_downloaded"
+        },
+        {
+          "id": "12:3496006556129024041",
+          "name": "is_video_downloaded"
+        },
+        {
+          "id": "13:5819983427267117150",
+          "name": "course_text"
+        },
+        {
+          "id": "14:1084365289759270611",
+          "name": "text_storage_address"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:6164863894198736358",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    4600280549789948739
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}
