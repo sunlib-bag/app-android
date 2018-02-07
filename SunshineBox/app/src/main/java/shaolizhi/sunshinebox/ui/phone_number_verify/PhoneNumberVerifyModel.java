@@ -2,6 +2,10 @@ package shaolizhi.sunshinebox.ui.phone_number_verify;
 
 import android.support.annotation.NonNull;
 
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVSMS;
+import com.avos.avoscloud.AVSMSOption;
+import com.avos.avoscloud.RequestMobileCodeCallback;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -11,7 +15,6 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import shaolizhi.sunshinebox.data.ApiService;
-import shaolizhi.sunshinebox.utils.ServiceGenerator;
 
 import static shaolizhi.sunshinebox.data.ApiService.BASE_URL_DEVELOPMENT;
 
@@ -27,24 +30,23 @@ public class PhoneNumberVerifyModel implements PhoneNumberVerifyContract.Model {
         this.callBack = callBack;
     }
 
+    //Call API1:发送验证码
     @Override
     public void requestSendCaptchaBean(@NonNull String phoneNumber) {
-        ApiService service = ServiceGenerator.createService(ApiService.class);
-
-        Call<SendCaptchaBean> call = service.sendCaptchaAPI(phoneNumber);
-
-        call.enqueue(new Callback<SendCaptchaBean>() {
+        AVSMSOption option = new AVSMSOption();
+        option.setTtl(10);
+        option.setApplicationName("阳光盒子");
+        option.setOperation("短信验证码");
+        AVSMS.requestSMSCodeInBackground(phoneNumber, option, new RequestMobileCodeCallback() {
             @Override
-            public void onResponse(@NonNull Call<SendCaptchaBean> call, @NonNull Response<SendCaptchaBean> response) {
-                SendCaptchaBean bean = response.body();
-                if (bean != null) {
-                    callBack.requestSendCaptchaBeanSuccess(bean);
+            public void done(AVException e) {
+                if (e == null) {
+                    //请求成功
+                    callBack.requestSendCaptchaBeanSuccess();
+                } else {
+                    //请求失败
+                    callBack.requestSendCaptchaBeanFailure();
                 }
-            }
-
-            @Override
-            public void onFailure(@NonNull Call<SendCaptchaBean> call, @NonNull Throwable t) {
-                callBack.requestSendCaptchaBeanFailure();
             }
         });
     }
@@ -67,7 +69,7 @@ public class PhoneNumberVerifyModel implements PhoneNumberVerifyContract.Model {
             public void onResponse(@NonNull Call<CheckCaptchaBean> call, @NonNull Response<CheckCaptchaBean> response) {
                 CheckCaptchaBean bean = response.body();
                 if (bean != null) {
-                    callBack.requestCheckCaptchaBeanSuccess(bean);
+                    callBack.requestCheckCaptchaBeanSuccess();
                 }
             }
 

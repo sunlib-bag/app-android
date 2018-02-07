@@ -40,11 +40,11 @@ public interface PhoneNumberVerifyContract {
     }
 
     interface CallBack {
-        void requestSendCaptchaBeanSuccess(@NonNull SendCaptchaBean bean);
+        void requestSendCaptchaBeanSuccess();
 
         void requestSendCaptchaBeanFailure();
 
-        void requestCheckCaptchaBeanSuccess(@NonNull CheckCaptchaBean bean);
+        void requestCheckCaptchaBeanSuccess();
 
         void requestCheckCaptchaBeanFailure();
     }

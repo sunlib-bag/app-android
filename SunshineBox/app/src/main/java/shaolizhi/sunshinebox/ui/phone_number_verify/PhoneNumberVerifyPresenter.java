@@ -1,16 +1,11 @@
 package shaolizhi.sunshinebox.ui.phone_number_verify;
 
 import android.os.CountDownTimer;
-import android.support.annotation.NonNull;
-
-import java.util.Objects;
 
 import shaolizhi.sunshinebox.R;
-import shaolizhi.sunshinebox.data.ConstantData;
 import shaolizhi.sunshinebox.ui.base.BaseActivity;
 import shaolizhi.sunshinebox.ui.base.BaseFragment;
 import shaolizhi.sunshinebox.utils.App;
-import shaolizhi.sunshinebox.utils.SharedPreferencesUtils;
 import shaolizhi.sunshinebox.utils.ToastUtils;
 
 /**
@@ -74,34 +69,35 @@ public class PhoneNumberVerifyPresenter implements PhoneNumberVerifyContract.Pre
     }
 
     @Override
-    public void requestSendCaptchaBeanSuccess(@NonNull SendCaptchaBean bean) {
-        if (bean.getFlag() != null) {
-            switch (bean.getFlag()) {
-                case "001":
-                    if (Objects.equals(bean.getMessage(), "success")) {
-                        ToastUtils.showToast("验证码发送成功");
-                    } else if (Objects.equals(bean.getMessage(), "failure")) {
-                        ToastUtils.showToast("对不起，该手机号没有激活权限或已经激活");
-                        resumeResendButtonState();
-                    } else {
-                        if (view instanceof BaseFragment) {
-                            ((BaseFragment) view).showToastForRequestResult("401");
-                        }
-                        if (view instanceof BaseActivity) {
-                            ((BaseActivity) view).showToastForRequestResult("401");
-                        }
-                    }
-                    break;
-                default:
-                    if (view instanceof BaseFragment) {
-                        ((BaseFragment) view).showToastForRequestResult(bean.getFlag());
-                    }
-                    if (view instanceof BaseActivity) {
-                        ((BaseActivity) view).showToastForRequestResult(bean.getFlag());
-                    }
-                    break;
-            }
-        }
+    public void requestSendCaptchaBeanSuccess() {
+        ToastUtils.showToast("验证码发送成功");
+//        if (bean.getFlag() != null) {
+//            switch (bean.getFlag()) {
+//                case "001":
+//                    if (Objects.equals(bean.getMessage(), "success")) {
+//                        ToastUtils.showToast("验证码发送成功");
+//                    } else if (Objects.equals(bean.getMessage(), "failure")) {
+//                        ToastUtils.showToast("对不起，该手机号没有激活权限或已经激活");
+//                        resumeResendButtonState();
+//                    } else {
+//                        if (view instanceof BaseFragment) {
+//                            ((BaseFragment) view).showToastForRequestResult("401");
+//                        }
+//                        if (view instanceof BaseActivity) {
+//                            ((BaseActivity) view).showToastForRequestResult("401");
+//                        }
+//                    }
+//                    break;
+//                default:
+//                    if (view instanceof BaseFragment) {
+//                        ((BaseFragment) view).showToastForRequestResult(bean.getFlag());
+//                    }
+//                    if (view instanceof BaseActivity) {
+//                        ((BaseActivity) view).showToastForRequestResult(bean.getFlag());
+//                    }
+//                    break;
+//            }
+//        }
     }
 
     private void resumeResendButtonState() {
@@ -114,50 +110,49 @@ public class PhoneNumberVerifyPresenter implements PhoneNumberVerifyContract.Pre
     @Override
     public void requestSendCaptchaBeanFailure() {
         resumeResendButtonState();
-
-        if (view instanceof BaseFragment) {
-            ((BaseFragment) view).showToastForRequestResult("403");
-        }
-        if (view instanceof BaseActivity) {
-            ((BaseActivity) view).showToastForRequestResult("403");
-        }
+        ToastUtils.showToast("验证码发送失败");
+//        if (view instanceof BaseFragment) {
+//            ((BaseFragment) view).showToastForRequestResult("403");
+//        }
+//        if (view instanceof BaseActivity) {
+//            ((BaseActivity) view).showToastForRequestResult("403");
+//        }
     }
 
     @Override
-    public void requestCheckCaptchaBeanSuccess(@NonNull CheckCaptchaBean bean) {
-        if (bean.getFlag() != null) {
-            switch (bean.getFlag()) {
-                case "001":
-                    if (Objects.equals(bean.getMessage(), "success")) {
-                        if (bean.getContent().getUuid() != null) {
-                            SharedPreferencesUtils.put(view.getContext(), ConstantData.UUID, bean.getContent().getUuid());
-                            view.openVerifyActivationCodeActivity();
-                        }
-                    } else if (Objects.equals(bean.getMessage(), "incorrect")) {
-                        ToastUtils.showToast("您输入的验证码有误");
-                    } else if (Objects.equals(bean.getMessage(), "expired")) {
-                        ToastUtils.showToast("您的验证码已过期");
-                    } else {
-                        if (view instanceof BaseFragment) {
-                            ((BaseFragment) view).showToastForRequestResult("401");
-                        }
-                        if (view instanceof BaseActivity) {
-                            ((BaseActivity) view).showToastForRequestResult("401");
-                        }
-                    }
-                    break;
-                default:
-                    if (view instanceof BaseFragment) {
-                        ((BaseFragment) view).showToastForRequestResult(bean.getFlag());
-                    }
-                    if (view instanceof BaseActivity) {
-                        ((BaseActivity) view).showToastForRequestResult(bean.getFlag());
-                    }
-                    break;
-            }
-        }
+    public void requestCheckCaptchaBeanSuccess() {
+//        if (bean.getFlag() != null) {
+//            switch (bean.getFlag()) {
+//                case "001":
+//                    if (Objects.equals(bean.getMessage(), "success")) {
+//                        if (bean.getContent().getUuid() != null) {
+//                            SharedPreferencesUtils.put(view.getContext(), ConstantData.UUID, bean.getContent().getUuid());
+//                            view.openVerifyActivationCodeActivity();
+//                        }
+//                    } else if (Objects.equals(bean.getMessage(), "incorrect")) {
+//                        ToastUtils.showToast("您输入的验证码有误");
+//                    } else if (Objects.equals(bean.getMessage(), "expired")) {
+//                        ToastUtils.showToast("您的验证码已过期");
+//                    } else {
+//                        if (view instanceof BaseFragment) {
+//                            ((BaseFragment) view).showToastForRequestResult("401");
+//                        }
+//                        if (view instanceof BaseActivity) {
+//                            ((BaseActivity) view).showToastForRequestResult("401");
+//                        }
+//                    }
+//                    break;
+//                default:
+//                    if (view instanceof BaseFragment) {
+//                        ((BaseFragment) view).showToastForRequestResult(bean.getFlag());
+//                    }
+//                    if (view instanceof BaseActivity) {
+//                        ((BaseActivity) view).showToastForRequestResult(bean.getFlag());
+//                    }
+//                    break;
+//            }
+//        }
     }
-
 
     @Override
     public void requestCheckCaptchaBeanFailure() {
