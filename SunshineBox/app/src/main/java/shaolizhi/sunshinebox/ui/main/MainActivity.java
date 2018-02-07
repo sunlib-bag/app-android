@@ -29,9 +29,11 @@ public class MainActivity extends ActivationActivityManager {
         if (AVUser.getCurrentUser() != null) {
             //已登录
             startActivity(IndexActivity.newIntent(this));
+            finish();
         } else {
             //未登录
             startActivity(WelcomeActivity.newIntent(this));
+            finish();
         }
     }
 
