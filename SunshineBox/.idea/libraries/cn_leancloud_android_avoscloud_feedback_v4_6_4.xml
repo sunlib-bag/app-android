@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="cn.leancloud.android:avoscloud-feedback-v4.6.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/avoscloud-feedback-v4.6.4.aar/a0aca741f09cfb2bfe1cd3ea1a37bb22/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/avoscloud-feedback-v4.6.4.aar/a0aca741f09cfb2bfe1cd3ea1a37bb22/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

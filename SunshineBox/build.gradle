@@ -6,6 +6,7 @@ buildscript {
         google()
         jcenter()
         maven { url "http://objectbox.net/beta-repo/" }
+        maven { url "http://mvn.leancloud.cn/nexus/content/repositories/public" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
@@ -22,6 +23,7 @@ allprojects {
         google()
         jcenter()
         maven { url "http://objectbox.net/beta-repo/" }
+        maven { url "http://mvn.leancloud.cn/nexus/content/repositories/public" }
     }
 }
 
