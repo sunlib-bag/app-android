@@ -140,7 +140,7 @@ public class PhoneNumberVerifyActivity extends ActivationActivityManager impleme
     }
 
     @Override
-    public void openVerifyActivationCodeActivity() {
+    public void openIndexActivity() {
         Intent intent = new Intent(PhoneNumberVerifyActivity.this, IndexActivity.class);
         intent.putExtra("phone_number", getPhoneNumber());
         startActivity(intent);

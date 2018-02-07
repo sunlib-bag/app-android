@@ -11,6 +11,7 @@ import shaolizhi.sunshinebox.utils.ToastUtils;
  */
 
 public class PhoneNumberVerifyPresenter implements PhoneNumberVerifyContract.Presenter, PhoneNumberVerifyContract.CallBack {
+    private final static String PASSWORD_FOR_LEANCLOUD_LOGIN = "123456";
 
     private PhoneNumberVerifyContract.View view;
 
@@ -57,6 +58,11 @@ public class PhoneNumberVerifyPresenter implements PhoneNumberVerifyContract.Pre
     @Override
     public void tryToVerifyCaptcha() {
         model.requestCheckCaptchaBean(view.getPhoneNumber(), view.getCaptcha());
+    }
+
+    @Override
+    public void tryToLogin() {
+        model.requestToLogin(view.getPhoneNumber(), PASSWORD_FOR_LEANCLOUD_LOGIN);
     }
 
     @Override
@@ -120,13 +126,14 @@ public class PhoneNumberVerifyPresenter implements PhoneNumberVerifyContract.Pre
     @Override
     public void requestCheckCaptchaBeanSuccess() {
         ToastUtils.showToast("验证码验证成功");
+        tryToLogin();
 //        if (bean.getFlag() != null) {
 //            switch (bean.getFlag()) {
 //                case "001":
 //                    if (Objects.equals(bean.getMessage(), "success")) {
 //                        if (bean.getContent().getUuid() != null) {
 //                            SharedPreferencesUtils.put(view.getContext(), ConstantData.UUID, bean.getContent().getUuid());
-//                            view.openVerifyActivationCodeActivity();
+//                            view.openIndexActivity();
 //                        }
 //                    } else if (Objects.equals(bean.getMessage(), "incorrect")) {
 //                        ToastUtils.showToast("您输入的验证码有误");
@@ -156,5 +163,15 @@ public class PhoneNumberVerifyPresenter implements PhoneNumberVerifyContract.Pre
     @Override
     public void requestCheckCaptchaBeanFailure() {
         ToastUtils.showToast("验证码验证失败");
+    }
+
+    @Override
+    public void requestToLoginSuccess() {
+        view.openIndexActivity();
+    }
+
+    @Override
+    public void requestToLoginFailure() {
+        ToastUtils.showToast("登录失败");
     }
 }

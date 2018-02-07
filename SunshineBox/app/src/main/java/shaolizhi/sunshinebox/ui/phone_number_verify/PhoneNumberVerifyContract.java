@@ -16,7 +16,7 @@ public interface PhoneNumberVerifyContract {
 
         void setResendButtonText(String text);
 
-        void openVerifyActivationCodeActivity();
+        void openIndexActivity();
 
         Context getContext();
 
@@ -30,6 +30,8 @@ public interface PhoneNumberVerifyContract {
 
         void tryToVerifyCaptcha();
 
+        void tryToLogin();
+
         void startCountDown();
     }
 
@@ -37,6 +39,8 @@ public interface PhoneNumberVerifyContract {
         void requestSendCaptchaBean(@NonNull String phoneNumber);
 
         void requestCheckCaptchaBean(@NonNull String phoneNumber, @NonNull String captcha);
+
+        void requestToLogin(@NonNull String phoneNumber, @NonNull String password);
     }
 
     interface CallBack {
@@ -47,5 +51,9 @@ public interface PhoneNumberVerifyContract {
         void requestCheckCaptchaBeanSuccess();
 
         void requestCheckCaptchaBeanFailure();
+
+        void requestToLoginSuccess();
+
+        void requestToLoginFailure();
     }
 }

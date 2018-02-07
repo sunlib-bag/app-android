@@ -6,6 +6,8 @@ import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVMobilePhoneVerifyCallback;
 import com.avos.avoscloud.AVSMS;
 import com.avos.avoscloud.AVSMSOption;
+import com.avos.avoscloud.AVUser;
+import com.avos.avoscloud.LogInCallback;
 import com.avos.avoscloud.RequestMobileCodeCallback;
 
 /**
@@ -53,6 +55,23 @@ public class PhoneNumberVerifyModel implements PhoneNumberVerifyContract.Model {
                 } else {
                     //验证失败
                     callBack.requestCheckCaptchaBeanFailure();
+                }
+            }
+        });
+    }
+
+    //Call API3: 验证手机号
+    @Override
+    public void requestToLogin(@NonNull String phoneNumber, @NonNull String password) {
+        AVUser.logInInBackground(phoneNumber, password, new LogInCallback<AVUser>() {
+            @Override
+            public void done(AVUser avUser, AVException e) {
+                if (e == null) {
+                    //登录成功
+                    callBack.requestToLoginSuccess();
+                } else {
+                    //登录失败
+                    callBack.requestToLoginFailure();
                 }
             }
         });
