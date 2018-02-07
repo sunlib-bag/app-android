@@ -23,7 +23,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyContract.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyContract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyPresenter.java" />
     </list>
@@ -86,12 +86,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PhoneNumberVerifyActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PhoneNumberVerifyActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="610">
+              <caret line="263" column="28" lean-forward="false" selection-start-line="263" selection-start-column="28" selection-end-line="263" selection-end-column="28" />
+              <folding>
+                <element signature="method#sendVerificationCode#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+                <element signature="method#commit#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+                <element signature="method#created#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+                <element signature="docComment;method#listenToTheSoftKeyboardAndKeepTheLayoutVisible#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+                <element signature="method#listenToTheSoftKeyboardAndKeepTheLayoutVisible#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+                <element signature="method#getSoftKeyBoardHeight#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+                <element signature="method#getNavigationBarHeight#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+                <element signature="method#clearViewFocus#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+                <element signature="method#isFocusEditText#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+                <element signature="method#isTouchView#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+                <element signature="method#dispatchTouchEvent#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+                <element signature="method#hideSoftByEditViewIds#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+                <element signature="method#hideSoftKeyboard#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+                <element signature="method#setUpView#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+                <element signature="class#8848:9754" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,15 +115,14 @@
       <file leaf-file-name="PhoneNumberVerifyPresenter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="122" column="50" lean-forward="false" selection-start-line="122" selection-start-column="50" selection-end-line="122" selection-end-column="50" />
+            <state relative-caret-position="583">
+              <caret line="157" column="37" lean-forward="false" selection-start-line="157" selection-start-column="37" selection-end-line="157" selection-end-column="37" />
               <folding>
-                <element signature="class#808:1421" expanded="false" />
-                <element signature="method#tryToVerifyCaptcha#0;class#PhoneNumberVerifyPresenter#0" expanded="false" />
+                <element signature="class#706:1319" expanded="false" />
                 <element signature="method#startCountDown#0;class#PhoneNumberVerifyPresenter#0" expanded="false" />
-                <element signature="method#requestSendCaptchaBeanSuccess#0;class#PhoneNumberVerifyPresenter#0" expanded="false" />
                 <element signature="method#requestSendCaptchaBeanFailure#0;class#PhoneNumberVerifyPresenter#0" expanded="false" />
-                <element signature="method#requestCheckCaptchaBeanFailure#0;class#PhoneNumberVerifyPresenter#0" expanded="false" />
+                <element signature="e#5694#5695#0" expanded="true" />
+                <element signature="e#5741#5742#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,14 +138,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PhoneNumberVerifyModel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PhoneNumberVerifyModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1194">
-              <caret line="71" column="60" lean-forward="false" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="60" />
+            <state relative-caret-position="543">
+              <caret line="51" column="51" lean-forward="false" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
               <folding>
-                <element signature="e#1219#1598#0" expanded="true" />
-                <element signature="e#1597#1598#0" expanded="true" />
+                <element signature="method#requestSendCaptchaBean#0;class#PhoneNumberVerifyModel#0" expanded="false" />
+                <element signature="e#929#1308#0" expanded="true" />
+                <element signature="e#1307#1308#0" expanded="true" />
+                <element signature="e#1512#1895#0" expanded="true" />
+                <element signature="e#1894#1895#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2071,7 +2089,6 @@
         <option value="$USER_HOME$/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/146bb1a2169c9a73fdc272245f91e650/jars/classes.jar!/android/support/constraint/ConstraintLayout.class" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/home_page/HomePageActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_phone_number_verify.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_index.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_home_page.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_index.xml" />
@@ -2089,8 +2106,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/main/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyContract.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyPresenter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyPresenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyActivity.java" />
       </list>
     </option>
   </component>
@@ -2430,7 +2448,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517999258778" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517999915311" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2478,7 +2496,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517999258778" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517999915311" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2640,7 +2658,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517999258779" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517999915312" />
       </method>
     </configuration>
     <list size="1">
@@ -2678,13 +2696,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511493005850</updated>
-    </task>
-    <task id="LOCAL-00039" summary="修改了Courses中的lastModificationTime的类型参数————为了使用ObjectBox的Query的max函数&#10;删除了数据库查询的回调，而是直接使用返回值来做这件事">
-      <created>1514453294699</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1514453294699</updated>
     </task>
     <task id="LOCAL-00040" summary="解决了第一个BUG：第一次打开APP时，数据请求OK但是显示不到界面上">
       <created>1514461298677</created>
@@ -3022,7 +3033,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517996837455</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="PhoneNumberVerifyActivity：发送验证码功能重构完成">
+      <created>1517999353094</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1517999353094</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3095,7 +3113,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="CourseActivity：音频下载的一切，但是还不能播放" />
     <MESSAGE value="CourseActivity:音频播放功能" />
     <MESSAGE value="CourseActivity:音频播放功能小改进" />
     <MESSAGE value="CourseActivity:添加了未联网状态时下载失败的snackbar提示" />
@@ -3120,7 +3137,8 @@
     <MESSAGE value="继承了LeanCloud的Demo" />
     <MESSAGE value="LeanCloud初始化" />
     <MESSAGE value="MainActivity：自动登录功能重构为LeanCloud" />
-    <option name="LAST_COMMIT_MESSAGE" value="MainActivity：自动登录功能重构为LeanCloud" />
+    <MESSAGE value="PhoneNumberVerifyActivity：发送验证码功能重构完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="PhoneNumberVerifyActivity：发送验证码功能重构完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3518,14 +3536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/base/BaseFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -3542,28 +3552,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyPresenter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="122" column="50" lean-forward="false" selection-start-line="122" selection-start-column="50" selection-end-line="122" selection-end-column="50" />
+        <state relative-caret-position="543">
+          <caret line="51" column="51" lean-forward="false" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
           <folding>
-            <element signature="class#808:1421" expanded="false" />
-            <element signature="method#tryToVerifyCaptcha#0;class#PhoneNumberVerifyPresenter#0" expanded="false" />
-            <element signature="method#startCountDown#0;class#PhoneNumberVerifyPresenter#0" expanded="false" />
-            <element signature="method#requestSendCaptchaBeanSuccess#0;class#PhoneNumberVerifyPresenter#0" expanded="false" />
-            <element signature="method#requestSendCaptchaBeanFailure#0;class#PhoneNumberVerifyPresenter#0" expanded="false" />
-            <element signature="method#requestCheckCaptchaBeanFailure#0;class#PhoneNumberVerifyPresenter#0" expanded="false" />
+            <element signature="method#requestSendCaptchaBean#0;class#PhoneNumberVerifyModel#0" expanded="false" />
+            <element signature="e#929#1308#0" expanded="true" />
+            <element signature="e#1307#1308#0" expanded="true" />
+            <element signature="e#1512#1895#0" expanded="true" />
+            <element signature="e#1894#1895#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyModel.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1194">
-          <caret line="71" column="60" lean-forward="false" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="60" />
+        <state relative-caret-position="583">
+          <caret line="157" column="37" lean-forward="false" selection-start-line="157" selection-start-column="37" selection-end-line="157" selection-end-column="37" />
           <folding>
-            <element signature="e#1219#1598#0" expanded="true" />
-            <element signature="e#1597#1598#0" expanded="true" />
+            <element signature="class#706:1319" expanded="false" />
+            <element signature="method#startCountDown#0;class#PhoneNumberVerifyPresenter#0" expanded="false" />
+            <element signature="method#requestSendCaptchaBeanFailure#0;class#PhoneNumberVerifyPresenter#0" expanded="false" />
+            <element signature="e#5694#5695#0" expanded="true" />
+            <element signature="e#5741#5742#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="263" column="28" lean-forward="false" selection-start-line="263" selection-start-column="28" selection-end-line="263" selection-end-column="28" />
+          <folding>
+            <element signature="method#sendVerificationCode#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+            <element signature="method#commit#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+            <element signature="method#created#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+            <element signature="docComment;method#listenToTheSoftKeyboardAndKeepTheLayoutVisible#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+            <element signature="method#listenToTheSoftKeyboardAndKeepTheLayoutVisible#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+            <element signature="method#getSoftKeyBoardHeight#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+            <element signature="method#getNavigationBarHeight#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+            <element signature="method#clearViewFocus#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+            <element signature="method#isFocusEditText#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+            <element signature="method#isTouchView#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+            <element signature="method#dispatchTouchEvent#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+            <element signature="method#hideSoftByEditViewIds#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+            <element signature="method#hideSoftKeyboard#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+            <element signature="method#setUpView#0;class#PhoneNumberVerifyActivity#0" expanded="false" />
+            <element signature="class#8848:9754" expanded="false" />
           </folding>
         </state>
       </provider>

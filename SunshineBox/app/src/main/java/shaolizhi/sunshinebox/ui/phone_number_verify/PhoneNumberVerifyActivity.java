@@ -303,13 +303,13 @@ public class PhoneNumberVerifyActivity extends ActivationActivityManager impleme
             @Override
             public void afterTextChanged(Editable editable) {
                 captchaEdt.removeTextChangedListener(this);
-                int maxInputNumber = 4;
+                int maxInputNumber = 6;
                 if (editable.length() > maxInputNumber) {
                     editable.replace(maxInputNumber, editable.length(), "", 0, 0);
                 }
                 captchaEdt.addTextChangedListener(this);
 
-                String rule = "^[0-9]{4}$";
+                String rule = "^[0-9]{6}$";
                 checkCaptcha = Pattern.matches(rule, editable);
             }
         });
