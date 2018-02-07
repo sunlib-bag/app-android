@@ -1,23 +1,19 @@
 package shaolizhi.sunshinebox.ui.main;
 
-import android.content.Intent;
 import android.os.Bundle;
+
+import com.avos.avoscloud.AVUser;
 
 import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.ui.index.IndexActivity;
 import shaolizhi.sunshinebox.ui.welcome.WelcomeActivity;
 import shaolizhi.sunshinebox.utils.ActivationActivityManager;
-import shaolizhi.sunshinebox.utils.SharedPreferencesUtils;
-
-import static shaolizhi.sunshinebox.data.ConstantData.UUID;
 
 /**
  * 由邵励治于2017/12/7创造.
  */
 
 public class MainActivity extends ActivationActivityManager {
-
-    Intent intent;
 
     @Override
     protected int layoutId() {
@@ -26,13 +22,17 @@ public class MainActivity extends ActivationActivityManager {
 
     @Override
     protected void created(Bundle bundle) {
-        String uuid = SharedPreferencesUtils.get(this, UUID);
-        if (uuid == null) {
-            intent = new Intent(MainActivity.this, WelcomeActivity.class);
+        automaticLogin();
+    }
+
+    private void automaticLogin() {
+        if (AVUser.getCurrentUser() != null) {
+            //已登录
+            startActivity(IndexActivity.newIntent(this));
         } else {
-            intent = new Intent(MainActivity.this, IndexActivity.class);
+            //未登录
+            startActivity(WelcomeActivity.newIntent(this));
         }
-        startActivity(intent);
     }
 
     @Override

@@ -1,5 +1,7 @@
 package shaolizhi.sunshinebox.ui.index;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
@@ -166,5 +168,9 @@ public class IndexActivity extends BaseActivity {
         } else {
             UIUtils.ifBackOut(this, getString(R.string.index_act_string3));
         }
+    }
+
+    public static Intent newIntent(Context packageContext) {
+        return new Intent(packageContext, IndexActivity.class);
     }
 }

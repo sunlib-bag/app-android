@@ -1,10 +1,12 @@
 package shaolizhi.sunshinebox.ui.welcome;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import butterknife.OnClick;
 import shaolizhi.sunshinebox.R;
+import shaolizhi.sunshinebox.ui.main.MainActivity;
 import shaolizhi.sunshinebox.ui.phone_number_verify.PhoneNumberVerifyActivity;
 import shaolizhi.sunshinebox.utils.ActivationActivityManager;
 
@@ -31,5 +33,7 @@ public class WelcomeActivity extends ActivationActivityManager {
 
     }
 
-
+    public static Intent newIntent(Context packageContext) {
+        return new Intent(packageContext, WelcomeActivity.class);
+    }
 }
