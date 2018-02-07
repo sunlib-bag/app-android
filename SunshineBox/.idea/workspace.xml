@@ -22,10 +22,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="PhoneNumberVerifyActivity：验证验证码功能重构完成">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/shaol.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/shaol.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/main/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/main/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyContract.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyContract.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyModel.java" />
@@ -2448,7 +2446,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518002320533" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518002358402" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2496,7 +2494,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518002320533" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518002358402" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2679,7 +2677,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518002320534" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518002358403" />
       </method>
     </configuration>
     <list size="1">
@@ -2717,13 +2715,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511493005850</updated>
-    </task>
-    <task id="LOCAL-00042" summary="给requestDataFromNetSuccess和requestDataNetFailure添加了错误处理语句">
-      <created>1514522572107</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1514522572107</updated>
     </task>
     <task id="LOCAL-00043" summary="提交了一个BUG：音乐和游戏界面不显示内容">
       <created>1514525039376</created>
@@ -3061,7 +3052,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518000000931</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="MainActivity：结束全部内容">
+      <created>1518002349828</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1518002349828</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3134,7 +3132,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="CourseActivity:添加了未联网状态时下载失败的snackbar提示" />
     <MESSAGE value="CoursePresenter：修复BUG：解决第一次打开CourseActivity，同意权限但是不能下载的问题" />
     <MESSAGE value="CourseActivity:添加了网络状态监听，若下载一半儿断网，就会自动停止下载" />
     <MESSAGE value="CourseActivity:添加了上一课、下一课按钮内容" />
@@ -3159,7 +3156,8 @@
     <MESSAGE value="PhoneNumberVerifyActivity：发送验证码功能重构完成" />
     <MESSAGE value="PhoneNumberVerifyActivity：验证码输入检测规则改变" />
     <MESSAGE value="PhoneNumberVerifyActivity：验证验证码功能重构完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="PhoneNumberVerifyActivity：验证验证码功能重构完成" />
+    <MESSAGE value="MainActivity：结束全部内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="MainActivity：结束全部内容" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
