@@ -3,8 +3,6 @@ package shaolizhi.sunshinebox.ui.phone_number_verify;
 import android.os.CountDownTimer;
 
 import shaolizhi.sunshinebox.R;
-import shaolizhi.sunshinebox.ui.base.BaseActivity;
-import shaolizhi.sunshinebox.ui.base.BaseFragment;
 import shaolizhi.sunshinebox.utils.App;
 import shaolizhi.sunshinebox.utils.ToastUtils;
 
@@ -121,6 +119,7 @@ public class PhoneNumberVerifyPresenter implements PhoneNumberVerifyContract.Pre
 
     @Override
     public void requestCheckCaptchaBeanSuccess() {
+        ToastUtils.showToast("验证码验证成功");
 //        if (bean.getFlag() != null) {
 //            switch (bean.getFlag()) {
 //                case "001":
@@ -156,11 +155,6 @@ public class PhoneNumberVerifyPresenter implements PhoneNumberVerifyContract.Pre
 
     @Override
     public void requestCheckCaptchaBeanFailure() {
-        if (view instanceof BaseFragment) {
-            ((BaseFragment) view).showToastForRequestResult("403");
-        }
-        if (view instanceof BaseActivity) {
-            ((BaseActivity) view).showToastForRequestResult("403");
-        }
+        ToastUtils.showToast("验证码验证失败");
     }
 }

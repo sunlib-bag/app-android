@@ -3,20 +3,10 @@ package shaolizhi.sunshinebox.ui.phone_number_verify;
 import android.support.annotation.NonNull;
 
 import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVMobilePhoneVerifyCallback;
 import com.avos.avoscloud.AVSMS;
 import com.avos.avoscloud.AVSMSOption;
 import com.avos.avoscloud.RequestMobileCodeCallback;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-import shaolizhi.sunshinebox.data.ApiService;
-
-import static shaolizhi.sunshinebox.data.ApiService.BASE_URL_DEVELOPMENT;
 
 /**
  * 由邵励治于2017/11/29创造.
@@ -51,31 +41,19 @@ public class PhoneNumberVerifyModel implements PhoneNumberVerifyContract.Model {
         });
     }
 
+    //Call API2：验证验证码
     @Override
     public void requestCheckCaptchaBean(@NonNull String phoneNumber, @NonNull String captcha) {
-        Gson gson = new GsonBuilder().create();
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL_DEVELOPMENT)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .build();
-
-        ApiService service = retrofit.create(ApiService.class);
-
-        Call<CheckCaptchaBean> call = service.checkCaptchaAPI(phoneNumber, captcha);
-
-        call.enqueue(new Callback<CheckCaptchaBean>() {
+        AVSMS.verifySMSCodeInBackground(captcha, phoneNumber, new AVMobilePhoneVerifyCallback() {
             @Override
-            public void onResponse(@NonNull Call<CheckCaptchaBean> call, @NonNull Response<CheckCaptchaBean> response) {
-                CheckCaptchaBean bean = response.body();
-                if (bean != null) {
+            public void done(AVException e) {
+                if (e == null) {
+                    //验证成功
                     callBack.requestCheckCaptchaBeanSuccess();
+                } else {
+                    //验证失败
+                    callBack.requestCheckCaptchaBeanFailure();
                 }
-            }
-
-            @Override
-            public void onFailure(@NonNull Call<CheckCaptchaBean> call, @NonNull Throwable t) {
-                callBack.requestCheckCaptchaBeanFailure();
             }
         });
     }
