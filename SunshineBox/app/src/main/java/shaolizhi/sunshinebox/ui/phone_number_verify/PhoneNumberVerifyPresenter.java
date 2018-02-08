@@ -126,7 +126,8 @@ public class PhoneNumberVerifyPresenter implements PhoneNumberVerifyContract.Pre
     @Override
     public void requestCheckCaptchaBeanSuccess() {
         ToastUtils.showToast("验证码验证成功");
-        tryToLogin();
+//        tryToLogin();
+        view.openIndexActivity();
 //        if (bean.getFlag() != null) {
 //            switch (bean.getFlag()) {
 //                case "001":
