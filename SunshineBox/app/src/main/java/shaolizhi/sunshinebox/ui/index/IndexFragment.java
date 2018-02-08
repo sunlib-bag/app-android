@@ -51,7 +51,7 @@ public class IndexFragment extends BaseFragment implements MyRefreshLayout.OnRef
 
     @Override
     protected int layoutId() {
-        return R.layout.fragment_nursery_rhymes;
+        return R.layout.fragment_index;
     }
 
     @Override
