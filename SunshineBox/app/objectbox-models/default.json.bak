@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:6164863894198736358",
-      "lastPropertyId": "14:1084365289759270611",
+      "lastPropertyId": "15:5417987096836100511",
       "name": "Courses",
       "properties": [
         {
@@ -59,6 +59,10 @@
         {
           "id": "14:1084365289759270611",
           "name": "text_storage_address"
+        },
+        {
+          "id": "15:5417987096836100511",
+          "name": "is_text_downloaded"
         }
       ],
       "relations": []

@@ -60,7 +60,6 @@
         <activity
             android:name=".ui.phone_number_verify.PhoneNumberVerifyActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".ui.home_page.HomePageActivity"></activity>
         <activity android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,10 +67,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.setting.SettingActivity" />
         <activity android:name=".ui.index.IndexActivity"></activity>
-        <activity android:name=".ui.course.CourseActivity"></activity>
-        <activity android:name=".ui.video.VideoActivity"></activity>
     </application>
 
 </manifest>
