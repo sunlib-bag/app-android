@@ -34,12 +34,16 @@
     <string name="activation_code_verify_act_string2">输入激活码</string>
     <string name="activation_code_verify_act_string3">请输入该手机号对应的激活码</string>
     <string name="activation_code_verify_act_string4">激活码</string>
+
+    <!--IndexActivity-->
     <string name="index_act_string1">已下载课程</string>
     <string name="index_act_string2">反馈问题</string>
     <string name="index_act_string3">重置软件</string>
     <string name="index_act_string4">登出</string>
     <string name="index_act_string5">加入教师社区</string>
     <string name="index_act_string6">扫描下方二维码加入教师社区</string>
+    <string name="index_act_string7">阳光盒子</string>
+    <string name="index_act_string8">抽屉菜单开关</string>
 
 
 </resources>
