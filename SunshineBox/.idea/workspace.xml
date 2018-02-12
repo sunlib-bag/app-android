@@ -23,12 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_book_black.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_child_care.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_games.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_music_note.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/shaol.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/shaol.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
@@ -101,20 +95,35 @@
       <file leaf-file-name="activity_index_content.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="174" column="42" lean-forward="false" selection-start-line="174" selection-start-column="42" selection-end-line="174" selection-end-column="42" />
+            <state relative-caret-position="699">
+              <caret line="222" column="48" lean-forward="false" selection-start-line="222" selection-start-column="48" selection-end-line="222" selection-end-column="48" />
               <folding>
                 <element signature="e#373#1909#0" expanded="false" />
                 <element signature="e#755#1177#0" expanded="false" />
-                <element signature="e#3410#3438#0" expanded="true" />
-                <element signature="e#3727#3755#0" expanded="true" />
-                <element signature="e#4434#4462#0" expanded="true" />
-                <element signature="e#4751#4779#0" expanded="true" />
-                <element signature="e#5458#5486#0" expanded="true" />
-                <element signature="e#5775#5803#0" expanded="true" />
-                <element signature="e#6482#6510#0" expanded="true" />
-                <element signature="e#6794#6822#0" expanded="true" />
-                <element signature="e#6981#7176#0" expanded="false" />
+                <element signature="e#2356#2820#0" expanded="false" />
+                <element signature="e#2834#3901#0" expanded="false" />
+                <element signature="e#3278#3522#0" expanded="false" />
+                <element signature="e#3433#3461#0" expanded="true" />
+                <element signature="e#3540#3873#0" expanded="false" />
+                <element signature="e#3750#3778#0" expanded="true" />
+                <element signature="e#3915#4925#0" expanded="false" />
+                <element signature="e#4302#4546#0" expanded="false" />
+                <element signature="e#4457#4485#0" expanded="true" />
+                <element signature="e#4564#4897#0" expanded="false" />
+                <element signature="e#4774#4802#0" expanded="true" />
+                <element signature="e#4939#5949#0" expanded="false" />
+                <element signature="e#5481#5509#0" expanded="true" />
+                <element signature="e#5798#5826#0" expanded="true" />
+                <element signature="e#6505#6533#0" expanded="true" />
+                <element signature="e#6817#6845#0" expanded="true" />
+                <element signature="e#7005#7363#0" expanded="false" />
+                <element signature="e#7248#7276#0" expanded="true" />
+                <element signature="e#7620#7648#0" expanded="true" />
+                <element signature="e#7992#8020#0" expanded="true" />
+                <element signature="e#8364#8392#0" expanded="true" />
+                <element signature="e#8736#8764#0" expanded="true" />
+                <element signature="e#9108#9136#0" expanded="true" />
+                <element signature="e#9259#9454#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -166,8 +175,8 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+            <state relative-caret-position="556">
+              <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -2488,7 +2497,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518429153953" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518430349976" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2535,7 +2544,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518429153953" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518430349976" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2717,7 +2726,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518429153954" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518430349977" />
       </method>
     </configuration>
     <list size="1">
@@ -2755,13 +2764,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511493005850</updated>
-    </task>
-    <task id="LOCAL-00049" summary="添加了IndexFragment的RecyclerView的点击事件&#10;重构了IndexAdapter的数据加载结构&#10;添加了CourseActivity的回退按钮的点击事件">
-      <created>1514983155845</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1514983155845</updated>
     </task>
     <task id="LOCAL-00050" summary="改写了ObjectBox的数据库结构Courses">
       <created>1515041197847</created>
@@ -3099,7 +3101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518422925488</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="IndexActivity：主页侧边栏（上半部分）">
+      <created>1518429172931</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1518429172935</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3123,7 +3132,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21436228" sideWeight="0.50656456" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47547975" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6695096" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52207506" sideWeight="0.4964229" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.49343544" order="7" side_tool="false" content_ui="tabs" />
@@ -3181,8 +3190,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="更新了IndexBean以适应新的数据返回格式" />
-    <MESSAGE value="更新了ObjectBox数据库，添加了三个属性" />
     <MESSAGE value="更新了IndexModel增量更新、增量删除时，从WEB往OBJECT-BOX中存的数据，多加了三个" />
     <MESSAGE value="更新了WebView的离线显示" />
     <MESSAGE value="修改了BUG：WebView没内容就隐藏了吧，别在那占着茅坑不拉屎了" />
@@ -3206,7 +3213,9 @@
     <MESSAGE value="删除了一大堆的第一期内容" />
     <MESSAGE value="IndexActivity：添加了侧边栏" />
     <MESSAGE value="IndexActivity：主页ToolBar" />
-    <option name="LAST_COMMIT_MESSAGE" value="IndexActivity：主页ToolBar" />
+    <MESSAGE value="IndexActivity：主页侧边栏（上半部分）" />
+    <MESSAGE value="IndexActivity：主页侧边栏（下半部分）" />
+    <option name="LAST_COMMIT_MESSAGE" value="IndexActivity：主页侧边栏（下半部分）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3509,28 +3518,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+        <state relative-caret-position="556">
+          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="174" column="42" lean-forward="false" selection-start-line="174" selection-start-column="42" selection-end-line="174" selection-end-column="42" />
+        <state relative-caret-position="699">
+          <caret line="222" column="48" lean-forward="false" selection-start-line="222" selection-start-column="48" selection-end-line="222" selection-end-column="48" />
           <folding>
             <element signature="e#373#1909#0" expanded="false" />
             <element signature="e#755#1177#0" expanded="false" />
-            <element signature="e#3410#3438#0" expanded="true" />
-            <element signature="e#3727#3755#0" expanded="true" />
-            <element signature="e#4434#4462#0" expanded="true" />
-            <element signature="e#4751#4779#0" expanded="true" />
-            <element signature="e#5458#5486#0" expanded="true" />
-            <element signature="e#5775#5803#0" expanded="true" />
-            <element signature="e#6482#6510#0" expanded="true" />
-            <element signature="e#6794#6822#0" expanded="true" />
-            <element signature="e#6981#7176#0" expanded="false" />
+            <element signature="e#2356#2820#0" expanded="false" />
+            <element signature="e#2834#3901#0" expanded="false" />
+            <element signature="e#3278#3522#0" expanded="false" />
+            <element signature="e#3433#3461#0" expanded="true" />
+            <element signature="e#3540#3873#0" expanded="false" />
+            <element signature="e#3750#3778#0" expanded="true" />
+            <element signature="e#3915#4925#0" expanded="false" />
+            <element signature="e#4302#4546#0" expanded="false" />
+            <element signature="e#4457#4485#0" expanded="true" />
+            <element signature="e#4564#4897#0" expanded="false" />
+            <element signature="e#4774#4802#0" expanded="true" />
+            <element signature="e#4939#5949#0" expanded="false" />
+            <element signature="e#5481#5509#0" expanded="true" />
+            <element signature="e#5798#5826#0" expanded="true" />
+            <element signature="e#6505#6533#0" expanded="true" />
+            <element signature="e#6817#6845#0" expanded="true" />
+            <element signature="e#7005#7363#0" expanded="false" />
+            <element signature="e#7248#7276#0" expanded="true" />
+            <element signature="e#7620#7648#0" expanded="true" />
+            <element signature="e#7992#8020#0" expanded="true" />
+            <element signature="e#8364#8392#0" expanded="true" />
+            <element signature="e#8736#8764#0" expanded="true" />
+            <element signature="e#9108#9136#0" expanded="true" />
+            <element signature="e#9259#9454#0" expanded="false" />
           </folding>
         </state>
       </provider>

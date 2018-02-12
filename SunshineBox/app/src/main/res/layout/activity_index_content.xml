@@ -59,6 +59,8 @@
             android:layout_weight="159"
             tools:ignore="NestedWeights">
 
+            <!--分类-->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -166,6 +168,62 @@
                     android:textColor="#666666"
                     android:textSize="18sp" />
             </LinearLayout>
+
+            <!--领域-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="280dp"
+                android:text="@string/index_act_string14"
+                android:textColor="#a1a1a1"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="321dp"
+                android:text="@string/index_act_string15"
+                android:textColor="#666666"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="366dp"
+                android:text="@string/index_act_string16"
+                android:textColor="#666666"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="411dp"
+                android:text="@string/index_act_string17"
+                android:textColor="#666666"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="456dp"
+                android:text="@string/index_act_string18"
+                android:textColor="#666666"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="501dp"
+                android:text="@string/index_act_string19"
+                android:textColor="#666666"
+                android:textSize="17sp" />
         </RelativeLayout>
 
         <FrameLayout

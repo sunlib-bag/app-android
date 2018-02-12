@@ -49,6 +49,12 @@
     <string name="index_act_string11">音乐</string>
     <string name="index_act_string12">阅读</string>
     <string name="index_act_string13">游戏</string>
+    <string name="index_act_string14">领域</string>
+    <string name="index_act_string15">健康</string>
+    <string name="index_act_string16">语言</string>
+    <string name="index_act_string17">社会</string>
+    <string name="index_act_string18">科学</string>
+    <string name="index_act_string19">艺术</string>
 
 
 </resources>
