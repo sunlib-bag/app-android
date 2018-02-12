@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:text="@string/index_act_string5"
         android:textColor="#000000"
         android:textSize="18sp" />
@@ -17,8 +17,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="125dp"
+        android:layout_marginTop="105dp"
         android:text="@string/index_act_string6"
         android:textColor="#000000"
         android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="155dp"
+        android:contentDescription="@string/index_act_string20"
+        android:src="@drawable/teacher_community_tdc" />
 </RelativeLayout>
