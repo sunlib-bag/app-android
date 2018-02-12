@@ -2,21 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-    <item android:title="@string/drawer_string1">
-        <menu>
-            <item
-                android:id="@+id/nav_camera"
-                android:title="@string/drawer_string2" />
-            <item
-                android:id="@+id/nav_share"
-                android:title="@string/drawer_string3" />
-            <item
-                android:id="@+id/nav_send"
-                android:title="@string/drawer_string4" />
-            <item
-                android:id="@+id/nav_manage"
-                android:title="@string/drawer_string5" />
-        </menu>
-    </item>
 
+    <item
+        android:id="@+id/nav_camera"
+        android:title="@string/index_act_string1" />
+    <item
+        android:id="@+id/nav_share"
+        android:title="@string/index_act_string2" />
+    <item
+        android:id="@+id/nav_send"
+        android:title="@string/index_act_string3" />
+    <item
+        android:id="@+id/nav_manage"
+        android:title="@string/index_act_string4" />
 </menu>

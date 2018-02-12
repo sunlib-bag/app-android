@@ -4,6 +4,7 @@
       <w>bcab</w>
       <w>constraintlayout</w>
       <w>drawerlayout</w>
+      <w>headerlayout</w>
       <w>imagebutton</w>
       <w>imagebuttton</w>
       <w>leancloud</w>
@@ -12,6 +13,7 @@
       <w>shaolizhi</w>
       <w>snackbar</w>
       <w>sunshinebox</w>
+      <w>textview</w>
       <w>videoview</w>
     </words>
   </dictionary>

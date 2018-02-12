@@ -34,64 +34,12 @@
     <string name="activation_code_verify_act_string2">输入激活码</string>
     <string name="activation_code_verify_act_string3">请输入该手机号对应的激活码</string>
     <string name="activation_code_verify_act_string4">激活码</string>
+    <string name="index_act_string1">已下载课程</string>
+    <string name="index_act_string2">反馈问题</string>
+    <string name="index_act_string3">重置软件</string>
+    <string name="index_act_string4">登出</string>
+    <string name="index_act_string5">加入教师社区</string>
+    <string name="index_act_string6">扫描下方二维码加入教师社区</string>
 
-    <!--HomePageActivity-->
-    <string name="home_page_act_string1">再按一次退出程序</string>
-    <string name="home_page_act_string2">阳光盒子——给孩子更好的教育</string>
-    <string name="home_page_act_string3">音乐</string>
-    <string name="home_page_act_string4">阅读</string>
-    <string name="home_page_act_string5">儿歌</string>
-    <string name="home_page_act_string6">游戏</string>
-    <string name="home_page_act_string7">Setting</string>
-
-    <!--SettingActivity-->
-    <string name="setting_act_string1">你好，励治</string>
-    <string name="setting_act__menu_string1">意见反馈</string>
-    <string name="setting_act__menu_string2">使用说明</string>
-    <string name="setting_act__menu_string3">特别感谢</string>
-    <string name="setting_act__menu_string4">退出激活</string>
-
-    <!--IndexActivity-->
-    <string name="index_act_string1">阳光盒子</string>
-    <string name="index_act_string2">打开菜单</string>
-    <string name="index_act_string3">再按一次退出程序</string>
-    <string name="index_act_string4">动作儿歌</string>
-    <string name="index_act_string5">听阅读</string>
-    <string name="index_act_string6">音乐</string>
-    <string name="index_act_string7">做游戏</string>
-    <string name="index_act_string8">儿歌</string>
-    <string name="index_act_string9">阅读</string>
-    <string name="index_act_string10">音乐</string>
-    <string name="index_act_string11">游戏</string>
-
-    <!--CourseActivity-->
-    <string name="course_act_string1">返回</string>
-    <string name="course_act_string2">PLAY音频</string>
-    <string name="course_act_string3">PLAY视频</string>
-    <string name="course_act_string4">上一课</string>
-    <string name="course_act_string5">下一课</string>
-    <string name="course_act_string6">下载音频</string>
-    <string name="course_act_string7">下载视频</string>
-    <string name="course_act_string8">现在开始下载！请尽量不要关闭本页面直至下载结束！</string>
-    <string name="course_act_string9">视频下载成功</string>
-    <string name="course_act_string10">现在正在下载视频，请稍等片刻哦</string>
-    <string name="course_act_string11">现在正在下载音频，请稍等片刻哦</string>
-    <string name="course_act_string12">无音频资源</string>
-    <string name="course_act_string13">无视频资源</string>
-    <string name="course_act_string14">音频下载成功</string>
-    <string name="course_act_string15">下载失败，请检查您的网络</string>
-    <string name="course_act_string16">已经是最后一节课了！</string>
-    <string name="course_act_string17">已经是第一节课了！</string>
-    <string name="course_act_string18">请等待下载结束后再切换课程！</string>
-    <string name="course_act_string19">本课没有教案</string>
-    <string name="course_act_string20">教案下载成功</string>
-    <string name="course_act_string21">教案下载失败</string>
-    <string name="nav_header_string1">阳光书屋</string>
-    <string name="nav_header_string2">http://www.sunshine-library.org/</string>
-    <string name="drawer_string1">菜单栏</string>
-    <string name="drawer_string2">我的收藏</string>
-    <string name="drawer_string3">意见反馈</string>
-    <string name="drawer_string4">联系我们</string>
-    <string name="drawer_string5">退出激活</string>
 
 </resources>
