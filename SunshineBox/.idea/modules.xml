@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SunshineBox.iml" filepath="$PROJECT_DIR$/SunshineBox.iml" />
-      <module fileurl="file://D:\DATA\Code\Android\creative\SunshineBox-Second-Edition\app-android\SunshineBox\SunshineBox.iml" filepath="D:\DATA\Code\Android\creative\SunshineBox-Second-Edition\app-android\SunshineBox\SunshineBox.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://D:\DATA\Code\Android\creative\SunshineBox-Second-Edition\app-android\SunshineBox\app\app.iml" filepath="D:\DATA\Code\Android\creative\SunshineBox-Second-Edition\app-android\SunshineBox\app\app.iml" />
     </modules>
   </component>
 </project>

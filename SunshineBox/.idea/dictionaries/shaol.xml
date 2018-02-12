@@ -4,10 +4,13 @@
       <w>bcab</w>
       <w>constraintlayout</w>
       <w>drawerlayout</w>
+      <w>framelayout</w>
       <w>headerlayout</w>
       <w>imagebutton</w>
       <w>imagebuttton</w>
+      <w>imageview</w>
       <w>leancloud</w>
+      <w>linearlayout</w>
       <w>navigationview</w>
       <w>relativelayout</w>
       <w>shaolizhi</w>
