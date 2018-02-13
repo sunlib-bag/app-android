@@ -10,7 +10,8 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/index_act_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="64dp"
+        android:background="#f7c319"
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp">
 
@@ -20,8 +21,8 @@
 
             <ImageButton
                 android:id="@+id/index_act_imagebuttton1"
-                android:layout_width="?attr/actionBarSize"
-                android:layout_height="?attr/actionBarSize"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
                 android:layout_centerVertical="true"
                 android:background="#00ffffff"
                 android:contentDescription="@string/index_act_string8"
@@ -31,17 +32,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="15dp"
-                android:layout_toEndOf="@+id/index_act_imagebuttton1"
+                android:layout_marginStart="72dp"
                 android:text="@string/index_act_string7"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textColor="#ffffff"
+                android:textSize="21sp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_alignParentBottom="true"
-                android:background="#dedede" />
         </RelativeLayout>
 
     </android.support.v7.widget.Toolbar>
@@ -66,107 +61,106 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="19dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="18dp"
                 android:text="@string/index_act_string9"
                 android:textColor="#a1a1a1"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <LinearLayout
-                android:id="@+id/index_act_linearlayout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="58dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:contentDescription="@string/index_act_string10"
                     android:src="@drawable/ic_child_care" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="25dp"
                     android:text="@string/index_act_string10"
                     android:textColor="#666666"
-                    android:textSize="18sp" />
+                    android:textSize="19sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="110dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="104dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:contentDescription="@string/index_act_string11"
                     android:src="@drawable/ic_music_note" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="25dp"
                     android:text="@string/index_act_string11"
                     android:textColor="#666666"
-                    android:textSize="18sp" />
+                    android:textSize="19sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="160dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="150dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:contentDescription="@string/index_act_string12"
                     android:src="@drawable/ic_book_black" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="25dp"
                     android:text="@string/index_act_string12"
                     android:textColor="#666666"
-                    android:textSize="18sp" />
+                    android:textSize="19sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="210dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="196dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:contentDescription="@string/index_act_string13"
                     android:src="@drawable/ic_games" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="25dp"
                     android:text="@string/index_act_string13"
                     android:textColor="#666666"
-                    android:textSize="18sp" />
+                    android:textSize="19sp" />
             </LinearLayout>
 
             <!--领域-->
@@ -174,56 +168,131 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="280dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="265dp"
                 android:text="@string/index_act_string14"
                 android:textColor="#a1a1a1"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="321dp"
-                android:text="@string/index_act_string15"
-                android:textColor="#666666"
-                android:textSize="17sp" />
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="305dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="366dp"
-                android:text="@string/index_act_string16"
-                android:textColor="#666666"
-                android:textSize="17sp" />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="@string/index_act_string10"
+                    android:src="@drawable/ic_fitness_center" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="411dp"
-                android:text="@string/index_act_string17"
-                android:textColor="#666666"
-                android:textSize="17sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:text="@string/index_act_string15"
+                    android:textColor="#666666"
+                    android:textSize="19sp" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="456dp"
-                android:text="@string/index_act_string18"
-                android:textColor="#666666"
-                android:textSize="17sp" />
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="351dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
 
-            <TextView
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="@string/index_act_string16"
+                    android:src="@drawable/ic_forum" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:text="@string/index_act_string16"
+                    android:textColor="#666666"
+                    android:textSize="19sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="501dp"
-                android:text="@string/index_act_string19"
-                android:textColor="#666666"
-                android:textSize="17sp" />
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="397dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="@string/index_act_string17"
+                    android:src="@drawable/ic_group_work" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:text="@string/index_act_string17"
+                    android:textColor="#666666"
+                    android:textSize="19sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="443dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="@string/index_act_string18"
+                    android:src="@drawable/ic_location_city" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:text="@string/index_act_string18"
+                    android:textColor="#666666"
+                    android:textSize="19sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="489dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="@string/index_act_string19"
+                    android:src="@drawable/ic_brush" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:text="@string/index_act_string19"
+                    android:textColor="#666666"
+                    android:textSize="19sp" />
+            </LinearLayout>
         </RelativeLayout>
 
         <FrameLayout

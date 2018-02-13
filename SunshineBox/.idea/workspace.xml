@@ -22,11 +22,18 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/teacher_community_tdc.png" />
+    <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="IndexActivity：首页UI细化调整">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_brush.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_fitness_center.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_forum.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_group_work.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_location_city.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_index.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/index_act_headerlayout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/index_act_headerlayout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_black_24dp.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_black_24dp.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,115 +74,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#drawerLayoutSwitch#0;class#IndexActivity#0" expanded="false" />
-                <element signature="e#1335#1336#0" expanded="true" />
-                <element signature="e#1381#1382#0" expanded="true" />
-                <element signature="method#setUpDrawerLayoutSwitchAnimator#0;class#IndexActivity#0" expanded="false" />
-                <element signature="method#setUpTitle#0;class#IndexActivity#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_index.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_index.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_act_headerlayout.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/index_act_headerlayout.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="3" column="44" lean-forward="false" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-              <folding>
-                <element signature="e#1090#1118#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dimens.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_index_content.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activity_index_content.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="48" column="17" lean-forward="false" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
-              <folding>
-                <element signature="e#373#1909#0" expanded="false" />
-                <element signature="e#755#1177#0" expanded="false" />
-                <element signature="e#2134#9249#0" expanded="false" />
-                <element signature="e#2356#2820#0" expanded="false" />
-                <element signature="e#2834#3901#0" expanded="false" />
-                <element signature="e#3278#3522#0" expanded="false" />
-                <element signature="e#3433#3461#0" expanded="true" />
-                <element signature="e#3540#3873#0" expanded="false" />
-                <element signature="e#3750#3778#0" expanded="true" />
-                <element signature="e#3915#4925#0" expanded="false" />
-                <element signature="e#4302#4546#0" expanded="false" />
-                <element signature="e#4457#4485#0" expanded="true" />
-                <element signature="e#4564#4897#0" expanded="false" />
-                <element signature="e#4774#4802#0" expanded="true" />
-                <element signature="e#4939#5949#0" expanded="false" />
-                <element signature="e#5481#5509#0" expanded="true" />
-                <element signature="e#5798#5826#0" expanded="true" />
-                <element signature="e#6505#6533#0" expanded="true" />
-                <element signature="e#6817#6845#0" expanded="true" />
-                <element signature="e#7005#7363#0" expanded="false" />
-                <element signature="e#7248#7276#0" expanded="true" />
-                <element signature="e#7620#7648#0" expanded="true" />
-                <element signature="e#7992#8020#0" expanded="true" />
-                <element signature="e#8364#8392#0" expanded="true" />
-                <element signature="e#8736#8764#0" expanded="true" />
-                <element signature="e#9108#9136#0" expanded="true" />
-                <element signature="e#9259#9454#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="68" column="19" lean-forward="false" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
+            <state relative-caret-position="165">
+              <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="32" />
               <folding>
-                <marker date="1518417429747" expanded="true" signature="3265:3276" ph="..." />
-                <marker date="1518417429747" expanded="true" signature="3265:3295" ph="..." />
+                <element signature="e#2410#2437#0" expanded="true" />
+                <element signature="e#2538#3547#0" expanded="false" />
+                <element signature="e#2924#3168#0" expanded="false" />
+                <element signature="e#3186#3519#0" expanded="false" />
+                <element signature="e#3561#4571#0" expanded="false" />
+                <element signature="e#4585#5595#0" expanded="false" />
+                <element signature="e#5609#6614#0" expanded="false" />
+                <element signature="e#6651#7009#0" expanded="false" />
+                <element signature="e#7023#8037#0" expanded="false" />
+                <element signature="e#7565#7593#0" expanded="true" />
+                <element signature="e#7886#7914#0" expanded="true" />
+                <element signature="e#8051#9056#0" expanded="false" />
+                <element signature="e#8593#8621#0" expanded="true" />
+                <element signature="e#8905#8933#0" expanded="true" />
+                <element signature="e#9070#10080#0" expanded="false" />
+                <element signature="e#9612#9640#0" expanded="true" />
+                <element signature="e#9929#9957#0" expanded="true" />
+                <element signature="e#10094#11107#0" expanded="false" />
+                <element signature="e#10636#10664#0" expanded="true" />
+                <element signature="e#10956#10984#0" expanded="true" />
+                <element signature="e#11121#12126#0" expanded="false" />
+                <element signature="e#11663#11691#0" expanded="true" />
+                <element signature="e#11975#12003#0" expanded="true" />
+                <element signature="e#12162#12357#0" expanded="false" />
               </folding>
             </state>
           </provider>
-          <provider editor-type-id="android-manifest">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="ic_menu_black_24dp.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_black_24dp.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ic_brush.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_brush.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ic_location_city.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_location_city.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ic_group_work.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_group_work.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ic_forum.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_forum.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ic_fitness_center.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_fitness_center.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -189,21 +182,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ic_book_black.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_book_black.xml">
+      <file leaf-file-name="values.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/3b8df95724110238689e75015287ab68/res/values/values.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ic_music_note.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_music_note.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="279">
+              <caret line="231" column="20" lean-forward="false" selection-start-line="231" selection-start-column="20" selection-end-line="231" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -212,8 +195,8 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="57" column="18" lean-forward="false" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+            <state relative-caret-position="299">
+              <caret line="46" column="39" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -226,8 +209,8 @@
       <list>
         <option value="Interface" />
         <option value="resourceFile" />
-        <option value="Class" />
         <option value="layoutResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -2078,16 +2061,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/nursery_rhymes/IndexPresenter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/objectbox/courses/CoursesUtils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/data/CacheData.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexContract.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/utils/ServiceGenerator.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/utils/IOUtils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexPresenter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/data/ConstantData.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home_page.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexBean.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/objectbox/courses/Courses.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java" />
@@ -2120,15 +2095,23 @@
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/data/ApiService.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_index.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_home_page_drawer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_child_care.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_music_note.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_book_black.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_games.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/index_act_headerlayout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/3b8df95724110238689e75015287ab68/res/values/values.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_fitness_center.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_forum.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_group_work.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_location_city.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_brush.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_black_24dp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml" />
       </list>
     </option>
   </component>
@@ -2156,6 +2139,135 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sunshinebox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sunshinebox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sunshinebox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phone_number_verify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2254,69 +2366,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manifests" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidManifestsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2337,15 +2386,14 @@
     <property name="DEBUGGABLE_PROCESS" value="shaolizhi.sunshinebox" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/captures/shaolizhi.sunshinebox_2018.01.17_17.35.li" />
-    <property name="VectorAssetImportPath" value="D:\DATA\Code\Android\creative" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DATA\Code\Android\creative\SunshineBox-Second-Edition\app-android\SunshineBox\app\src\main\res\layout" />
       <recent name="D:\DATA\Code\Android\creative\SunshineBox-Second-Edition\app-android\SunshineBox\app\src\main\res\drawable" />
       <recent name="M:\DATA\CODE\Creative\SunshineBox\app\src\main\res\drawable" />
       <recent name="M:\DATA\CODE\Creative\SunshineBox\app\src\main\res\values" />
       <recent name="M:\DATA\CODE\Creative\SunshineBox\app\src\main\res\menu" />
-      <recent name="M:\DATA\CODE\Creative\SunshineBox\app\src\main\res\layout" />
     </key>
     <key name="android.template.packageName">
       <recent name="shaolizhi.sunshinebox.ui.index" />
@@ -2450,7 +2498,8 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518431346873" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518504443685" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2497,7 +2546,8 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518431346873" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518504443685" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2679,7 +2729,8 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518431346875" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1518504443686" />
       </method>
     </configuration>
     <list size="1">
@@ -2717,13 +2768,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511493005850</updated>
-    </task>
-    <task id="LOCAL-00051" summary="完成CourseActivity中的onCreate代码部分">
-      <created>1515042673482</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1515042673482</updated>
     </task>
     <task id="LOCAL-00052" summary="添加了CourseActivity的MVP架构">
       <created>1515048566521</created>
@@ -3061,7 +3105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518430350656</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="IndexActivity：主页侧拉菜单添加二维码">
+      <created>1518431364571</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1518431364571</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3085,7 +3136,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21436228" sideWeight="0.50656456" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5021322" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5378465" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52207506" sideWeight="0.4964229" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.49343544" order="7" side_tool="false" content_ui="tabs" />
@@ -3094,7 +3145,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.50656456" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3880597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5142232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -3143,8 +3194,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="更新了IndexModel增量更新、增量删除时，从WEB往OBJECT-BOX中存的数据，多加了三个" />
-    <MESSAGE value="更新了WebView的离线显示" />
     <MESSAGE value="修改了BUG：WebView没内容就隐藏了吧，别在那占着茅坑不拉屎了" />
     <MESSAGE value="调整了PhoneNumberVerifyActivity的UI" />
     <MESSAGE value="又小调整了一下验证手机号的UI" />
@@ -3168,7 +3217,9 @@
     <MESSAGE value="IndexActivity：主页ToolBar" />
     <MESSAGE value="IndexActivity：主页侧边栏（上半部分）" />
     <MESSAGE value="IndexActivity：主页侧边栏（下半部分）" />
-    <option name="LAST_COMMIT_MESSAGE" value="IndexActivity：主页侧边栏（下半部分）" />
+    <MESSAGE value="IndexActivity：主页侧拉菜单添加二维码" />
+    <MESSAGE value="IndexActivity：首页UI细化调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="IndexActivity：首页UI细化调整" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3180,41 +3231,21 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/side_nav_bar.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://M:/development-software/Android/sdk/sources/android-27/android/content/Intent.java" />
-    <entry file="file://M:/development-software/Android/sdk/sources/android-27/android/widget/VideoView.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/widget/MyVideoView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/video/VideoActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_video.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CoursePresenter.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexContract.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexBean.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_course.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home_page.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_white_button.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -3224,13 +3255,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_phone_number_verify.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="3186">
           <caret line="118" column="52" lean-forward="false" selection-start-line="118" selection-start-column="52" selection-end-line="118" selection-end-column="52" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
@@ -3272,17 +3303,15 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_game.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_reading.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_index.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyContract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
@@ -3336,19 +3365,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_home_page_drawer.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#261#288#0" expanded="false" />
-            <element signature="e#360#387#0" expanded="false" />
-            <element signature="e#458#485#0" expanded="false" />
-            <element signature="e#558#585#0" expanded="false" />
-          </folding>
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/utils/ActivationActivityManager.java">
@@ -3365,13 +3388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="70" column="10" lean-forward="false" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/base/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1392">
@@ -3383,15 +3399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
           <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_book_black.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3399,55 +3406,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_games.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="203">
+          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="48" column="17" lean-forward="false" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
-          <folding>
-            <element signature="e#373#1909#0" expanded="false" />
-            <element signature="e#755#1177#0" expanded="false" />
-            <element signature="e#2134#9249#0" expanded="false" />
-            <element signature="e#2356#2820#0" expanded="false" />
-            <element signature="e#2834#3901#0" expanded="false" />
-            <element signature="e#3278#3522#0" expanded="false" />
-            <element signature="e#3433#3461#0" expanded="true" />
-            <element signature="e#3540#3873#0" expanded="false" />
-            <element signature="e#3750#3778#0" expanded="true" />
-            <element signature="e#3915#4925#0" expanded="false" />
-            <element signature="e#4302#4546#0" expanded="false" />
-            <element signature="e#4457#4485#0" expanded="true" />
-            <element signature="e#4564#4897#0" expanded="false" />
-            <element signature="e#4774#4802#0" expanded="true" />
-            <element signature="e#4939#5949#0" expanded="false" />
-            <element signature="e#5481#5509#0" expanded="true" />
-            <element signature="e#5798#5826#0" expanded="true" />
-            <element signature="e#6505#6533#0" expanded="true" />
-            <element signature="e#6817#6845#0" expanded="true" />
-            <element signature="e#7005#7363#0" expanded="false" />
-            <element signature="e#7248#7276#0" expanded="true" />
-            <element signature="e#7620#7648#0" expanded="true" />
-            <element signature="e#7992#8020#0" expanded="true" />
-            <element signature="e#8364#8392#0" expanded="true" />
-            <element signature="e#8736#8764#0" expanded="true" />
-            <element signature="e#9108#9136#0" expanded="true" />
-            <element signature="e#9259#9454#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/index_act_headerlayout.xml">
       <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
@@ -3464,58 +3440,171 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_book_black.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_index.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1827">
+          <caret line="70" column="58" lean-forward="false" selection-start-line="70" selection-start-column="58" selection-end-line="70" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        <state relative-caret-position="498">
+          <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#drawerLayoutSwitch#0;class#IndexActivity#0" expanded="false" />
-            <element signature="e#1335#1336#0" expanded="true" />
-            <element signature="e#1381#1382#0" expanded="true" />
+            <element signature="method#resumed#0;class#IndexActivity#0" expanded="false" />
             <element signature="method#setUpDrawerLayoutSwitchAnimator#0;class#IndexActivity#0" expanded="false" />
             <element signature="method#setUpTitle#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#newIntent#0;class#IndexActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_index.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="57" column="18" lean-forward="false" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+        <state relative-caret-position="299">
+          <caret line="46" column="39" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/index_act_headerlayout.xml">
+    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/3b8df95724110238689e75015287ab68/res/values/values.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" column="44" lean-forward="false" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-          <folding>
-            <element signature="e#1090#1118#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="279">
+          <caret line="231" column="20" lean-forward="false" selection-start-line="231" selection-start-column="20" selection-end-line="231" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_games.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_fitness_center.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_group_work.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_forum.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_location_city.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_brush.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_black_24dp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="165">
+          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="32" />
+          <folding>
+            <element signature="e#2410#2437#0" expanded="true" />
+            <element signature="e#2538#3547#0" expanded="false" />
+            <element signature="e#2924#3168#0" expanded="false" />
+            <element signature="e#3186#3519#0" expanded="false" />
+            <element signature="e#3561#4571#0" expanded="false" />
+            <element signature="e#4585#5595#0" expanded="false" />
+            <element signature="e#5609#6614#0" expanded="false" />
+            <element signature="e#6651#7009#0" expanded="false" />
+            <element signature="e#7023#8037#0" expanded="false" />
+            <element signature="e#7565#7593#0" expanded="true" />
+            <element signature="e#7886#7914#0" expanded="true" />
+            <element signature="e#8051#9056#0" expanded="false" />
+            <element signature="e#8593#8621#0" expanded="true" />
+            <element signature="e#8905#8933#0" expanded="true" />
+            <element signature="e#9070#10080#0" expanded="false" />
+            <element signature="e#9612#9640#0" expanded="true" />
+            <element signature="e#9929#9957#0" expanded="true" />
+            <element signature="e#10094#11107#0" expanded="false" />
+            <element signature="e#10636#10664#0" expanded="true" />
+            <element signature="e#10956#10984#0" expanded="true" />
+            <element signature="e#11121#12126#0" expanded="false" />
+            <element signature="e#11663#11691#0" expanded="true" />
+            <element signature="e#11975#12003#0" expanded="true" />
+            <element signature="e#12162#12357#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

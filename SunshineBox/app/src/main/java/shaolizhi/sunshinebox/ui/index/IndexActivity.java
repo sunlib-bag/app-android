@@ -26,6 +26,7 @@ public class IndexActivity extends BaseActivity {
     @BindView(R.id.index_act_toolbar)
     Toolbar toolbar;
 
+    //-----------------------------click method---------------------------------------------------//
     @OnClick(R.id.index_act_imagebuttton1)
     public void drawerLayoutSwitch() {
         int drawerLockMode = drawerLayout.getDrawerLockMode(GravityCompat.START);
@@ -37,6 +38,7 @@ public class IndexActivity extends BaseActivity {
         }
     }
 
+    //-----------------------------common method--------------------------------------------------//
     @Override
     protected int layoutId() {
         return R.layout.activity_index;
@@ -48,6 +50,12 @@ public class IndexActivity extends BaseActivity {
         setUpDrawerLayoutSwitchAnimator();
     }
 
+    @Override
+    protected void resumed() {
+
+    }
+
+    //------------------------------private method------------------------------------------------//
     private void setUpDrawerLayoutSwitchAnimator() {
         drawerLayout.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
@@ -82,11 +90,7 @@ public class IndexActivity extends BaseActivity {
         }
     }
 
-    @Override
-    protected void resumed() {
-
-    }
-
+    //------------------------------static method-------------------------------------------------//
     public static Intent newIntent(Context packageContext) {
         return new Intent(packageContext, IndexActivity.class);
     }
