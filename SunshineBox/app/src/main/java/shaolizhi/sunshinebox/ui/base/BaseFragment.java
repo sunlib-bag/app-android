@@ -27,6 +27,8 @@ public abstract class BaseFragment extends Fragment {
 
     protected Context mActivity;
 
+    protected View mFragment;
+
     protected abstract
     @LayoutRes
     int layoutId();
@@ -36,12 +38,13 @@ public abstract class BaseFragment extends Fragment {
     protected abstract void resumed();
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(layoutId(), container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, @Nullable Bundle savedInstanceState) {
+        mFragment = inflater.inflate(layoutId(), container, false);
+        return mFragment;
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         unbinder = ButterKnife.bind(this, view);
         created(savedInstanceState);

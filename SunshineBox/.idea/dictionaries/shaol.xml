@@ -12,6 +12,8 @@
       <w>leancloud</w>
       <w>linearlayout</w>
       <w>navigationview</w>
+      <w>recyclerview</w>
+      <w>refreshlayout</w>
       <w>relativelayout</w>
       <w>shaolizhi</w>
       <w>snackbar</w>

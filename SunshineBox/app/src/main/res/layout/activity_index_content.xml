@@ -11,9 +11,11 @@
         android:id="@+id/index_act_toolbar"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="#f7c319"
+        android:background="#ffffff"
+        android:elevation="5dp"
         app:contentInsetEnd="0dp"
-        app:contentInsetStart="0dp">
+        app:contentInsetStart="0dp"
+        tools:targetApi="lollipop">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -34,7 +36,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="72dp"
                 android:text="@string/index_act_string7"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 android:textSize="21sp" />
 
         </RelativeLayout>

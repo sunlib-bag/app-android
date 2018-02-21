@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
@@ -26,8 +28,11 @@ public class IndexActivity extends BaseActivity {
     @BindView(R.id.index_act_toolbar)
     Toolbar toolbar;
 
+    IndexFragment indexFragment;
+
     //-----------------------------click method---------------------------------------------------//
     @OnClick(R.id.index_act_imagebuttton1)
+
     public void drawerLayoutSwitch() {
         int drawerLockMode = drawerLayout.getDrawerLockMode(GravityCompat.START);
         if (drawerLayout.isDrawerVisible(GravityCompat.START)
@@ -48,6 +53,7 @@ public class IndexActivity extends BaseActivity {
     protected void created(Bundle bundle) {
         setUpTitle();
         setUpDrawerLayoutSwitchAnimator();
+        setUpFragment();
     }
 
     @Override
@@ -89,6 +95,15 @@ public class IndexActivity extends BaseActivity {
             actionBar.setDisplayShowTitleEnabled(false);
         }
     }
+
+    private void setUpFragment() {
+        indexFragment = IndexFragment.newInstance();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.index_act_framelayout, indexFragment);
+        fragmentTransaction.commit();
+    }
+
 
     //------------------------------static method-------------------------------------------------//
     public static Intent newIntent(Context packageContext) {
