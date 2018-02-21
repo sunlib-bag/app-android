@@ -34,6 +34,8 @@ public class App extends Application {
         //LeanCloud
         AVOSCloud.initialize(this, "CQBviH8f3TNrbRwzHfjTw7yk-gzGzoHsz", "5KnQsMhpWAAXYXvzbGV1YU62");
         AVAnalytics.enableCrashReport(this, true);
+        //开启调试日志
+        AVOSCloud.setDebugLogEnabled(true);
     }
 
     public BoxStore getBoxStore() {
