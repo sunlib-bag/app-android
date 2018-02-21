@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="165.6dp"
+        android:layout_height="115.2dp">
+
+        <ImageView
+            android:id="@+id/index_fgm_item_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/nursery_rhymes"
+            android:contentDescription="@string/index_fgm_string1" />
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/index_fgm_item_textview"
+        android:layout_width="165.6dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="阳光盒子小蝌蚪"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+</LinearLayout>
