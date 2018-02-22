@@ -12,7 +12,7 @@
             android:id="@+id/index_fgm_item_imageview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/nursery_rhymes"
+            android:background="@drawable/nursery"
             android:contentDescription="@string/index_fgm_string1" />
 
     </android.support.v7.widget.CardView>

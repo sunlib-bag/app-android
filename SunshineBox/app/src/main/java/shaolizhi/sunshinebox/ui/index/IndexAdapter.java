@@ -8,9 +8,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import shaolizhi.sunshinebox.R;
+import shaolizhi.sunshinebox.objectbox.courses.Course;
 import shaolizhi.sunshinebox.utils.ToastUtils;
 
 /**
@@ -23,9 +28,16 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
 
     private Context activity;
 
+    private List<Course> data;
+
     IndexAdapter(Context activity) {
         this.activity = activity;
         layoutInflater = LayoutInflater.from(activity);
+    }
+
+    void setCourseData(List<Course> data) {
+        this.data = data;
+        notifyDataSetChanged();
     }
 
     @Override
@@ -36,12 +48,18 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
 
     @Override
     public void onBindViewHolder(IndexViewHolder holder, int position) {
-
+        if (holder != null) {
+            holder.bind(data.get(position));
+        }
     }
 
     @Override
     public int getItemCount() {
-        return 32;
+        if (data != null) {
+            return data.size();
+        } else {
+            return 0;
+        }
     }
 
     class IndexViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -50,6 +68,26 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
 
         @BindView(R.id.index_fgm_item_textview)
         TextView textView;
+
+        void bind(Course course) {
+            textView.setText(course.getCourseName());
+            switch (course.getSubject()) {
+                case "nursery":
+                    Glide.with(activity).load(R.drawable.nursery).into(imageView);
+                    break;
+                case "music":
+                    Glide.with(activity).load(R.drawable.music).into(imageView);
+                    break;
+                case "reading":
+                    Glide.with(activity).load(R.drawable.reading).into(imageView);
+                    break;
+                case "game":
+                    Glide.with(activity).load(R.drawable.game).into(imageView);
+                    break;
+                default:
+                    break;
+            }
+        }
 
         IndexViewHolder(View itemView) {
             super(itemView);

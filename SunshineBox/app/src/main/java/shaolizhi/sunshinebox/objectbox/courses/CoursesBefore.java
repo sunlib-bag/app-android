@@ -10,7 +10,7 @@ import io.objectbox.annotation.Id;
  */
 
 @Entity
-public class Courses implements Serializable {
+public class CoursesBefore implements Serializable {
     @Id
     long id;
 

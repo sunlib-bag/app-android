@@ -4,80 +4,136 @@
   "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
   "entities": [
     {
-      "id": "1:6164863894198736358",
-      "lastPropertyId": "15:5417987096836100511",
-      "name": "Courses",
+      "id": "2:449517885836788839",
+      "lastPropertyId": "8:3321867681689686574",
+      "name": "Course",
       "properties": [
         {
-          "id": "1:8407701297652900290",
+          "id": "1:1177936450859839959",
           "name": "id"
         },
         {
-          "id": "2:805179444249896986",
+          "id": "2:9017866366187537870",
+          "name": "objectId"
+        },
+        {
+          "id": "3:2615107284239084210",
+          "name": "courseName"
+        },
+        {
+          "id": "4:3672741662364946740",
+          "name": "subject"
+        },
+        {
+          "id": "5:8659129670747758439",
+          "name": "versionCode"
+        },
+        {
+          "id": "6:4075553147556494940",
+          "name": "resourcePackageUrl"
+        },
+        {
+          "id": "7:3959316346062380771",
+          "name": "resourcePackageStorageAddress"
+        },
+        {
+          "id": "8:3321867681689686574",
+          "name": "situation"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:6885563963856737589",
+      "lastPropertyId": "14:1458549400654452294",
+      "name": "CoursesBefore",
+      "properties": [
+        {
+          "id": "1:4253127171674863866",
+          "name": "id"
+        },
+        {
+          "id": "2:1143374650349675495",
           "name": "course_id"
         },
         {
-          "id": "3:1333639119399598259",
+          "id": "3:4436392688577669670",
           "name": "course_type"
         },
         {
-          "id": "4:6974851191916261800",
+          "id": "4:2452014984806280309",
           "name": "course_video"
         },
         {
-          "id": "5:5670903184302586064",
-          "name": "course_name"
-        },
-        {
-          "id": "6:8899206602274156479",
-          "name": "last_modification_time"
-        },
-        {
-          "id": "7:1773442134669238224",
-          "name": "video_storage_address"
-        },
-        {
-          "id": "8:8338597386777231609",
-          "name": "audio_storage_address"
-        },
-        {
-          "id": "10:8867546885730053229",
+          "id": "5:8096856978423675421",
           "name": "course_audio"
         },
         {
-          "id": "11:3876495877073636504",
-          "name": "is_audio_downloaded"
+          "id": "6:406021197153436661",
+          "name": "course_name"
         },
         {
-          "id": "12:3496006556129024041",
-          "name": "is_video_downloaded"
-        },
-        {
-          "id": "13:5819983427267117150",
+          "id": "7:3086831875933730251",
           "name": "course_text"
         },
         {
-          "id": "14:1084365289759270611",
+          "id": "8:2392329404497938487",
+          "name": "last_modification_time"
+        },
+        {
+          "id": "9:2719313884024134521",
+          "name": "video_storage_address"
+        },
+        {
+          "id": "10:197724695942634680",
+          "name": "audio_storage_address"
+        },
+        {
+          "id": "11:5980728296332041919",
           "name": "text_storage_address"
         },
         {
-          "id": "15:5417987096836100511",
+          "id": "12:8502625275297506330",
+          "name": "is_audio_downloaded"
+        },
+        {
+          "id": "13:3031301450369741173",
+          "name": "is_video_downloaded"
+        },
+        {
+          "id": "14:1458549400654452294",
           "name": "is_text_downloaded"
         }
       ],
       "relations": []
     }
   ],
-  "lastEntityId": "1:6164863894198736358",
+  "lastEntityId": "3:6885563963856737589",
   "lastIndexId": "0:0",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
   "modelVersion": 4,
   "modelVersionParserMinimum": 4,
-  "retiredEntityUids": [],
+  "retiredEntityUids": [
+    6164863894198736358
+  ],
   "retiredIndexUids": [],
   "retiredPropertyUids": [
-    4600280549789948739
+    4600280549789948739,
+    8407701297652900290,
+    805179444249896986,
+    1333639119399598259,
+    6974851191916261800,
+    5670903184302586064,
+    8899206602274156479,
+    1773442134669238224,
+    8338597386777231609,
+    8867546885730053229,
+    3876495877073636504,
+    3496006556129024041,
+    5819983427267117150,
+    1084365289759270611,
+    5417987096836100511
   ],
   "retiredRelationUids": [],
   "version": 1

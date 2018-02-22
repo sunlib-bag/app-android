@@ -30,6 +30,8 @@ public class IndexActivity extends BaseActivity {
 
     IndexFragment indexFragment;
 
+    CourseTypeSwitcher courseTypeSwitcher;
+
     //-----------------------------click method---------------------------------------------------//
     @OnClick(R.id.index_act_imagebuttton1)
 
@@ -97,13 +99,18 @@ public class IndexActivity extends BaseActivity {
     }
 
     private void setUpFragment() {
-        indexFragment = IndexFragment.newInstance();
+        courseTypeSwitcher = indexFragment;
         FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.index_act_framelayout, indexFragment);
-        fragmentTransaction.commit();
+        if (fragmentManager.findFragmentById(R.id.index_act_framelayout) instanceof IndexFragment) {
+            indexFragment = (IndexFragment) fragmentManager.findFragmentById(R.id.index_act_framelayout);
+        }
+        if (indexFragment == null) {
+            indexFragment = IndexFragment.newInstance();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.index_act_framelayout, indexFragment);
+            fragmentTransaction.commit();
+        }
     }
-
 
     //------------------------------static method-------------------------------------------------//
     public static Intent newIntent(Context packageContext) {

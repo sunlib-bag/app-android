@@ -3,19 +3,21 @@ package shaolizhi.sunshinebox.ui.index;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+
+import java.util.List;
 
 import butterknife.BindView;
 import shaolizhi.sunshinebox.R;
+import shaolizhi.sunshinebox.objectbox.courses.Course;
 import shaolizhi.sunshinebox.ui.base.BaseFragment;
 import shaolizhi.sunshinebox.widget.MyRefreshLayout;
 
 /**
- *
  * Created by 邵励治 on 2018/2/12.
  */
 
-public class IndexFragment extends BaseFragment implements IndexContract.View, MyRefreshLayout.OnRefreshListener {
+public class IndexFragment extends BaseFragment implements IndexContract.View, MyRefreshLayout.OnRefreshListener, CourseTypeSwitcher {
+
 
     @BindView(R.id.index_fgm_my_refreshlayout)
     MyRefreshLayout refreshLayout;
@@ -23,9 +25,48 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
     @BindView(R.id.index_fgm_recyclerview)
     RecyclerView recyclerView;
 
-    IndexAdapter indexAdapter;
+    private IndexAdapter indexAdapter;
 
-    IndexContract.Presenter presenter;
+    private IndexContract.Presenter presenter;
+
+    private IndexContract.CourseType courseType;
+
+    @Override
+    public void switchToNursery() {
+        courseType = IndexContract.CourseType.NURSERY;
+    }
+
+    @Override
+    public void switchToMusic() {
+        courseType = IndexContract.CourseType.MUSIC;
+    }
+
+    @Override
+    public void switchToReading() {
+        courseType = IndexContract.CourseType.READING;
+    }
+
+    @Override
+    public void switchToGame() {
+        courseType = IndexContract.CourseType.GAME;
+    }
+
+    private void setUpRecyclerView() {
+        indexAdapter = new IndexAdapter(mActivity);
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 4));
+        recyclerView.setAdapter(indexAdapter);
+    }
+
+    @Override
+    public IndexContract.CourseType getCourseType() {
+        return courseType;
+    }
+
+    @Override
+    public void refreshRecyclerView(List<Course> courseList) {
+        indexAdapter.setCourseData(courseList);
+    }
+
 
     static IndexFragment newInstance() {
         return new IndexFragment();
@@ -49,18 +90,25 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
 
     @Override
     public void setUpView() {
-        //set up recyclerview
-        indexAdapter = new IndexAdapter(mActivity);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 4));
-        recyclerView.setAdapter(indexAdapter);
-
-        //set up refreshlayout
-        refreshLayout.setOnRefreshListener(this);
+        setUpRefreshLayout();
+        setUpCourseType();
+        setUpRecyclerView();
     }
 
     @Override
     public void onRefresh() {
-        Log.e("FUCK", "FUCK");
+        presenter.tryToLoadDataIntoRecyclerView();
         refreshLayout.setRefreshing(false);
     }
+
+    private void setUpCourseType() {
+        if (courseType == null) {
+            courseType = IndexContract.CourseType.NURSERY;
+        }
+    }
+
+    private void setUpRefreshLayout() {
+        refreshLayout.setOnRefreshListener(this);
+    }
+
 }
