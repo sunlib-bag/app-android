@@ -1,5 +1,7 @@
 package shaolizhi.sunshinebox.ui.index;
 
+import android.app.Activity;
+
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
 
@@ -22,7 +24,11 @@ class IndexContract {
 
         CourseType getCourseType();
 
-        void refreshRecyclerView(List<Course> courseList);
+        void loadDataToRecyclerView(List<Course> courseList);
+
+        void stopRefresh();
+
+        Activity getFuckingActivity();
     }
 
     interface Presenter extends BasePresenter {
@@ -32,16 +38,18 @@ class IndexContract {
     interface Model {
         void requestDataFromNet(CourseType courseType);
 
-        void requestDataFromDatabase();
+        void updateDatabase(List<AVObject> dataFromNet, CourseType courseType);
 
-        boolean isThereAnyDataInTheDatabase(CourseType courseType);
-
-        void storedInTheDatabase();
+        void requestDataFromDatabase(CourseType courseType);
     }
 
     interface CallBack {
-        void requestDataFromNetSuccess(List<AVObject> list, CourseType courseType);
+        void requestDataFromNetSuccess(List<AVObject> dataFromNet, CourseType courseType);
 
         void requestDataFromNetFailure(AVException e);
+
+        void updateDatabaseSuccess();
+
+        void requestDataFromDatabaseSuccess(List<Course> dataFromDatabase);
     }
 }

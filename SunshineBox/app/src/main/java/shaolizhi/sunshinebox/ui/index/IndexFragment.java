@@ -1,5 +1,6 @@
 package shaolizhi.sunshinebox.ui.index;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,7 +18,6 @@ import shaolizhi.sunshinebox.widget.MyRefreshLayout;
  */
 
 public class IndexFragment extends BaseFragment implements IndexContract.View, MyRefreshLayout.OnRefreshListener, CourseTypeSwitcher {
-
 
     @BindView(R.id.index_fgm_my_refreshlayout)
     MyRefreshLayout refreshLayout;
@@ -63,8 +63,18 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
     }
 
     @Override
-    public void refreshRecyclerView(List<Course> courseList) {
+    public void loadDataToRecyclerView(List<Course> courseList) {
         indexAdapter.setCourseData(courseList);
+    }
+
+    @Override
+    public void stopRefresh() {
+        refreshLayout.setRefreshing(false);
+    }
+
+    @Override
+    public Activity getFuckingActivity() {
+        return (Activity) mActivity;
     }
 
 
@@ -98,7 +108,6 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
     @Override
     public void onRefresh() {
         presenter.tryToLoadDataIntoRecyclerView();
-        refreshLayout.setRefreshing(false);
     }
 
     private void setUpCourseType() {

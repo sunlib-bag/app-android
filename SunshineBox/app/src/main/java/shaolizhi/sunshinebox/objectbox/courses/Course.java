@@ -5,6 +5,7 @@ import io.objectbox.annotation.Id;
 
 /**
  * Created by 邵励治 on 2018/2/22.
+
  */
 
 @Entity
@@ -25,19 +26,11 @@ public class Course {
      */
     int situation;
 
-    public int getSituation() {
-        return situation;
-    }
-
-    public void setSituation(int situation) {
-        this.situation = situation;
-    }
-
     int versionCode;
 
     String resourcePackageUrl;
 
-    String resourcePackageStorageAddress;
+    String resourceStorageAddress;
 
     public long getId() {
         return id;
@@ -71,6 +64,14 @@ public class Course {
         this.subject = subject;
     }
 
+    public int getSituation() {
+        return situation;
+    }
+
+    public void setSituation(int situation) {
+        this.situation = situation;
+    }
+
     public int getVersionCode() {
         return versionCode;
     }
@@ -87,11 +88,11 @@ public class Course {
         this.resourcePackageUrl = resourcePackageUrl;
     }
 
-    public String getResourcePackageStorageAddress() {
-        return resourcePackageStorageAddress;
+    public String getResourceStorageAddress() {
+        return resourceStorageAddress;
     }
 
-    public void setResourcePackageStorageAddress(String resourcePackageStorageAddress) {
-        this.resourcePackageStorageAddress = resourcePackageStorageAddress;
+    public void setResourceStorageAddress(String resourceStorageAddress) {
+        this.resourceStorageAddress = resourceStorageAddress;
     }
 }

@@ -1,28 +1,34 @@
 package shaolizhi.sunshinebox.objectbox.courses;
 
+import android.app.Activity;
+
+import io.objectbox.Box;
+import io.objectbox.BoxStore;
+import shaolizhi.sunshinebox.utils.App;
+
 /**
  * 由邵励治于2017/12/27创造.
  */
 
-public class CoursesUtils {
-//    private static CoursesUtils coursesUtils;
-//
-//    public static CoursesUtils getInstance() {
-//        if (coursesUtils == null) {
-//            coursesUtils = new CoursesUtils();
-//        }
-//        return coursesUtils;
-//    }
-//
-//    private CoursesUtils() {
-//
-//    }
-//
-//    public Box<CoursesBefore> getCoursesBox(Activity activity) {
-//        BoxStore boxStore = ((App) activity.getApplication()).getBoxStore();
-//        return boxStore.boxFor(CoursesBefore.class);
-//    }
-//
+public class CourseUtils {
+    private static CourseUtils courseUtils;
+
+    public static CourseUtils getInstance() {
+        if (courseUtils == null) {
+            courseUtils = new CourseUtils();
+        }
+        return courseUtils;
+    }
+
+    private CourseUtils() {
+
+    }
+
+    public Box<Course> getCourseBox(Activity activity) {
+        BoxStore boxStore = ((App) activity.getApplication()).getBoxStore();
+        return boxStore.boxFor(Course.class);
+    }
+
 //    //数据库中是否存在类型为courseType的数据
 //    public Boolean isCoursesBoxHasData(Box<CoursesBefore> coursesBox, String courseType) {
 //        if (coursesBox != null) {

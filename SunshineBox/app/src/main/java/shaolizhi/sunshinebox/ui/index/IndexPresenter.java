@@ -1,11 +1,8 @@
 package shaolizhi.sunshinebox.ui.index;
 
-import android.util.Log;
-
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import shaolizhi.sunshinebox.objectbox.courses.Course;
@@ -21,61 +18,48 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
 
     private IndexContract.Model model;
 
+    private IndexContract.CourseType courseType;
+
     IndexPresenter(IndexContract.View view) {
         this.view = view;
-        model = new IndexModel(this);
+        model = new IndexModel(this, view.getFuckingActivity());
     }
 
     @Override
     public void start() {
         view.setUpView();
+        courseType = null;
         tryToLoadDataIntoRecyclerView();
     }
 
+    //1:request net
     @Override
     public void tryToLoadDataIntoRecyclerView() {
-        Log.e("FUCK", "tryToLoadDataIntoRecyclerView");
-        model.requestDataFromNet(view.getCourseType());
+        courseType = view.getCourseType();
+        model.requestDataFromNet(courseType);
     }
 
+    //2:get data from net, update net-data to database
     @Override
-    public void requestDataFromNetSuccess(List<AVObject> list, IndexContract.CourseType courseType) {
-        Log.e("FUCK", "requestDataFromNetSuccess");
-        if (list == null) {
-            Log.e("FUCK", "list is null");
-        } else {
-            Log.e("FUCK", "list is not null");
-            Log.e("FUCK", "list's size" + list.size());
-        }
-        List<Course> courses = new ArrayList<>();
-        if (list != null) {
-            for (AVObject avObject : list) {
-                Course course = new Course();
-                course.setObjectId(avObject.getObjectId());
-                course.setCourseName(avObject.getString("name"));
-                switch (courseType) {
-                    case READING:
-                        course.setSubject("reading");
-                        break;
-                    case MUSIC:
-                        course.setSubject("music");
-                        break;
-                    case GAME:
-                        course.setSubject("game");
-                        break;
-                    case NURSERY:
-                        course.setSubject("nursery");
-                        break;
-                }
-                courses.add(course);
-            }
-        }
-        view.refreshRecyclerView(courses);
+    public void requestDataFromNetSuccess(List<AVObject> dataFromNet, IndexContract.CourseType courseType) {
+        model.updateDatabase(dataFromNet, courseType);
     }
 
     @Override
     public void requestDataFromNetFailure(AVException e) {
-        Log.e("FUCK", "requestDataFromNetFailure");
         ToastUtils.showToast(e.getMessage());
+    }
+
+    //3:request database
+    @Override
+    public void updateDatabaseSuccess() {
+        model.requestDataFromDatabase(courseType);
+    }
+
+    //4:get data from database, show it in user-interface
+    @Override
+    public void requestDataFromDatabaseSuccess(List<Course> dataFromDatabase) {
+        view.loadDataToRecyclerView(dataFromDatabase);
+        view.stopRefresh();
     }
 }
