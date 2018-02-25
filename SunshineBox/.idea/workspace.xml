@@ -21,14 +21,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="IndexModel：完成了数据库同步，并可以展示数据">
+    <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/index_act_headerlayout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/index_act_headerlayout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+            <state relative-caret-position="312">
+              <caret line="148" column="5" lean-forward="false" selection-start-line="148" selection-start-column="5" selection-end-line="148" selection-end-column="5" />
               <folding>
                 <element signature="method#drawerLayoutSwitch#0;class#IndexActivity#0" expanded="false" />
                 <element signature="method#created#0;class#IndexActivity#0" expanded="false" />
@@ -138,6 +133,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="IndexModel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="125" column="31" lean-forward="false" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#requestDataFromNetResult#0;class#IndexModel#0" expanded="false" />
+                <element signature="method#requestDataFromDatabase#0;class#IndexModel#0" expanded="false" />
+                <element signature="method#initObjectBox#0;class#IndexModel#0" expanded="false" />
+                <element signature="method#printAllDataInServer#0;class#IndexModel#0" expanded="false" />
+                <element signature="method#printAllDataInDatabase#0;class#IndexModel#0" expanded="false" />
+                <element signature="method#queryToLeanCloud#0;class#IndexModel#0" expanded="false" />
+                <element signature="method#getQuerySubject#0;class#IndexModel#0" expanded="false" />
+                <element signature="method#getQueryPublished#0;class#IndexModel#0" expanded="false" />
+                <element signature="method#getDataFromDatabase#0;class#IndexModel#0" expanded="false" />
+                <element signature="method#sortCourseListByObjectId#0;class#SynchronizeDatabase#0;class#IndexModel#0" expanded="false" />
+                <element signature="method#getSubjectByCourseType#0;class#SynchronizeDatabase#0;class#IndexModel#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -180,8 +198,8 @@
       <find>READ_PHONE_STATE</find>
       <find>READ_LOGS</find>
       <find>view.getCourseType</find>
-      <find>courseTypeSwitcher</find>
       <find>index_act_textview1</find>
+      <find>courseTypeSwitcher</find>
     </findStrings>
     <replaceStrings>
       <replace>IndexActivity</replace>
@@ -2045,19 +2063,18 @@
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexContract.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexPresenter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/index_act_headerlayout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="2576" />
-    <option name="height" value="1066" />
+    <option name="x" value="1273" />
+    <option name="width" value="1294" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -2308,7 +2325,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519589928579" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519593672271" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2355,7 +2372,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519589928579" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519593672272" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2537,7 +2554,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519589928580" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519593672273" />
       </method>
     </configuration>
     <list size="1">
@@ -2575,13 +2592,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511493005850</updated>
-    </task>
-    <task id="LOCAL-00059" summary="防止重复创建Presenter">
-      <created>1515073961274</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1515073961274</updated>
     </task>
     <task id="LOCAL-00060" summary="1. 修复了在没网情况下就无法显示的BUG&#10;2. 给CourseActivity添加了一个WebView，用于展示教案，目前放了一个固定URL用于演示">
       <created>1515117959723</created>
@@ -2919,7 +2929,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519587551676</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="IndexActivity：完成了点击事件，发现了deleteList的一个BUG">
+      <created>1519589968096</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1519589968096</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2932,7 +2949,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
+    <frame x="1273" y="0" width="1294" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7174393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2947,7 +2964,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5194805" sideWeight="0.4964229" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49343544" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5819936" sideWeight="0.49403816" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6829004" sideWeight="0.49403816" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.50656456" order="7" side_tool="true" content_ui="tabs" />
@@ -3001,7 +3018,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Commit Test" />
     <MESSAGE value="继承了LeanCloud的Demo" />
     <MESSAGE value="LeanCloud初始化" />
     <MESSAGE value="MainActivity：自动登录功能重构为LeanCloud" />
@@ -3026,7 +3042,8 @@
     <MESSAGE value="做到了至关重要的“更新数据库操作”，这是整个“同步操作”的核心，由于本软件是一款追求速度的软件，故“更新数据库操作”我希望仔细的设计研究一下" />
     <MESSAGE value="IndexModel：完成了IndexModel中最关键的updateDatabase函数" />
     <MESSAGE value="IndexModel：完成了数据库同步，并可以展示数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="IndexModel：完成了数据库同步，并可以展示数据" />
+    <MESSAGE value="IndexActivity：完成了点击事件，发现了deleteList的一个BUG" />
+    <option name="LAST_COMMIT_MESSAGE" value="IndexActivity：完成了点击事件，发现了deleteList的一个BUG" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3325,32 +3342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="73" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#requestDataFromNet#0;class#IndexModel#0" expanded="false" />
-            <element signature="method#requestDataFromNetResult#0;class#IndexModel#0" expanded="false" />
-            <element signature="method#requestDataFromDatabase#0;class#IndexModel#0" expanded="false" />
-            <element signature="method#initObjectBox#0;class#IndexModel#0" expanded="false" />
-            <element signature="method#printAllDataInServer#0;class#IndexModel#0" expanded="false" />
-            <element signature="method#printAllDataInDatabase#0;class#IndexModel#0" expanded="false" />
-            <element signature="method#queryToLeanCloud#0;class#IndexModel#0" expanded="false" />
-            <element signature="method#getQueryOrderByDescendingObjectId#0;class#IndexModel#0" expanded="false" />
-            <element signature="method#getQuerySubject#0;class#IndexModel#0" expanded="false" />
-            <element signature="method#getQueryPublished#0;class#IndexModel#0" expanded="false" />
-            <element signature="method#getDataFromDatabase#0;class#IndexModel#0" expanded="false" />
-            <element signature="class#SynchronizeDatabase#0;class#IndexModel#0" expanded="false" />
-            <element signature="method#sortCourseListByObjectId#0;class#SynchronizeDatabase#0;class#IndexModel#0" expanded="false" />
-            <element signature="e#10267#10483#0" expanded="true" />
-            <element signature="e#10482#10483#0" expanded="true" />
-            <element signature="method#getSubjectByCourseType#0;class#SynchronizeDatabase#0;class#IndexModel#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/ZipBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -3420,7 +3411,7 @@
         <state relative-caret-position="121">
           <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
-            <element signature="e#2789#2790#0" expanded="true" />
+            <element signature="e#2789#2790#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3439,8 +3430,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+        <state relative-caret-position="312">
+          <caret line="148" column="5" lean-forward="false" selection-start-line="148" selection-start-column="5" selection-end-line="148" selection-end-column="5" />
           <folding>
             <element signature="method#drawerLayoutSwitch#0;class#IndexActivity#0" expanded="false" />
             <element signature="method#created#0;class#IndexActivity#0" expanded="false" />
@@ -3448,6 +3439,27 @@
             <element signature="method#setUpDrawerLayoutSwitchAnimator#0;class#IndexActivity#0" expanded="false" />
             <element signature="method#setUpTitle#0;class#IndexActivity#0" expanded="false" />
             <element signature="method#newIntent#0;class#IndexActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="125" column="31" lean-forward="false" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#requestDataFromNetResult#0;class#IndexModel#0" expanded="false" />
+            <element signature="method#requestDataFromDatabase#0;class#IndexModel#0" expanded="false" />
+            <element signature="method#initObjectBox#0;class#IndexModel#0" expanded="false" />
+            <element signature="method#printAllDataInServer#0;class#IndexModel#0" expanded="false" />
+            <element signature="method#printAllDataInDatabase#0;class#IndexModel#0" expanded="false" />
+            <element signature="method#queryToLeanCloud#0;class#IndexModel#0" expanded="false" />
+            <element signature="method#getQuerySubject#0;class#IndexModel#0" expanded="false" />
+            <element signature="method#getQueryPublished#0;class#IndexModel#0" expanded="false" />
+            <element signature="method#getDataFromDatabase#0;class#IndexModel#0" expanded="false" />
+            <element signature="method#sortCourseListByObjectId#0;class#SynchronizeDatabase#0;class#IndexModel#0" expanded="false" />
+            <element signature="method#getSubjectByCourseType#0;class#SynchronizeDatabase#0;class#IndexModel#0" expanded="false" />
           </folding>
         </state>
       </provider>

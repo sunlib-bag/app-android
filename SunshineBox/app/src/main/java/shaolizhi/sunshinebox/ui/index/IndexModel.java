@@ -123,7 +123,7 @@ class IndexModel implements IndexContract.Model {
     @NonNull
     private AVQuery<AVObject> getQueryOrderByDescendingObjectId(AVQuery<AVObject> query1, AVQuery<AVObject> query2) {
         AVQuery<AVObject> query = AVQuery.and(Arrays.asList(query1, query2));
-        query.orderByDescending("objectId");
+        query.orderByAscending("objectId");
         query.include("package");
         return query;
     }
@@ -215,33 +215,36 @@ class IndexModel implements IndexContract.Model {
             deleteList = new ArrayList<>();
             updateList = new ArrayList<>();
             for (Course course : dataFromDatabase) {
-                //course.getObjectId < minObjectIdFromNet
-                for (AVObject avObject : dataFromNet) {
-                    if (course.getObjectId().compareTo(avObject.getObjectId()) == 0) {
-                        //database中的数据在net中找到了
-                        //通过对比versionCode来判断需不需要加入更新列表
-                        if (course.getVersionCode() != avObject.getNumber("version_code").intValue()) {
-                            course.setCourseName(avObject.getString("name"));
-                            switch (course.getSituation()) {
-                                case 0:
-                                    break;
-                                case 1:
-                                    break;
-                                case 2:
-                                    course.setSituation(1);
-                                    break;
-                                default:
-                                    break;
+                if (course.getObjectId().compareTo(dataFromNet.get(dataFromNet.size() - 1).getObjectId()) > 0) {
+                    deleteList.add(course);
+                } else {
+                    for (AVObject avObject : dataFromNet) {
+                        if (course.getObjectId().compareTo(avObject.getObjectId()) == 0) {
+                            //database中的数据在net中找到了
+                            //通过对比versionCode来判断需不需要加入更新列表
+                            if (course.getVersionCode() != avObject.getNumber("version_code").intValue()) {
+                                course.setCourseName(avObject.getString("name"));
+                                switch (course.getSituation()) {
+                                    case 0:
+                                        break;
+                                    case 1:
+                                        break;
+                                    case 2:
+                                        course.setSituation(1);
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                course.setVersionCode(avObject.getNumber("version_code").intValue());
+                                course.setResourcePackageUrl(avObject.getAVFile("package").getUrl());
+                                updateList.add(course);
                             }
-                            course.setVersionCode(avObject.getNumber("version_code").intValue());
-                            course.setResourcePackageUrl(avObject.getAVFile("package").getUrl());
-                            updateList.add(course);
+                            break;
                         }
-                        break;
-                    }
-                    if (course.getObjectId().compareTo(avObject.getObjectId()) < 0) {
-                        deleteList.add(course);
-                        break;
+                        if (course.getObjectId().compareTo(avObject.getObjectId()) < 0) {
+                            deleteList.add(course);
+                            break;
+                        }
                     }
                 }
             }
