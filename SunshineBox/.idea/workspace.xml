@@ -23,7 +23,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,14 +69,23 @@
       <file leaf-file-name="IndexFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-894">
-              <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+            <state relative-caret-position="430">
+              <caret line="74" column="8" lean-forward="false" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#loadDataToRecyclerView#0;class#IndexFragment#0" expanded="false" />
-                <element signature="method#stopRefresh#0;class#IndexFragment#0" expanded="false" />
                 <element signature="method#created#0;class#IndexFragment#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexContract.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexContract.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,20 +133,31 @@
       <file leaf-file-name="IndexPresenter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+            <state relative-caret-position="244">
+              <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="44" />
               <folding>
                 <element signature="method#IndexPresenter#0;class#IndexPresenter#0" expanded="false" />
+                <element signature="method#requestDataFromDatabaseSuccess#0;class#IndexPresenter#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexModel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="678">
+              <caret line="103" column="50" lean-forward="false" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="125" column="31" lean-forward="false" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
+            <state relative-caret-position="288">
+              <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#requestDataFromNetResult#0;class#IndexModel#0" expanded="false" />
@@ -2060,14 +2080,14 @@
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/objectbox/courses/Course.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/objectbox/courses/CoursesUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/objectbox/courses/CourseUtils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexContract.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexPresenter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/index_act_headerlayout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexContract.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexPresenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" />
       </list>
     </option>
   </component>
@@ -2325,7 +2345,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519593672271" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519594400755" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2372,7 +2392,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519593672272" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519594400755" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2554,7 +2574,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519593672273" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519594400756" />
       </method>
     </configuration>
     <list size="1">
@@ -2592,20 +2612,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511493005850</updated>
-    </task>
-    <task id="LOCAL-00060" summary="1. 修复了在没网情况下就无法显示的BUG&#10;2. 给CourseActivity添加了一个WebView，用于展示教案，目前放了一个固定URL用于演示">
-      <created>1515117959723</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1515117959724</updated>
-    </task>
-    <task id="LOCAL-00061" summary="CourseActivity：检查数据库，若无资源供下载则在按钮上提示“无音频资源”或“无视频资源”">
-      <created>1515405558994</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1515405558994</updated>
     </task>
     <task id="LOCAL-00062" summary="CourseActivity：视频下载的进度条">
       <created>1515407743252</created>
@@ -2936,7 +2942,21 @@
       <option name="project" value="LOCAL" />
       <updated>1519589968096</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="IndexModel：解决了deleteList的BUG">
+      <created>1519593716000</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1519593716000</updated>
+    </task>
+    <task id="LOCAL-00110" summary="IndexPresenter：优化进度条的显示位置">
+      <created>1519594209059</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1519594209059</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3018,8 +3038,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="继承了LeanCloud的Demo" />
-    <MESSAGE value="LeanCloud初始化" />
     <MESSAGE value="MainActivity：自动登录功能重构为LeanCloud" />
     <MESSAGE value="PhoneNumberVerifyActivity：发送验证码功能重构完成" />
     <MESSAGE value="PhoneNumberVerifyActivity：验证码输入检测规则改变" />
@@ -3043,7 +3061,9 @@
     <MESSAGE value="IndexModel：完成了IndexModel中最关键的updateDatabase函数" />
     <MESSAGE value="IndexModel：完成了数据库同步，并可以展示数据" />
     <MESSAGE value="IndexActivity：完成了点击事件，发现了deleteList的一个BUG" />
-    <option name="LAST_COMMIT_MESSAGE" value="IndexActivity：完成了点击事件，发现了deleteList的一个BUG" />
+    <MESSAGE value="IndexModel：解决了deleteList的BUG" />
+    <MESSAGE value="IndexPresenter：优化进度条的显示位置" />
+    <option name="LAST_COMMIT_MESSAGE" value="IndexPresenter：优化进度条的显示位置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3281,14 +3301,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/base/BasePresenter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -3334,14 +3346,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2476">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/ZipBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -3349,29 +3353,6 @@
           <folding>
             <element signature="docComment;field#id#0;class#ZipBean#0" expanded="false" />
             <element signature="class#MaterialsBean#0;class#ZipBean#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding>
-            <element signature="method#IndexPresenter#0;class#IndexPresenter#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-894">
-          <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#loadDataToRecyclerView#0;class#IndexFragment#0" expanded="false" />
-            <element signature="method#stopRefresh#0;class#IndexFragment#0" expanded="false" />
-            <element signature="method#created#0;class#IndexFragment#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3443,10 +3424,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="74" column="8" lean-forward="false" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#loadDataToRecyclerView#0;class#IndexFragment#0" expanded="false" />
+            <element signature="method#created#0;class#IndexFragment#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="125" column="31" lean-forward="false" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
+        <state relative-caret-position="288">
+          <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#requestDataFromNetResult#0;class#IndexModel#0" expanded="false" />
@@ -3461,6 +3462,25 @@
             <element signature="method#sortCourseListByObjectId#0;class#SynchronizeDatabase#0;class#IndexModel#0" expanded="false" />
             <element signature="method#getSubjectByCourseType#0;class#SynchronizeDatabase#0;class#IndexModel#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="44" />
+          <folding>
+            <element signature="method#IndexPresenter#0;class#IndexPresenter#0" expanded="false" />
+            <element signature="method#requestDataFromDatabaseSuccess#0;class#IndexPresenter#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="103" column="50" lean-forward="false" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>

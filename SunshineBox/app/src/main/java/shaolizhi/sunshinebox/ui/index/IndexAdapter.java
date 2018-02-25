@@ -20,7 +20,6 @@ import shaolizhi.sunshinebox.utils.ToastUtils;
 
 /**
  * Created by 邵励治 on 2018/2/21.
-
  */
 
 public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHolder> {
@@ -64,6 +63,9 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
     }
 
     class IndexViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
+        Course course;
+
         @BindView(R.id.index_fgm_item_imageview)
         ImageView imageView;
 
@@ -71,6 +73,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
         TextView textView;
 
         void bind(Course course) {
+            this.course = course;
             textView.setText(course.getCourseName());
             switch (course.getSubject()) {
                 case "nursery":
@@ -98,7 +101,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
 
         @Override
         public void onClick(View v) {
-            ToastUtils.showToast("点击！");
+            ToastUtils.showToast("Package URL:" + course.getResourcePackageUrl());
         }
     }
 }
