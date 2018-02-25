@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "2:449517885836788839",
-      "lastPropertyId": "8:3321867681689686574",
+      "lastPropertyId": "9:785553761997052288",
       "name": "Course",
       "properties": [
         {
@@ -33,12 +33,12 @@
           "name": "resourcePackageUrl"
         },
         {
-          "id": "7:3959316346062380771",
-          "name": "resourcePackageStorageAddress"
-        },
-        {
           "id": "8:3321867681689686574",
           "name": "situation"
+        },
+        {
+          "id": "9:785553761997052288",
+          "name": "resourceStorageAddress"
         }
       ],
       "relations": []
@@ -133,7 +133,8 @@
     3496006556129024041,
     5819983427267117150,
     1084365289759270611,
-    5417987096836100511
+    5417987096836100511,
+    3959316346062380771
   ],
   "retiredRelationUids": [],
   "version": 1

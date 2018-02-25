@@ -2,6 +2,7 @@ package shaolizhi.sunshinebox.ui.index;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
@@ -23,7 +24,6 @@ import shaolizhi.sunshinebox.objectbox.courses.Course_;
 
 /**
  * Created by 邵励治 on 2018/2/22.
-
  */
 
 class IndexModel implements IndexContract.Model {
@@ -54,25 +54,54 @@ class IndexModel implements IndexContract.Model {
         }
     }
 
+
     @Override
     public void updateDatabase(List<AVObject> dataFromNet, IndexContract.CourseType courseType) {
+
         //获取CourseType类型的数据库中数据
         List<Course> dataFromDatabase = getDataFromDatabase(courseType);
+
+        printAllDataInServer(dataFromNet);
+        printAllDataInDatabase(courseType);
+
         SynchronizeDatabase synchronizeDatabase = new SynchronizeDatabase(dataFromNet, dataFromDatabase, courseType).invoke();
         List<Course> deleteList = synchronizeDatabase.getDeleteList();
         List<Course> updateList = synchronizeDatabase.getUpdateList();
         List<Course> insertList = synchronizeDatabase.getInsertList();
+        Log.e("deleteList", String.valueOf(deleteList.size()));
+        Log.e("updateList", String.valueOf(updateList.size()));
+        Log.e("insertList", String.valueOf(insertList.size()));
         courseBox.remove(deleteList);
         courseBox.put(updateList);
         courseBox.put(insertList);
+        callBack.updateDatabaseSuccess();
     }
 
     @Override
     public void requestDataFromDatabase(IndexContract.CourseType courseType) {
-
+        callBack.requestDataFromDatabaseSuccess(getDataFromDatabase(courseType));
     }
 
     //--------------------------------Dirty Socks：臭袜子--------------------------------------------//
+    //utils
+    private void printAllDataInServer(List<AVObject> list) {
+        if (list.isEmpty()) {
+            Log.e("Server", "Empty");
+        } else {
+            Log.e("Server", "have: " + String.valueOf(list.size()) + " item");
+        }
+    }
+
+    //utils
+    private void printAllDataInDatabase(IndexContract.CourseType courseType) {
+        List<Course> courseList = getDataFromDatabase(courseType);
+        if (courseList.isEmpty()) {
+            Log.e("Database", "Empty");
+        } else {
+            Log.e("Database", "have: " + String.valueOf(courseList.size()) + " item");
+        }
+    }
+
     //for requestDataFromNet
     private void queryToLeanCloud(final IndexContract.CourseType courseType, AVQuery<AVObject> query) {
         query.findInBackground(new FindCallback<AVObject>() {
@@ -214,14 +243,24 @@ class IndexModel implements IndexContract.Model {
                 }
             }
 
-            for (AVObject avObject : dataFromNet) {
-                for (Course course : dataFromDatabase) {
-                    if (avObject.getObjectId().compareTo(course.getObjectId()) < 0) {
-                        insertList.add(createCourseForDatabase(getSubjectByCourseType(courseType), avObject));
-                        break;
+            if (dataFromDatabase.isEmpty()) {
+                for (AVObject avObject : dataFromNet) {
+                    insertList.add(createCourseForDatabase(getSubjectByCourseType(courseType), avObject));
+                }
+            } else {
+                for (AVObject avObject : dataFromNet) {
+                    for (Course course : dataFromDatabase) {
+                        if (avObject.getObjectId().compareTo(course.getObjectId()) == 0) {
+                            break;
+                        }
+                        if (avObject.getObjectId().compareTo(course.getObjectId()) < 0) {
+                            insertList.add(createCourseForDatabase(getSubjectByCourseType(courseType), avObject));
+                            break;
+                        }
                     }
                 }
             }
+
             return this;
         }
 
@@ -239,6 +278,7 @@ class IndexModel implements IndexContract.Model {
             Course course = new Course();
             course.setId(0);
             course.setObjectId(avObject.getObjectId());
+            course.setCourseName(avObject.getString("name"));
             course.setSubject(subject);
             course.setSituation(0);
             course.setVersionCode(avObject.getNumber("version_code").intValue());
