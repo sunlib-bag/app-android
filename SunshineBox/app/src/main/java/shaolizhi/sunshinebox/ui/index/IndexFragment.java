@@ -18,7 +18,6 @@ import shaolizhi.sunshinebox.widget.MyRefreshLayout;
  */
 
 public class IndexFragment extends BaseFragment implements IndexContract.View, MyRefreshLayout.OnRefreshListener, CourseTypeSwitcher {
-
     @BindView(R.id.index_fgm_my_refreshlayout)
     MyRefreshLayout refreshLayout;
 
@@ -34,21 +33,25 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
     @Override
     public void switchToNursery() {
         courseType = IndexContract.CourseType.NURSERY;
+        presenter.tryToLoadDataIntoRecyclerView();
     }
 
     @Override
     public void switchToMusic() {
         courseType = IndexContract.CourseType.MUSIC;
+        presenter.tryToLoadDataIntoRecyclerView();
     }
 
     @Override
     public void switchToReading() {
         courseType = IndexContract.CourseType.READING;
+        presenter.tryToLoadDataIntoRecyclerView();
     }
 
     @Override
     public void switchToGame() {
         courseType = IndexContract.CourseType.GAME;
+        presenter.tryToLoadDataIntoRecyclerView();
     }
 
     private void setUpRecyclerView() {

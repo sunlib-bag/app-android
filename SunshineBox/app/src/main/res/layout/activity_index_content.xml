@@ -70,6 +70,7 @@
                 android:textSize="16sp" />
 
             <LinearLayout
+                android:id="@+id/index_act_linearlayout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -85,15 +86,17 @@
                     android:src="@drawable/ic_child_care" />
 
                 <TextView
+                    android:id="@+id/index_act_textview1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
                     android:text="@string/index_act_string10"
-                    android:textColor="#666666"
+                    android:textColor="#f09038"
                     android:textSize="19sp" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/index_act_linearlayout2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -109,6 +112,7 @@
                     android:src="@drawable/ic_music_note" />
 
                 <TextView
+                    android:id="@+id/index_act_textview2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
@@ -118,6 +122,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/index_act_linearlayout3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -133,6 +138,7 @@
                     android:src="@drawable/ic_book_black" />
 
                 <TextView
+                    android:id="@+id/index_act_textview3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"
@@ -142,6 +148,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/index_act_linearlayout4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -157,6 +164,7 @@
                     android:src="@drawable/ic_games" />
 
                 <TextView
+                    android:id="@+id/index_act_textview4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="25dp"

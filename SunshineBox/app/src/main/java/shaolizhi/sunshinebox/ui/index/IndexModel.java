@@ -24,6 +24,7 @@ import shaolizhi.sunshinebox.objectbox.courses.Course_;
 
 /**
  * Created by 邵励治 on 2018/2/22.
+ * Perfect Code
  */
 
 class IndexModel implements IndexContract.Model {
@@ -83,6 +84,12 @@ class IndexModel implements IndexContract.Model {
     }
 
     //--------------------------------Dirty Socks：臭袜子--------------------------------------------//
+    //utils
+    private void initObjectBox(Activity activity) {
+        CourseUtils courseUtils = CourseUtils.getInstance();
+        courseBox = courseUtils.getCourseBox(activity);
+    }
+
     //utils
     private void printAllDataInServer(List<AVObject> list) {
         if (list.isEmpty()) {
@@ -174,11 +181,7 @@ class IndexModel implements IndexContract.Model {
         return query.find();
     }
 
-    private void initObjectBox(Activity activity) {
-        CourseUtils courseUtils = CourseUtils.getInstance();
-        courseBox = courseUtils.getCourseBox(activity);
-    }
-
+    //for updateDatabase
     private class SynchronizeDatabase {
         private List<AVObject> dataFromNet;
         private List<Course> dataFromDatabase;

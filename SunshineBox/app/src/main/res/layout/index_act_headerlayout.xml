@@ -4,12 +4,12 @@
     android:layout_height="@dimen/nav_header_height">
 
     <TextView
-        android:id="@+id/index_act_textview1"
+        android:id="@+id/index_drawer_textview1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="60dp"
-        android:text="@string/index_act_string5"
+        android:text="@string/index_drawer_string1"
         android:textColor="#000000"
         android:textSize="18sp" />
 
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="105dp"
-        android:text="@string/index_act_string6"
+        android:text="@string/index_drawer_string2"
         android:textColor="#000000"
         android:textSize="16sp" />
 
@@ -27,6 +27,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="155dp"
-        android:contentDescription="@string/index_act_string20"
+        android:contentDescription="@string/index_drawer_string3"
         android:src="@drawable/teacher_community_tdc" />
 </RelativeLayout>

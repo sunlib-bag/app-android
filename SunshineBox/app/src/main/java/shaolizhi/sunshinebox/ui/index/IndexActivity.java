@@ -2,6 +2,7 @@ package shaolizhi.sunshinebox.ui.index;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
@@ -11,6 +12,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -18,6 +20,54 @@ import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.ui.base.BaseActivity;
 
 public class IndexActivity extends BaseActivity {
+
+    @OnClick(R.id.index_act_linearlayout1)
+    public void clickNursery() {
+        nurseryTextView.setTextColor(Color.parseColor("#f09038"));
+        musicTextView.setTextColor(Color.parseColor("#666666"));
+        readingTextView.setTextColor(Color.parseColor("#666666"));
+        gameTextView.setTextColor(Color.parseColor("#666666"));
+        courseTypeSwitcher.switchToNursery();
+    }
+
+    @OnClick(R.id.index_act_linearlayout2)
+    public void clickMusic() {
+        nurseryTextView.setTextColor(Color.parseColor("#666666"));
+        musicTextView.setTextColor(Color.parseColor("#f09038"));
+        readingTextView.setTextColor(Color.parseColor("#666666"));
+        gameTextView.setTextColor(Color.parseColor("#666666"));
+        courseTypeSwitcher.switchToMusic();
+    }
+
+    @OnClick(R.id.index_act_linearlayout3)
+    public void clickReading() {
+        nurseryTextView.setTextColor(Color.parseColor("#666666"));
+        musicTextView.setTextColor(Color.parseColor("#666666"));
+        readingTextView.setTextColor(Color.parseColor("#f09038"));
+        gameTextView.setTextColor(Color.parseColor("#666666"));
+        courseTypeSwitcher.switchToReading();
+    }
+
+    @OnClick(R.id.index_act_linearlayout4)
+    public void clickGame() {
+        nurseryTextView.setTextColor(Color.parseColor("#666666"));
+        musicTextView.setTextColor(Color.parseColor("#666666"));
+        readingTextView.setTextColor(Color.parseColor("#666666"));
+        gameTextView.setTextColor(Color.parseColor("#f09038"));
+        courseTypeSwitcher.switchToGame();
+    }
+
+    @BindView(R.id.index_act_textview1)
+    TextView nurseryTextView;
+
+    @BindView(R.id.index_act_textview2)
+    TextView musicTextView;
+
+    @BindView(R.id.index_act_textview3)
+    TextView readingTextView;
+
+    @BindView(R.id.index_act_textview4)
+    TextView gameTextView;
 
     @BindView(R.id.index_act_drawerlayout)
     DrawerLayout drawerLayout;
@@ -99,7 +149,6 @@ public class IndexActivity extends BaseActivity {
     }
 
     private void setUpFragment() {
-        courseTypeSwitcher = indexFragment;
         FragmentManager fragmentManager = getSupportFragmentManager();
         if (fragmentManager.findFragmentById(R.id.index_act_framelayout) instanceof IndexFragment) {
             indexFragment = (IndexFragment) fragmentManager.findFragmentById(R.id.index_act_framelayout);
@@ -110,6 +159,7 @@ public class IndexActivity extends BaseActivity {
             fragmentTransaction.replace(R.id.index_act_framelayout, indexFragment);
             fragmentTransaction.commit();
         }
+        courseTypeSwitcher = indexFragment;
     }
 
     //------------------------------static method-------------------------------------------------//
