@@ -20,6 +20,7 @@ import shaolizhi.sunshinebox.utils.ToastUtils;
 
 /**
  * Created by 邵励治 on 2018/2/21.
+
  */
 
 public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHolder> {

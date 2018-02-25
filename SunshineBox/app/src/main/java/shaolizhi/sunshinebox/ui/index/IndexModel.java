@@ -1,13 +1,17 @@
 package shaolizhi.sunshinebox.ui.index;
 
 import android.app.Activity;
+import android.support.annotation.NonNull;
 
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.FindCallback;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import io.objectbox.Box;
@@ -19,12 +23,11 @@ import shaolizhi.sunshinebox.objectbox.courses.Course_;
 
 /**
  * Created by 邵励治 on 2018/2/22.
+
  */
 
 class IndexModel implements IndexContract.Model {
     private IndexContract.CallBack callBack;
-
-    private CourseUtils courseUtils;
 
     private Box<Course> courseBox;
 
@@ -34,8 +37,15 @@ class IndexModel implements IndexContract.Model {
         initObjectBox(activity);
     }
 
+    //--------------------------------Drawers：衣柜-------------------------------------------------//
+    @Override
+    public void requestDataFromNet(final IndexContract.CourseType courseType) {
+        final AVQuery<AVObject> query1 = getQueryPublished();
+        final AVQuery<AVObject> query2 = getQuerySubject(courseType);
+        AVQuery<AVObject> query = getQueryOrderByDescendingObjectId(query1, query2);
+        queryToLeanCloud(courseType, query);
+    }
 
-    //request data from net
     private void requestDataFromNetResult(List<AVObject> list, AVException e, IndexContract.CourseType courseType) {
         if (e == null) {
             callBack.requestDataFromNetSuccess(list, courseType);
@@ -44,45 +54,47 @@ class IndexModel implements IndexContract.Model {
         }
     }
 
-    /**
-     * 查询objectId是否在数据库中
-     *
-     * @param objectId 要查询的objectId
-     * @return 若存在返回ObjectBox的id，若不存在返回0
-     */
-    private long getIdFromDatabase(String objectId) {
-        QueryBuilder<Course> builder = courseBox.query();
-        Query<Course> query = builder.equal(Course_.objectId, objectId).build();
-        List<Course> dataFromDatabase = query.find();
-        if (dataFromDatabase.size() == 0) {
-            return 0;
-        } else {
-            Course course = dataFromDatabase.get(0);
-            return course.getId();
-        }
-    }
-
-    /**
-     * 按照objectId删除数据库中内容
-     *
-     * @param objectId
-     */
-    private void deleteCourseWithObjectId(String objectId) {
-        if (getIdFromDatabase(objectId) != 0) {
-            QueryBuilder<Course> builder = courseBox.query();
-            builder.equal(Course_.objectId, objectId);
-            Query<Course> query = builder.build();
-            Course course = query.findUnique();
-            if (course != null) {
-                courseBox.remove(course);
-            }
-        }
+    @Override
+    public void updateDatabase(List<AVObject> dataFromNet, IndexContract.CourseType courseType) {
+        //获取CourseType类型的数据库中数据
+        List<Course> dataFromDatabase = getDataFromDatabase(courseType);
+        SynchronizeDatabase synchronizeDatabase = new SynchronizeDatabase(dataFromNet, dataFromDatabase, courseType).invoke();
+        List<Course> deleteList = synchronizeDatabase.getDeleteList();
+        List<Course> updateList = synchronizeDatabase.getUpdateList();
+        List<Course> insertList = synchronizeDatabase.getInsertList();
+        courseBox.remove(deleteList);
+        courseBox.put(updateList);
+        courseBox.put(insertList);
     }
 
     @Override
-    public void requestDataFromNet(final IndexContract.CourseType courseType) {
-        final AVQuery<AVObject> query1 = new AVQuery<>("Lesson");
-        query1.whereEqualTo("isPublished", true);
+    public void requestDataFromDatabase(IndexContract.CourseType courseType) {
+
+    }
+
+    //--------------------------------Dirty Socks：臭袜子--------------------------------------------//
+    //for requestDataFromNet
+    private void queryToLeanCloud(final IndexContract.CourseType courseType, AVQuery<AVObject> query) {
+        query.findInBackground(new FindCallback<AVObject>() {
+            @Override
+            public void done(List<AVObject> list, AVException e) {
+                requestDataFromNetResult(list, e, courseType);
+            }
+        });
+    }
+
+    //for requestDataFromNet
+    @NonNull
+    private AVQuery<AVObject> getQueryOrderByDescendingObjectId(AVQuery<AVObject> query1, AVQuery<AVObject> query2) {
+        AVQuery<AVObject> query = AVQuery.and(Arrays.asList(query1, query2));
+        query.orderByDescending("objectId");
+        query.include("package");
+        return query;
+    }
+
+    //for requestDataFromNet
+    @NonNull
+    private AVQuery<AVObject> getQuerySubject(IndexContract.CourseType courseType) {
         final AVQuery<AVObject> query2 = new AVQuery<>("Lesson");
         switch (courseType) {
             case NURSERY:
@@ -98,29 +110,18 @@ class IndexModel implements IndexContract.Model {
                 query2.whereEqualTo("subject", AVObject.createWithoutData("Subject", "5a8e908dac502e0032b6225d"));
                 break;
         }
-        AVQuery<AVObject> query = AVQuery.and(Arrays.asList(query1, query2));
-        query.findInBackground(new FindCallback<AVObject>() {
-            @Override
-            public void done(List<AVObject> list, AVException e) {
-                requestDataFromNetResult(list, e, courseType);
-            }
-        });
+        return query2;
     }
 
-    @Override
-    public void updateDatabase(List<AVObject> dataFromNet, IndexContract.CourseType courseType) {
-        //将ObjectBox中有的，DataFromNet中没有的数据删除
-        List<Course> dataFromDatabase = getDataFromDatabase(courseType);
-
-        List<Course> dataNeedToDelete = dataFromDatabase;
-
-        for (AVObject avObject : dataFromNet) {
-
-        }
-
-
+    //for requestDataFromNet
+    @NonNull
+    private AVQuery<AVObject> getQueryPublished() {
+        final AVQuery<AVObject> query1 = new AVQuery<>("Lesson");
+        query1.whereEqualTo("isPublished", true);
+        return query1;
     }
 
+    //for updateDatabase
     private List<Course> getDataFromDatabase(IndexContract.CourseType courseType) {
         QueryBuilder<Course> builder = courseBox.query();
         Query<Course> query;
@@ -144,14 +145,121 @@ class IndexModel implements IndexContract.Model {
         return query.find();
     }
 
-    @Override
-    public void requestDataFromDatabase(IndexContract.CourseType courseType) {
-
-    }
-
     private void initObjectBox(Activity activity) {
-        courseUtils = CourseUtils.getInstance();
+        CourseUtils courseUtils = CourseUtils.getInstance();
         courseBox = courseUtils.getCourseBox(activity);
     }
 
+    private class SynchronizeDatabase {
+        private List<AVObject> dataFromNet;
+        private List<Course> dataFromDatabase;
+        private IndexContract.CourseType courseType;
+        private List<Course> insertList;
+        private List<Course> deleteList;
+        private List<Course> updateList;
+
+        SynchronizeDatabase(List<AVObject> dataFromNet, List<Course> dataFromDatabase, IndexContract.CourseType courseType) {
+            this.dataFromNet = dataFromNet;
+            this.dataFromDatabase = dataFromDatabase;
+            this.courseType = courseType;
+        }
+
+        List<Course> getInsertList() {
+            return insertList;
+        }
+
+        List<Course> getDeleteList() {
+            return deleteList;
+        }
+
+        List<Course> getUpdateList() {
+            return updateList;
+        }
+
+        SynchronizeDatabase invoke() {
+            //将dataFromDatabase按objectId升序排列
+            sortCourseListByObjectId(dataFromDatabase);
+            insertList = new ArrayList<>();
+            deleteList = new ArrayList<>();
+            updateList = new ArrayList<>();
+            for (Course course : dataFromDatabase) {
+                //course.getObjectId < minObjectIdFromNet
+                for (AVObject avObject : dataFromNet) {
+                    if (course.getObjectId().compareTo(avObject.getObjectId()) == 0) {
+                        //database中的数据在net中找到了
+                        //通过对比versionCode来判断需不需要加入更新列表
+                        if (course.getVersionCode() != avObject.getNumber("version_code").intValue()) {
+                            course.setCourseName(avObject.getString("name"));
+                            switch (course.getSituation()) {
+                                case 0:
+                                    break;
+                                case 1:
+                                    break;
+                                case 2:
+                                    course.setSituation(1);
+                                    break;
+                                default:
+                                    break;
+                            }
+                            course.setVersionCode(avObject.getNumber("version_code").intValue());
+                            course.setResourcePackageUrl(avObject.getAVFile("package").getUrl());
+                            updateList.add(course);
+                        }
+                        break;
+                    }
+                    if (course.getObjectId().compareTo(avObject.getObjectId()) < 0) {
+                        deleteList.add(course);
+                        break;
+                    }
+                }
+            }
+
+            for (AVObject avObject : dataFromNet) {
+                for (Course course : dataFromDatabase) {
+                    if (avObject.getObjectId().compareTo(course.getObjectId()) < 0) {
+                        insertList.add(createCourseForDatabase(getSubjectByCourseType(courseType), avObject));
+                        break;
+                    }
+                }
+            }
+            return this;
+        }
+
+        private void sortCourseListByObjectId(List<Course> dataFromDatabase) {
+            Collections.sort(dataFromDatabase, new Comparator<Course>() {
+                @Override
+                public int compare(Course o1, Course o2) {
+                    return o1.getObjectId().compareTo(o2.getObjectId());
+                }
+            });
+        }
+
+        @NonNull
+        private Course createCourseForDatabase(String subject, AVObject avObject) {
+            Course course = new Course();
+            course.setId(0);
+            course.setObjectId(avObject.getObjectId());
+            course.setSubject(subject);
+            course.setSituation(0);
+            course.setVersionCode(avObject.getNumber("version_code").intValue());
+            course.setResourcePackageUrl(avObject.getAVFile("package").getUrl());
+            course.setResourceStorageAddress(null);
+            return course;
+        }
+
+        private String getSubjectByCourseType(IndexContract.CourseType courseType) {
+            switch (courseType) {
+                case NURSERY:
+                    return "nursery";
+                case GAME:
+                    return "game";
+                case READING:
+                    return "reading";
+                case MUSIC:
+                    return "music";
+                default:
+                    return null;
+            }
+        }
+    }
 }
