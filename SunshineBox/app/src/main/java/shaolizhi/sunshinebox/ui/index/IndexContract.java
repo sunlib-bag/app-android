@@ -26,6 +26,8 @@ class IndexContract {
 
         void loadDataToRecyclerView(List<Course> courseList);
 
+        void startRefresh();
+
         void stopRefresh();
 
         Activity getFuckingActivity();

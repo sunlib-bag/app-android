@@ -71,6 +71,13 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
     }
 
     @Override
+    public void startRefresh() {
+        if (refreshLayout != null) {
+            refreshLayout.setRefreshing(true);
+        }
+    }
+
+    @Override
     public void stopRefresh() {
         if (refreshLayout != null) {
             refreshLayout.setRefreshing(false);

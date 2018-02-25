@@ -36,6 +36,8 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
     @Override
     public void tryToLoadDataIntoRecyclerView() {
         courseType = view.getCourseType();
+        model.requestDataFromDatabase(courseType);
+        view.startRefresh();
         model.requestDataFromNet(courseType);
     }
 
