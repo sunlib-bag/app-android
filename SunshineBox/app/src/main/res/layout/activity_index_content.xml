@@ -305,8 +305,8 @@
             </LinearLayout>
         </RelativeLayout>
 
-        <FrameLayout
-            android:id="@+id/index_act_framelayout"
+        <shaolizhi.sunshinebox.widget.NoScrollViewPager
+            android:id="@+id/index_act_viewpager"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="607" />

@@ -1,6 +1,7 @@
 package shaolizhi.sunshinebox.ui.index;
 
 import android.content.Context;
+import android.os.CountDownTimer;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,7 +48,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
     }
 
     @Override
-    public void onBindViewHolder(IndexViewHolder holder, int position) {
+    public void onBindViewHolder(final IndexViewHolder holder, int position) {
         if (holder != null) {
             holder.bind(data.get(position));
         }
@@ -101,6 +102,19 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
 
         @Override
         public void onClick(View v) {
+            //测试下点击item后更新UI会不会有问题
+            new CountDownTimer(60000, 1000) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    textView.setText(String.valueOf(millisUntilFinished / 1000));
+                }
+
+
+                @Override
+                public void onFinish() {
+
+                }
+            }.start();
             ToastUtils.showToast("Package URL:" + course.getResourcePackageUrl());
         }
     }

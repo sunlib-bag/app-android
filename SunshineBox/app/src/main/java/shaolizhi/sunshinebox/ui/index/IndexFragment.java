@@ -17,7 +17,7 @@ import shaolizhi.sunshinebox.widget.MyRefreshLayout;
  * Created by 邵励治 on 2018/2/12.
  */
 
-public class IndexFragment extends BaseFragment implements IndexContract.View, MyRefreshLayout.OnRefreshListener, CourseTypeSwitcher {
+public class IndexFragment extends BaseFragment implements IndexContract.View, MyRefreshLayout.OnRefreshListener {
     @BindView(R.id.index_fgm_my_refreshlayout)
     MyRefreshLayout refreshLayout;
 
@@ -29,30 +29,6 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
     private IndexContract.Presenter presenter;
 
     private IndexContract.CourseType courseType;
-
-    @Override
-    public void switchToNursery() {
-        courseType = IndexContract.CourseType.NURSERY;
-        presenter.tryToLoadDataIntoRecyclerView();
-    }
-
-    @Override
-    public void switchToMusic() {
-        courseType = IndexContract.CourseType.MUSIC;
-        presenter.tryToLoadDataIntoRecyclerView();
-    }
-
-    @Override
-    public void switchToReading() {
-        courseType = IndexContract.CourseType.READING;
-        presenter.tryToLoadDataIntoRecyclerView();
-    }
-
-    @Override
-    public void switchToGame() {
-        courseType = IndexContract.CourseType.GAME;
-        presenter.tryToLoadDataIntoRecyclerView();
-    }
 
     private void setUpRecyclerView() {
         indexAdapter = new IndexAdapter(mActivity);
@@ -89,9 +65,25 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
         return (Activity) mActivity;
     }
 
-
-    static IndexFragment newInstance() {
-        return new IndexFragment();
+    static IndexFragment newInstance(IndexContract.CourseType courseType) {
+        IndexFragment indexFragment = new IndexFragment();
+        Bundle args = new Bundle();
+        switch (courseType) {
+            case NURSERY:
+                args.putString("course_type", "nursery");
+                break;
+            case MUSIC:
+                args.putString("course_type", "music");
+                break;
+            case READING:
+                args.putString("course_type", "reading");
+                break;
+            case GAME:
+                args.putString("course_type", "game");
+                break;
+        }
+        indexFragment.setArguments(args);
+        return indexFragment;
     }
 
     @Override
@@ -101,31 +93,42 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
 
     @Override
     protected void created(Bundle bundle) {
-
+        switch (getArguments().getString("course_type")) {
+            case "nursery":
+                courseType = IndexContract.CourseType.NURSERY;
+                break;
+            case "music":
+                courseType = IndexContract.CourseType.MUSIC;
+                break;
+            case "reading":
+                courseType = IndexContract.CourseType.READING;
+                break;
+            case "game":
+                courseType = IndexContract.CourseType.GAME;
+                break;
+            default:
+                courseType = null;
+                break;
+        }
     }
 
     @Override
     protected void resumed() {
-        presenter = new IndexPresenter(this);
+        if (presenter == null) {
+            presenter = new IndexPresenter(this);
+        }
         presenter.start();
     }
 
     @Override
     public void setUpView() {
         setUpRefreshLayout();
-        setUpCourseType();
         setUpRecyclerView();
     }
 
     @Override
     public void onRefresh() {
         presenter.tryToLoadDataIntoRecyclerView();
-    }
-
-    private void setUpCourseType() {
-        if (courseType == null) {
-            courseType = IndexContract.CourseType.NURSERY;
-        }
     }
 
     private void setUpRefreshLayout() {

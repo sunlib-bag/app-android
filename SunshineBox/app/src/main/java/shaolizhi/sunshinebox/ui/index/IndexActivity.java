@@ -5,8 +5,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
@@ -18,6 +19,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.ui.base.BaseActivity;
+import shaolizhi.sunshinebox.widget.NoScrollViewPager;
 
 public class IndexActivity extends BaseActivity {
 
@@ -27,7 +29,7 @@ public class IndexActivity extends BaseActivity {
         musicTextView.setTextColor(Color.parseColor("#666666"));
         readingTextView.setTextColor(Color.parseColor("#666666"));
         gameTextView.setTextColor(Color.parseColor("#666666"));
-        courseTypeSwitcher.switchToNursery();
+        noScrollViewPager.setCurrentItem(0);
     }
 
     @OnClick(R.id.index_act_linearlayout2)
@@ -36,7 +38,7 @@ public class IndexActivity extends BaseActivity {
         musicTextView.setTextColor(Color.parseColor("#f09038"));
         readingTextView.setTextColor(Color.parseColor("#666666"));
         gameTextView.setTextColor(Color.parseColor("#666666"));
-        courseTypeSwitcher.switchToMusic();
+        noScrollViewPager.setCurrentItem(1);
     }
 
     @OnClick(R.id.index_act_linearlayout3)
@@ -45,7 +47,7 @@ public class IndexActivity extends BaseActivity {
         musicTextView.setTextColor(Color.parseColor("#666666"));
         readingTextView.setTextColor(Color.parseColor("#f09038"));
         gameTextView.setTextColor(Color.parseColor("#666666"));
-        courseTypeSwitcher.switchToReading();
+        noScrollViewPager.setCurrentItem(2);
     }
 
     @OnClick(R.id.index_act_linearlayout4)
@@ -54,7 +56,7 @@ public class IndexActivity extends BaseActivity {
         musicTextView.setTextColor(Color.parseColor("#666666"));
         readingTextView.setTextColor(Color.parseColor("#666666"));
         gameTextView.setTextColor(Color.parseColor("#f09038"));
-        courseTypeSwitcher.switchToGame();
+        noScrollViewPager.setCurrentItem(3);
     }
 
     @BindView(R.id.index_act_textview1)
@@ -78,9 +80,17 @@ public class IndexActivity extends BaseActivity {
     @BindView(R.id.index_act_toolbar)
     Toolbar toolbar;
 
-    IndexFragment indexFragment;
+    @BindView(R.id.index_act_viewpager)
+    NoScrollViewPager noScrollViewPager;
 
-    CourseTypeSwitcher courseTypeSwitcher;
+    IndexFragment nurseryFragment;
+
+    IndexFragment musicFragment;
+
+    IndexFragment readingFragment;
+
+    IndexFragment gameFragment;
+
 
     //-----------------------------click method---------------------------------------------------//
     @OnClick(R.id.index_act_imagebuttton1)
@@ -149,17 +159,40 @@ public class IndexActivity extends BaseActivity {
     }
 
     private void setUpFragment() {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        if (fragmentManager.findFragmentById(R.id.index_act_framelayout) instanceof IndexFragment) {
-            indexFragment = (IndexFragment) fragmentManager.findFragmentById(R.id.index_act_framelayout);
+        nurseryFragment = IndexFragment.newInstance(IndexContract.CourseType.NURSERY);
+        musicFragment = IndexFragment.newInstance(IndexContract.CourseType.MUSIC);
+        readingFragment = IndexFragment.newInstance(IndexContract.CourseType.READING);
+        gameFragment = IndexFragment.newInstance(IndexContract.CourseType.GAME);
+        MyViewPagerAdapter viewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager());
+        noScrollViewPager.setAdapter(viewPagerAdapter);
+    }
+
+    private class MyViewPagerAdapter extends FragmentPagerAdapter {
+
+        MyViewPagerAdapter(FragmentManager fm) {
+            super(fm);
         }
-        if (indexFragment == null) {
-            indexFragment = IndexFragment.newInstance();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.index_act_framelayout, indexFragment);
-            fragmentTransaction.commit();
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return nurseryFragment;
+                case 1:
+                    return musicFragment;
+                case 2:
+                    return readingFragment;
+                case 3:
+                    return gameFragment;
+                default:
+                    return null;
+            }
         }
-        courseTypeSwitcher = indexFragment;
+
+        @Override
+        public int getCount() {
+            return 4;
+        }
     }
 
     //------------------------------static method-------------------------------------------------//
