@@ -165,6 +165,7 @@ public class IndexActivity extends BaseActivity {
         gameFragment = IndexFragment.newInstance(IndexContract.CourseType.GAME);
         MyViewPagerAdapter viewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager());
         noScrollViewPager.setAdapter(viewPagerAdapter);
+        noScrollViewPager.setOffscreenPageLimit(3);
     }
 
     private class MyViewPagerAdapter extends FragmentPagerAdapter {

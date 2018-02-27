@@ -22,13 +22,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/widget/NoScrollViewPager.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/CourseTypeSwitcher.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_index_content.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,10 +69,9 @@
       <file leaf-file-name="IndexFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="36" />
+            <state relative-caret-position="401">
+              <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="20" />
               <folding>
-                <element signature="method#setUpRecyclerView#0;class#IndexFragment#0" expanded="false" />
                 <element signature="method#loadDataToRecyclerView#0;class#IndexFragment#0" expanded="false" />
                 <element signature="method#startRefresh#0;class#IndexFragment#0" expanded="false" />
                 <element signature="method#stopRefresh#0;class#IndexFragment#0" expanded="false" />
@@ -100,22 +94,23 @@
       <file leaf-file-name="IndexActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="160" column="34" lean-forward="false" selection-start-line="160" selection-start-column="34" selection-end-line="160" selection-end-column="34" />
+            <state relative-caret-position="282">
+              <caret line="167" column="49" lean-forward="false" selection-start-line="167" selection-start-column="49" selection-end-line="167" selection-end-column="49" />
               <folding>
                 <element signature="method#clickNursery#0;class#IndexActivity#0" expanded="false" />
                 <element signature="method#clickMusic#0;class#IndexActivity#0" expanded="false" />
                 <element signature="method#clickReading#0;class#IndexActivity#0" expanded="false" />
                 <element signature="method#clickGame#0;class#IndexActivity#0" expanded="false" />
                 <element signature="method#drawerLayoutSwitch#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#created#0;class#IndexActivity#0" expanded="false" />
                 <element signature="method#resumed#0;class#IndexActivity#0" expanded="false" />
                 <element signature="method#setUpDrawerLayoutSwitchAnimator#0;class#IndexActivity#0" expanded="false" />
                 <element signature="method#setUpTitle#0;class#IndexActivity#0" expanded="false" />
-                <element signature="e#5824#5825#0" expanded="true" />
-                <element signature="e#5857#5858#0" expanded="true" />
+                <element signature="e#5876#5877#0" expanded="true" />
+                <element signature="e#5909#5910#0" expanded="true" />
                 <element signature="method#getItem#0;class#MyViewPagerAdapter#0;class#IndexActivity#0" expanded="false" />
-                <element signature="e#6356#6357#0" expanded="true" />
-                <element signature="e#6388#6389#0" expanded="true" />
+                <element signature="e#6408#6409#0" expanded="true" />
+                <element signature="e#6440#6441#0" expanded="true" />
                 <element signature="method#newIntent#0;class#IndexActivity#0" expanded="false" />
               </folding>
             </state>
@@ -2380,7 +2375,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519754476574" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519755616017" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2428,7 +2423,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519754476574" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519755616017" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2611,7 +2606,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519754476575" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519755616018" />
       </method>
     </configuration>
     <list size="1">
@@ -2649,13 +2644,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511493005850</updated>
-    </task>
-    <task id="LOCAL-00064" summary="CourseActivity:音频播放功能">
-      <created>1515560850519</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1515560850521</updated>
     </task>
     <task id="LOCAL-00065" summary="CourseActivity:音频播放功能小改进">
       <created>1515561611910</created>
@@ -2993,7 +2981,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519702775700</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="重做了首页加载Fragment的能力:使用ViewPager代替了FrameLayout">
+      <created>1519754526613</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1519754526613</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3016,7 +3011,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46516612" sideWeight="0.50596184" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4642857" sideWeight="0.50596184" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19793323" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5187567" sideWeight="0.4964229" order="7" side_tool="false" content_ui="tabs" />
@@ -3075,7 +3070,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="PhoneNumberVerifyActivity：验证码输入检测规则改变" />
     <MESSAGE value="PhoneNumberVerifyActivity：验证验证码功能重构完成" />
     <MESSAGE value="MainActivity：结束全部内容" />
     <MESSAGE value="IndexActivity：当IndexActivity被打开了，自动结束之前注册流程的全部内容" />
@@ -3100,7 +3094,8 @@
     <MESSAGE value="IndexPresenter：优化进度条的显示位置" />
     <MESSAGE value="IndexAdapter：添加了一个点击事件显示URL" />
     <MESSAGE value="修改了图片显示的BUG" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了图片显示的BUG" />
+    <MESSAGE value="重做了首页加载Fragment的能力:使用ViewPager代替了FrameLayout" />
+    <option name="LAST_COMMIT_MESSAGE" value="重做了首页加载Fragment的能力:使用ViewPager代替了FrameLayout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3457,14 +3452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="118" column="9" lean-forward="false" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_index.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -3487,20 +3474,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="36" />
-          <folding>
-            <element signature="method#setUpRecyclerView#0;class#IndexFragment#0" expanded="false" />
-            <element signature="method#loadDataToRecyclerView#0;class#IndexFragment#0" expanded="false" />
-            <element signature="method#startRefresh#0;class#IndexFragment#0" expanded="false" />
-            <element signature="method#stopRefresh#0;class#IndexFragment#0" expanded="false" />
-            <element signature="method#newInstance#0;class#IndexFragment#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/CourseTypeSwitcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -3509,24 +3482,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="118" column="9" lean-forward="false" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="20" />
+          <folding>
+            <element signature="method#loadDataToRecyclerView#0;class#IndexFragment#0" expanded="false" />
+            <element signature="method#startRefresh#0;class#IndexFragment#0" expanded="false" />
+            <element signature="method#stopRefresh#0;class#IndexFragment#0" expanded="false" />
+            <element signature="method#newInstance#0;class#IndexFragment#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="160" column="34" lean-forward="false" selection-start-line="160" selection-start-column="34" selection-end-line="160" selection-end-column="34" />
+        <state relative-caret-position="282">
+          <caret line="167" column="49" lean-forward="false" selection-start-line="167" selection-start-column="49" selection-end-line="167" selection-end-column="49" />
           <folding>
             <element signature="method#clickNursery#0;class#IndexActivity#0" expanded="false" />
             <element signature="method#clickMusic#0;class#IndexActivity#0" expanded="false" />
             <element signature="method#clickReading#0;class#IndexActivity#0" expanded="false" />
             <element signature="method#clickGame#0;class#IndexActivity#0" expanded="false" />
             <element signature="method#drawerLayoutSwitch#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#created#0;class#IndexActivity#0" expanded="false" />
             <element signature="method#resumed#0;class#IndexActivity#0" expanded="false" />
             <element signature="method#setUpDrawerLayoutSwitchAnimator#0;class#IndexActivity#0" expanded="false" />
             <element signature="method#setUpTitle#0;class#IndexActivity#0" expanded="false" />
-            <element signature="e#5824#5825#0" expanded="true" />
-            <element signature="e#5857#5858#0" expanded="true" />
+            <element signature="e#5876#5877#0" expanded="true" />
+            <element signature="e#5909#5910#0" expanded="true" />
             <element signature="method#getItem#0;class#MyViewPagerAdapter#0;class#IndexActivity#0" expanded="false" />
-            <element signature="e#6356#6357#0" expanded="true" />
-            <element signature="e#6388#6389#0" expanded="true" />
+            <element signature="e#6408#6409#0" expanded="true" />
+            <element signature="e#6440#6441#0" expanded="true" />
             <element signature="method#newIntent#0;class#IndexActivity#0" expanded="false" />
           </folding>
         </state>
