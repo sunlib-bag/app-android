@@ -26,9 +26,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,7 +42,7 @@ import shaolizhi.sunshinebox.utils.ToastUtils;
 
 public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHolder> {
 
-    private HashSet<String> downloadingTask;
+    private HashMap<String, String> downloadingTask;
 
     private LayoutInflater layoutInflater;
 
@@ -57,7 +55,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
     IndexAdapter(Context activity) {
         this.activity = activity;
         layoutInflater = LayoutInflater.from(activity);
-        downloadingTask = new HashSet<>();
+        downloadingTask = new HashMap<>();
         initObjectBox((Activity) activity);
     }
 
@@ -199,7 +197,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
         }
 
         private void downloadZip(File folder) {
-            downloadingTask.add(course.getObjectId());
+            downloadingTask.put(course.getObjectId(), "");
             AVFile zipPackage = new AVFile(course.getObjectId() + ".zip", course.getResourcePackageUrl(), new HashMap<String, Object>());
             final File file = new File(folder, course.getObjectId() + ".zip");
 
@@ -242,14 +240,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
         }
 
         private boolean checkItemIsDownloading() {
-            boolean isDownloading = false;
-            for (String objectId : downloadingTask) {
-                if (Objects.equals(objectId, course.getObjectId())) {
-                    isDownloading = true;
-                    break;
-                }
-            }
-            return isDownloading;
+            return downloadingTask.get(course.getObjectId()) != null;
         }
 
         private File createFolder() {

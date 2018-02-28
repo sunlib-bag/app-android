@@ -11,6 +11,7 @@ import butterknife.BindView;
 import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
 import shaolizhi.sunshinebox.ui.base.BaseFragment;
+import shaolizhi.sunshinebox.utils.ToastUtils;
 import shaolizhi.sunshinebox.widget.MyRefreshLayout;
 
 /**
@@ -128,7 +129,12 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
 
     @Override
     public void onRefresh() {
-        presenter.tryToLoadDataIntoRecyclerView();
+        if (indexAdapter.isDownloadNow()) {
+            stopRefresh();
+            ToastUtils.showToast("请等待下载完成后再进行更新操作");
+        } else {
+            presenter.tryToLoadDataIntoRecyclerView();
+        }
     }
 
     private void setUpRefreshLayout() {
