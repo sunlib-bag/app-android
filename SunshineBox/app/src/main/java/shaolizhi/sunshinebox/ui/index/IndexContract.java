@@ -15,7 +15,7 @@ import shaolizhi.sunshinebox.ui.base.BaseView;
  * Created by shaol on 2018/2/21.
  */
 
-class IndexContract {
+interface IndexContract {
     enum CourseType {
         NURSERY, MUSIC, READING, GAME
     }

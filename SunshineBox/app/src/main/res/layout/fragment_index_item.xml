@@ -16,10 +16,19 @@
             android:contentDescription="@string/index_fgm_string1"
             android:scaleType="fitXY" />
 
+        <TextView
+            android:id="@+id/index_fgm_item_textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            tools:text="正在下载：13%" />
+
     </android.support.v7.widget.CardView>
 
     <TextView
-        android:id="@+id/index_fgm_item_textview"
+        android:id="@+id/index_fgm_item_textview2"
         android:layout_width="165.6dp"
         android:layout_height="48dp"
         android:gravity="center"
