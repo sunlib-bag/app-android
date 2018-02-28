@@ -1,16 +1,31 @@
 package shaolizhi.sunshinebox.ui.index;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
-import android.os.CountDownTimer;
+import android.content.pm.PackageManager;
+import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVFile;
+import com.avos.avoscloud.GetDataCallback;
+import com.avos.avoscloud.ProgressCallback;
 import com.bumptech.glide.Glide;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.HashMap;
 import java.util.List;
 
 import butterknife.BindView;
@@ -100,22 +115,69 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
             itemView.setOnClickListener(this);
         }
 
+        /**
+         * @return true 权限检查通过
+         * false  权限检查没有通过
+         */
+        private boolean checkPermissions() {
+            //检查运行时权限
+            boolean result1 = ContextCompat.checkSelfPermission(activity, Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS) != PackageManager.PERMISSION_GRANTED;
+            boolean result2 = ContextCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED;
+            //result1 = true 说明缺少权限
+            Log.e("result1", String.valueOf(result1));
+            Log.e("result2", String.valueOf(result2));
+
+            //有一个为true（缺少权限），就需要申请
+            if (result2) {
+                ActivityCompat.requestPermissions((Activity) activity, new String[]{Manifest.permission.MOUNT_UNMOUNT_FILESYSTEMS, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+            }
+            return !result2;
+        }
+
         @Override
         public void onClick(View v) {
-            //测试下点击item后更新UI会不会有问题
-            new CountDownTimer(60000, 1000) {
-                @Override
-                public void onTick(long millisUntilFinished) {
-                    textView.setText(String.valueOf(millisUntilFinished / 1000));
+//            switch (course.getSituation()) {
+//                case 0:
+//                    //资源尚未下载
+//                    AVFile avFile = new AVFile()
+//                    break;
+//                case 1:
+//                    //资源已下载但有更新
+//                    break;
+//                case 2:
+//                    //资源已下载且没更新
+//                    break;
+//            }
+            if (checkPermissions()) {
+                File file = new File(Environment.getExternalStorageDirectory().getPath() + File.separator + "SunshineBox II");
+                if (!file.exists()) {
+                    ToastUtils.showToast(String.valueOf(file.mkdirs()));
                 }
+            }
 
-
+            AVFile avFile = new AVFile(course.getObjectId() + ".zip", course.getResourcePackageUrl(), new HashMap<String, Object>());
+            avFile.getDataInBackground(new GetDataCallback() {
                 @Override
-                public void onFinish() {
-
+                public void done(byte[] bytes, AVException e) {
+                    if (e == null) {
+                        try {
+                            ToastUtils.showToast(Environment.getExternalStorageDirectory().getPath() + File.separator + "SunshineBox II");
+                            OutputStream outputStream = new FileOutputStream(new File(Environment.getExternalStorageDirectory().getPath() + File.separator + "SunshineBox II", course.getObjectId() + ".zip"));
+                            outputStream.write(bytes, 0, bytes.length);
+                            outputStream.close();
+                        } catch (IOException e1) {
+                            e1.printStackTrace();
+                        }
+                    } else {
+                        ToastUtils.showToast(e.getMessage());
+                    }
                 }
-            }.start();
-            ToastUtils.showToast("Package URL:" + course.getResourcePackageUrl());
+            }, new ProgressCallback() {
+                @Override
+                public void done(Integer integer) {
+                    textView.setText(String.valueOf(integer));
+                }
+            });
         }
     }
 }
