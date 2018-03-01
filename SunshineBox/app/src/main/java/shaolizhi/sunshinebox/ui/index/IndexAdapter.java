@@ -38,6 +38,7 @@ import shaolizhi.sunshinebox.utils.ToastUtils;
 
 /**
  * Created by 邵励治 on 2018/2/21.
+ * Perfect Code
  */
 
 public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHolder> {
@@ -64,7 +65,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
         courseBox = courseUtils.getCourseBox(activity);
     }
 
-    public boolean isDownloadNow() {
+    boolean isDownloadNow() {
         return !(downloadingTask.size() == 0);
     }
 

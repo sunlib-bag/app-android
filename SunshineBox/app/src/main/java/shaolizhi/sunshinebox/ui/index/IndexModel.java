@@ -54,8 +54,7 @@ class IndexModel implements IndexContract.Model {
             callBack.requestDataFromNetFailure(e);
         }
     }
-
-
+    
     @Override
     public void updateDatabase(List<AVObject> dataFromNet, IndexContract.CourseType courseType) {
 

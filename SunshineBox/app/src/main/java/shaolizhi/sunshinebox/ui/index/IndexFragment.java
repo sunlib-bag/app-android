@@ -16,6 +16,7 @@ import shaolizhi.sunshinebox.widget.MyRefreshLayout;
 
 /**
  * Created by 邵励治 on 2018/2/12.
+ * Perfect Code
  */
 
 public class IndexFragment extends BaseFragment implements IndexContract.View, MyRefreshLayout.OnRefreshListener {
