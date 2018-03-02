@@ -57,6 +57,7 @@
     <string name="index_act_string19">艺术</string>
     <string name="index_drawer_string3">二维码</string>
     <string name="index_fgm_string1">课程</string>
+    <string name="course_act_string1">返回上一个界面</string>
 
 
 </resources>

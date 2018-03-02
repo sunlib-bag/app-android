@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
@@ -35,6 +36,7 @@ import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
 import shaolizhi.sunshinebox.objectbox.courses.CourseUtils;
 import shaolizhi.sunshinebox.utils.ToastUtils;
+import shaolizhi.sunshinebox.utils.ZipUtils;
 
 /**
  * Created by 邵励治 on 2018/2/21.
@@ -177,7 +179,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
         @Override
         public void onClick(View v) {
             if (checkPermissions()) {
-                final File folder = createFolder();
+                final File folder = getRootFolder();
                 if (checkItemIsDownloading()) {
                     ToastUtils.showToast("现在正在下载视频，请稍等片刻哦");
                 } else {
@@ -219,9 +221,21 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
         private void downloadZipSuccess(Integer integer, File file) {
             if (integer == 100) {
                 downloadingTask.remove(course.getObjectId());
+                File outputFolder = decompressZip(file);
                 informationTextView.setText("资源已下载");
-                upDateDatabase(file);
+                upDateDatabase(outputFolder);
             }
+        }
+
+        @NonNull
+        private File decompressZip(File file) {
+            File outputFolder = new File(getRootFolder(), course.getObjectId());
+            try {
+                ZipUtils.decompress(file, outputFolder.getAbsolutePath());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return outputFolder;
         }
 
         private void upDateDatabase(File file) {
@@ -244,7 +258,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
             return downloadingTask.get(course.getObjectId()) != null;
         }
 
-        private File createFolder() {
+        private File getRootFolder() {
             File file = new File(Environment.getExternalStorageDirectory().getPath() + File.separator + "SunshineBox II");
             if (!file.exists()) {
                 Log.e("Create Folder: ", String.valueOf(file.mkdirs()));
