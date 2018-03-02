@@ -17,7 +17,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.avos.avoscloud.AVFile;
 import com.bumptech.glide.Glide;
 
 import java.io.File;
@@ -218,8 +217,6 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
 
         private void downloadZip(final File folder) {
             downloadingTask.put(course.getObjectId(), "");
-            AVFile zipPackage = new AVFile(course.getObjectId() + ".zip", course.getResourcePackageUrl(), new HashMap<String, Object>());
-            final File file = new File(folder, course.getObjectId() + ".zip");
             Call<ResponseBody> call = apiService.downloadFileWithDynamicUrl(course.getResourcePackageUrl());
             call.enqueue(new Callback<ResponseBody>() {
                 @Override
