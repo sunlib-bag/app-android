@@ -3,6 +3,7 @@ package shaolizhi.sunshinebox.ui.index;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Environment;
 import android.support.annotation.NonNull;
@@ -37,6 +38,8 @@ import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.data.ApiService;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
 import shaolizhi.sunshinebox.objectbox.courses.CourseUtils;
+import shaolizhi.sunshinebox.ui.course.CourseActivity;
+import shaolizhi.sunshinebox.utils.AlertDialogUtils;
 import shaolizhi.sunshinebox.utils.NewZipUtils;
 import shaolizhi.sunshinebox.utils.ServiceGenerator;
 import shaolizhi.sunshinebox.utils.ToastUtils;
@@ -197,9 +200,16 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
                             break;
                         case 1:
                             //资源已下载但有更新
+                            AlertDialogUtils.showAlertDialog((Activity) activity, "资源有更新", "是否更新资源？", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    downloadZip(folder);
+                                }
+                            });
                             break;
                         case 2:
                             //资源已下载且没更新
+                            activity.startActivity(CourseActivity.newIntent(activity, course.getResourceStorageAddress()));
                             break;
                     }
                 }
