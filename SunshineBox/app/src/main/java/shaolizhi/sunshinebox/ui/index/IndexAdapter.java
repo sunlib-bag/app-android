@@ -37,9 +37,9 @@ import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.data.ApiService;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
 import shaolizhi.sunshinebox.objectbox.courses.CourseUtils;
+import shaolizhi.sunshinebox.utils.NewZipUtils;
 import shaolizhi.sunshinebox.utils.ServiceGenerator;
 import shaolizhi.sunshinebox.utils.ToastUtils;
-import shaolizhi.sunshinebox.utils.ZipUtils;
 
 /**
  * Created by 邵励治 on 2018/2/21.
@@ -239,35 +239,14 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
 
                 }
             });
-
-//            zipPackage.getDataInBackground(new GetDataCallback() {
-//                @Override
-//                public void done(byte[] bytes, AVException e) {
-//                    storageZip(bytes, file);
-//                }
-//            }, new ProgressCallback() {
-//                @Override
-//                public void done(Integer integer) {
-//                    informationTextView.setText("正在下载：" + String.valueOf(integer) + "%");
-//                    downloadZipSuccess(integer, file);
-//                }
-//            });
-        }
-
-        private void downloadZipSuccess(Integer integer, File file) {
-            if (integer == 100) {
-                downloadingTask.remove(course.getObjectId());
-                File outputFolder = decompressZip(file);
-                informationTextView.setText("资源已下载");
-                upDateDatabase(outputFolder);
-            }
         }
 
         @NonNull
         private File decompressZip(File file) {
             File outputFolder = new File(getRootFolder(), course.getObjectId());
             try {
-                ZipUtils.decompress(file, outputFolder.getAbsolutePath());
+                NewZipUtils.unzip(file.getAbsolutePath(), outputFolder.getAbsolutePath());
+//                ZipUtils.decompress(file, outputFolder.getAbsolutePath());
             } catch (IOException e) {
                 e.printStackTrace();
             }

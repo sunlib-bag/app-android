@@ -22,7 +22,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/DownloadTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" />
     </list>
@@ -134,7 +133,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="562">
-              <caret line="233" column="21" lean-forward="true" selection-start-line="233" selection-start-column="21" selection-end-line="233" selection-end-column="21" />
+              <caret line="248" column="76" lean-forward="true" selection-start-line="248" selection-start-column="76" selection-end-line="248" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#IndexAdapter#0;class#IndexAdapter#0" expanded="false" />
@@ -160,7 +159,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/DownloadTask.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1284">
-              <caret line="64" column="6" lean-forward="true" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
+              <caret line="64" column="6" lean-forward="false" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#doInBackground#0;class#DownloadTask#0" expanded="false" />
@@ -2689,7 +2688,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519980112398" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519980844789" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2736,7 +2735,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519980112398" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519980844789" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2918,7 +2917,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519980112399" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1519980844790" />
       </method>
     </configuration>
     <list size="1">
@@ -2956,13 +2955,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511493005850</updated>
-    </task>
-    <task id="LOCAL-00071" summary="添加了Glide第三方库支持，并且给首页加上了难看的渐变色">
-      <created>1515736058903</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1515736058904</updated>
     </task>
     <task id="LOCAL-00072" summary="修复了一个由获取网络状态引起的空指针BUG">
       <created>1515741748520</created>
@@ -3300,7 +3292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519976899855</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="使用了Retrofit重构了下载功能，之前的下载有问题">
+      <created>1519980143059</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1519980143060</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3382,7 +3381,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="IndexActivity：添加了侧边栏" />
     <MESSAGE value="IndexActivity：主页ToolBar" />
     <MESSAGE value="IndexActivity：主页侧边栏（上半部分）" />
     <MESSAGE value="IndexActivity：主页侧边栏（下半部分）" />
@@ -3407,7 +3405,8 @@
     <MESSAGE value="完成了当有下载时不进行同步操作的限定" />
     <MESSAGE value="小修改" />
     <MESSAGE value="添加了解压缩代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了解压缩代码" />
+    <MESSAGE value="使用了Retrofit重构了下载功能，之前的下载有问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用了Retrofit重构了下载功能，之前的下载有问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3839,7 +3838,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/DownloadTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1284">
-          <caret line="64" column="6" lean-forward="true" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
+          <caret line="64" column="6" lean-forward="false" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#doInBackground#0;class#DownloadTask#0" expanded="false" />
@@ -3854,7 +3853,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="562">
-          <caret line="233" column="21" lean-forward="true" selection-start-line="233" selection-start-column="21" selection-end-line="233" selection-end-column="21" />
+          <caret line="248" column="76" lean-forward="true" selection-start-line="248" selection-start-column="76" selection-end-line="248" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#IndexAdapter#0;class#IndexAdapter#0" expanded="false" />
