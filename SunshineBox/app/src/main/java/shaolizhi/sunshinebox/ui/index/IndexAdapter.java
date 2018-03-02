@@ -16,10 +16,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
-import com.avos.avoscloud.GetDataCallback;
-import com.avos.avoscloud.ProgressCallback;
 import com.bumptech.glide.Glide;
 
 import java.io.File;
@@ -32,9 +29,15 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.objectbox.Box;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import shaolizhi.sunshinebox.R;
+import shaolizhi.sunshinebox.data.ApiService;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
 import shaolizhi.sunshinebox.objectbox.courses.CourseUtils;
+import shaolizhi.sunshinebox.utils.ServiceGenerator;
 import shaolizhi.sunshinebox.utils.ToastUtils;
 import shaolizhi.sunshinebox.utils.ZipUtils;
 
@@ -45,6 +48,8 @@ import shaolizhi.sunshinebox.utils.ZipUtils;
 
 public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHolder> {
 
+    private final ApiService apiService = ServiceGenerator.createService(ApiService.class);
+
     private HashMap<String, String> downloadingTask;
 
     private LayoutInflater layoutInflater;
@@ -54,6 +59,8 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
     private List<Course> data;
 
     private Box<Course> courseBox;
+
+    private DownloadTask downloadTask;
 
     IndexAdapter(Context activity) {
         this.activity = activity;
@@ -199,23 +206,52 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
             }
         }
 
-        private void downloadZip(File folder) {
+        private void downloadZip(final File folder) {
             downloadingTask.put(course.getObjectId(), "");
             AVFile zipPackage = new AVFile(course.getObjectId() + ".zip", course.getResourcePackageUrl(), new HashMap<String, Object>());
             final File file = new File(folder, course.getObjectId() + ".zip");
+            Call<ResponseBody> call = apiService.downloadFileWithDynamicUrl(course.getResourcePackageUrl());
+            call.enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(@NonNull Call<ResponseBody> call, @NonNull Response<ResponseBody> response) {
+                    if (response.isSuccessful()) {
+                        Log.e("IndexAdapter", "server contacted and has file");
+                        downloadTask = new DownloadTask(response, course.getObjectId() + ".zip", folder, new DownloadTask.DownloadCallback() {
+                            @Override
+                            public void downloadSuccess(File file) {
+                                downloadingTask.remove(course.getObjectId());
+                                File outputFolder = decompressZip(file);
+                                informationTextView.setText("资源已下载");
+                                upDateDatabase(outputFolder);
+                            }
 
-            zipPackage.getDataInBackground(new GetDataCallback() {
-                @Override
-                public void done(byte[] bytes, AVException e) {
-                    storageZip(bytes, file);
+                            @Override
+                            public void progressUpdate(Long value) {
+                                informationTextView.setText("正在下载：" + String.valueOf(value) + "%");
+                            }
+                        });
+                        downloadTask.execute();
+                    }
                 }
-            }, new ProgressCallback() {
+
                 @Override
-                public void done(Integer integer) {
-                    informationTextView.setText("正在下载：" + String.valueOf(integer) + "%");
-                    downloadZipSuccess(integer, file);
+                public void onFailure(@NonNull Call<ResponseBody> call, @NonNull Throwable t) {
+
                 }
             });
+
+//            zipPackage.getDataInBackground(new GetDataCallback() {
+//                @Override
+//                public void done(byte[] bytes, AVException e) {
+//                    storageZip(bytes, file);
+//                }
+//            }, new ProgressCallback() {
+//                @Override
+//                public void done(Integer integer) {
+//                    informationTextView.setText("正在下载：" + String.valueOf(integer) + "%");
+//                    downloadZipSuccess(integer, file);
+//                }
+//            });
         }
 
         private void downloadZipSuccess(Integer integer, File file) {
