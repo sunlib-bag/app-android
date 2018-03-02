@@ -2,23 +2,37 @@ package shaolizhi.sunshinebox.ui.course;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.annotation.NonNull;
+import android.text.Html;
+import android.text.Spanned;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.zzhoujay.markdown.MarkDown;
+import com.zzhoujay.markdown.method.LongPressLinkMovementMethod;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.ui.base.BaseActivity;
 import shaolizhi.sunshinebox.utils.IOUtils;
-import shaolizhi.sunshinebox.utils.ToastUtils;
 
 public class CourseActivity extends BaseActivity implements CourseContract.View {
 
@@ -39,8 +53,11 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
         finish();
     }
 
-    @BindView(R.id.course_act_textview)
+    @BindView(R.id.course_act_textview1)
     TextView courseNameTextView;
+
+    @BindView(R.id.course_act_textview2)
+    TextView markdownTextView;
 
     @Override
     protected int layoutId() {
@@ -55,8 +72,49 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
         File jsonFile = getJsonFile();
         File materialFolder = getMaterialFolder();
         bean = deserializeJson(jsonFile);
-        Log.e("CourseActivity", "Json Analytical Results: " + bean.toString());
-        ToastUtils.showToast(resourceStorageAddress);
+        markdownTextView.setMovementMethod(LongPressLinkMovementMethod.getInstance());
+        markdownTextView.post(new Runnable() {
+            @Override
+            public void run() {
+                long time = System.nanoTime();
+                Spanned spanned = MarkDown.fromMarkdown(bean.getContent(), new Html.ImageGetter() {
+                    static final String TAG = "Markdown";
+
+                    @Override
+                    public Drawable getDrawable(String source) {
+                        Log.d(TAG, "getDrawable() called with: source = [" + source + "]");
+
+                        Drawable drawable;
+                        try {
+                            drawable = drawableFromUrl(source);
+                            drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+                        } catch (IOException e) {
+                            Log.w(TAG, "can't get image", e);
+                            drawable = new ColorDrawable(Color.LTGRAY);
+                            drawable.setBounds(0, 0, markdownTextView.getWidth() - markdownTextView.getPaddingLeft() - markdownTextView.getPaddingRight(), 400);
+                        }
+                        return drawable;
+                    }
+                }, markdownTextView);
+                long useTime = System.nanoTime() - time;
+                Toast.makeText(getApplicationContext(), "use time: " + useTime + "ns", Toast.LENGTH_LONG).show();
+                markdownTextView.setText(spanned);
+            }
+        });
+    }
+
+    public static Drawable drawableFromUrl(String url) throws IOException {
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        Bitmap x;
+
+        HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+        connection.connect();
+        InputStream input = connection.getInputStream();
+
+        x = BitmapFactory.decodeStream(input);
+        return new BitmapDrawable(x);
     }
 
     private CourseBean deserializeJson(File jsonFile) {
@@ -93,7 +151,6 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
         }
         return jsonFile;
     }
-
 
     @NonNull
     private String getMaterialAddress() {
