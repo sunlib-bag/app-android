@@ -8,18 +8,11 @@
     android:layout_marginTop="8dp"
     android:orientation="horizontal">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView"
+    <ImageView
+        android:id="@+id/course_act_item_imageview1"
         android:layout_width="80dp"
         android:layout_height="match_parent"
-        app:cardPreventCornerOverlap="false">
-
-        <ImageView
-            android:id="@+id/course_act_item_imageview1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </android.support.v7.widget.CardView>
+        android:contentDescription="@string/course_act_item_string1" />
 
     <TextView
         android:id="@+id/course_act_item_textview1"

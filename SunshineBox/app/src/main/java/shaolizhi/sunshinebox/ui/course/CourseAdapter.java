@@ -51,7 +51,19 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
 
         private void loadMaterialName(Materials materials) {
             if (materials != null) {
-                textView.setText(materials.getName());
+                switch (materials.getMaterialType()) {
+                    case ALBUM:
+                        textView.setText("图集： " + materials.getName());
+                        break;
+                    case AUDIO:
+                        textView.setText("音频： " + materials.getName());
+                        break;
+                    case VIDEO:
+                        textView.setText("视频： " + materials.getName());
+                        break;
+                    default:
+                        break;
+                }
             }
         }
 

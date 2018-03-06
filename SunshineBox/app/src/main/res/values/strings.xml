@@ -60,4 +60,5 @@
     <string name="course_act_string1">返回上一个界面</string>
     <string name="course_string1">提供</string>
     <string name="course_string2">作者</string>
+    <string name="course_act_item_string1">课程类别图片</string>
 </resources>
