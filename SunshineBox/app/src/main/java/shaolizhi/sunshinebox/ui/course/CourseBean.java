@@ -12,29 +12,29 @@ public class CourseBean {
     /**
      * id : 5a8f7c2bac502e0032ba4233
      * name : 测试本地图片展示
-     * version_code : 7
+     * version_code : 10
      * tags : ["domain.语言","source.千千树"]
      * source : 千千树
      * content : # test
-     #### 图集
-     ___
-     ...
-     .
-     ....
-     ........
-     ..
-
-
-     ...
-
-
-     图集
-     //
-     //
-     **粗体文字**
-     ![测试本地图片展示.jpg](5a9cfae29f54541f23721f17)
+     * #### 图集
+     * ___
+     * ...
+     * .
+     * ....
+     * ........
+     * ..
+     * <p>
+     * <p>
+     * ...
+     * <p>
+     * <p>
+     * 图集
+     * //
+     * //
+     * *粗体文字**
+     * ![测试本地图片展示.jpg](5a9cfae29f54541f23721f17)
      * author : test
-     * materials : [{"url":"http://ac-CQBviH8f.clouddn.com/1c39dd71ef5057372ea2.png","id":"5a8f7c53ac502e0032ba430a","filename":"5a8f7c53ac502e0032ba430a","parent":"5a8f7c49fe88c20038907410","album_index":1,"type":"image/png"},{"url":"http://ac-CQBviH8f.clouddn.com/1e00894f8809b609986e.png","id":"5a8f7c559f54540b4a21d0b5","filename":"5a8f7c559f54540b4a21d0b5","parent":"5a8f7c49fe88c20038907410","album_index":2,"type":"image/png"},{"url":"http://ac-CQBviH8f.clouddn.com/3f4a4cefd5e42f03030b.png","id":"5a8f7c6317d0090035613679","filename":"5a8f7c6317d0090035613679","parent":"5a8f7c49fe88c20038907410","album_index":3,"type":"image/png"},{"url":"http://ac-CQBviH8f.clouddn.com/130ac2beaf77e8583a64.png","id":"5a8f7c6d17d00900356136ae","filename":"5a8f7c6d17d00900356136ae","parent":"5a8f7c49fe88c20038907410","album_index":4,"type":"image/png"},{"url":"http://ac-CQBviH8f.clouddn.com/1e16996a9a4a61f09727.png","id":"5a8f7c71d50eee7c5fa48750","filename":"5a8f7c71d50eee7c5fa48750","parent":"5a8f7c49fe88c20038907410","album_index":5,"type":"image/png"},{"url":"http://ac-CQBviH8f.clouddn.com/7812584aefdebaad9b74.png","id":"5a8f7c7e128fe10037d78924","filename":"5a8f7c7e128fe10037d78924","parent":"5a8f7c49fe88c20038907410","album_index":6,"type":"image/png"},{"id":"5a8f7c49fe88c20038907410","file_index":1,"name":"test","type":"album"},{"id":"5a8eac0517d00900355dc635","file_index":2,"url":"http://ac-CQBviH8f.clouddn.com/e9ae26971f2c77860827.mp3","filename":"5a8eac0517d00900355dc635","type":"audio/mpeg3"},{"id":"5a9cfae29f54541f23721f17","file_index":3,"url":"http://ac-CQBviH8f.clouddn.com/70912058c2bd1f0fa1c4.jpg","filename":"5a9cfae29f54541f23721f17","type":"image/jpeg"}]
+     * materials : [{"url":"http://ac-CQBviH8f.clouddn.com/1c39dd71ef5057372ea2.png","id":"5a8f7c53ac502e0032ba430a","filename":"5a8f7c53ac502e0032ba430a","parent":"5a8f7c49fe88c20038907410","album_index":1,"album_name":"测试ID.png","mime_type":"image/png","type":3},{"url":"http://ac-CQBviH8f.clouddn.com/1e00894f8809b609986e.png","id":"5a8f7c559f54540b4a21d0b5","filename":"5a8f7c559f54540b4a21d0b5","parent":"5a8f7c49fe88c20038907410","album_index":2,"album_name":"汽车轮子乐谱.png","mime_type":"image/png","type":3},{"url":"http://ac-CQBviH8f.clouddn.com/3f4a4cefd5e42f03030b.png","id":"5a8f7c6317d0090035613679","filename":"5a8f7c6317d0090035613679","parent":"5a8f7c49fe88c20038907410","album_index":3,"album_name":"屏幕快照 2018-02-13 下午11.57.13.png","mime_type":"image/png","type":3},{"url":"http://ac-CQBviH8f.clouddn.com/130ac2beaf77e8583a64.png","id":"5a8f7c6d17d00900356136ae","filename":"5a8f7c6d17d00900356136ae","parent":"5a8f7c49fe88c20038907410","album_index":4,"album_name":"屏幕快照 2018-02-23 上午10.28.44.png","mime_type":"image/png","type":3},{"url":"http://ac-CQBviH8f.clouddn.com/1e16996a9a4a61f09727.png","id":"5a8f7c71d50eee7c5fa48750","filename":"5a8f7c71d50eee7c5fa48750","parent":"5a8f7c49fe88c20038907410","album_index":5,"album_name":"屏幕快照 2018-02-23 上午10.28.52.png","mime_type":"image/png","type":3},{"url":"http://ac-CQBviH8f.clouddn.com/7812584aefdebaad9b74.png","id":"5a8f7c7e128fe10037d78924","filename":"5a8f7c7e128fe10037d78924","parent":"5a8f7c49fe88c20038907410","album_index":6,"album_name":"屏幕快照 2018-02-23 上午10.29.11.png","mime_type":"image/png","type":3},{"id":"5a8f7c49fe88c20038907410","file_index":1,"name":"test","type":0,"mime_type":"album"},{"id":"5a8eac0517d00900355dc635","file_index":2,"url":"http://ac-CQBviH8f.clouddn.com/e9ae26971f2c77860827.mp3","filename":"5a8eac0517d00900355dc635","name":"testFile.mp3","mime_type":"audio/mpeg3","type":1},{"id":"5a9cfae29f54541f23721f17","file_index":3,"url":"http://ac-CQBviH8f.clouddn.com/70912058c2bd1f0fa1c4.jpg","filename":"5a9cfae29f54541f23721f17","name":"测试本地图片展示.jpg","mime_type":"image/jpeg","type":3}]
      */
 
     private String id;
@@ -111,23 +111,45 @@ public class CourseBean {
     }
 
     public static class MaterialsBean {
+        @Override
+        public String toString() {
+            return "MaterialsBean{" +
+                    "url='" + url + '\'' +
+                    ", id='" + id + '\'' +
+                    ", filename='" + filename + '\'' +
+                    ", parent='" + parent + '\'' +
+                    ", album_index=" + album_index +
+                    ", album_name='" + album_name + '\'' +
+                    ", mime_type='" + mime_type + '\'' +
+                    ", type=" + type +
+                    ", file_index=" + file_index +
+                    ", name='" + name + '\'' +
+                    '}';
+        }
+
         /**
          * url : http://ac-CQBviH8f.clouddn.com/1c39dd71ef5057372ea2.png
          * id : 5a8f7c53ac502e0032ba430a
          * filename : 5a8f7c53ac502e0032ba430a
          * parent : 5a8f7c49fe88c20038907410
          * album_index : 1
-         * type : image/png
+         * album_name : 测试ID.png
+         * mime_type : image/png
+         * type : 3
          * file_index : 1
          * name : test
          */
+
+
 
         private String url;
         private String id;
         private String filename;
         private String parent;
         private int album_index;
-        private String type;
+        private String album_name;
+        private String mime_type;
+        private int type;
         private int file_index;
         private String name;
 
@@ -171,11 +193,27 @@ public class CourseBean {
             this.album_index = album_index;
         }
 
-        public String getType() {
+        public String getAlbum_name() {
+            return album_name;
+        }
+
+        public void setAlbum_name(String album_name) {
+            this.album_name = album_name;
+        }
+
+        public String getMime_type() {
+            return mime_type;
+        }
+
+        public void setMime_type(String mime_type) {
+            this.mime_type = mime_type;
+        }
+
+        public int getType() {
             return type;
         }
 
-        public void setType(String type) {
+        public void setType(int type) {
             this.type = type;
         }
 

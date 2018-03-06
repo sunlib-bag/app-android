@@ -11,6 +11,8 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.text.Spanned;
 import android.util.Log;
@@ -25,6 +27,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -63,6 +68,11 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
     @BindView(R.id.course_act_textview4)
     TextView author;
 
+    @BindView(R.id.course_act_recyclerview)
+    RecyclerView recyclerView;
+
+    CourseAdapter courseAdapter;
+
     @Override
     protected int layoutId() {
         return R.layout.activity_course;
@@ -70,18 +80,100 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
 
     @Override
     protected void created(Bundle bundle) {
+        //设置RecyclerView
+        courseAdapter = new CourseAdapter(this);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(courseAdapter);
+
+        //获取resource的存储地址
         resourceStorageAddress = getResourceStorageAddress();
+
+        //根据resource的地址构建Json和Material的存储地址
         jsonStorageAddress = getJsonAddress();
         materialStorageAddress = getMaterialAddress();
+
+        //根据Json和Material的存储地址构建JsonFile和MaterialFile
         File jsonFile = getJsonFile();
         File materialFolder = getMaterialFolder();
+
+        //解析JSON到bean中
         bean = deserializeJson(jsonFile);
+
+        //读取bean中的内容到UI上
         courseNameTextView.setText(bean.getName());
         sourceTextView.setText(bean.getSource());
         author.setText(bean.getAuthor());
-        String markdownReplace = "[$1](" + materialFolder.getAbsolutePath() + "/$2)";
-        final String markdown = bean.getContent().replaceAll("\\[(\\S+)]\\((\\S+)\\)", markdownReplace);
-        Log.e("FUCK:Markdown content", markdown);
+
+        //解析markdown
+        final String markdown = rebuildMarkdown(materialFolder);
+        renderingMarkdown(markdown);
+
+        //遍历Json, 获取List<Materials>
+        List<Materials> materialsList = getMaterialsList(materialFolder);
+
+        //加载数据
+        courseAdapter.setMaterialData(materialsList);
+    }
+
+    @NonNull
+    private List<Materials> getMaterialsList(File materialFolder) {
+        List<Materials> materialsList = new ArrayList<>();
+        for (CourseBean.MaterialsBean materialsBean : bean.getMaterials()) {
+            //非图集内图片
+            if (materialsBean.getParent() == null) {
+                Materials materials = new Materials();
+                switch (materialsBean.getType()) {
+                    case 0:
+                        //图集
+                        materials.setName(materialsBean.getName());
+                        materials.setMaterialType(Materials.MaterialType.ALBUM);
+                        materials.setResourceStorageAddress(materialFolder.getAbsolutePath());
+                        //获取图集的儿子们
+                        List<Materials.AlbumResource> albumResourceList = new ArrayList<>();
+                        for (CourseBean.MaterialsBean materialsBean1 : bean.getMaterials()) {
+                            if (materialsBean1.getParent() != null) {
+                                if (Objects.equals(materialsBean1.getParent(), materialsBean.getFilename())) {
+                                    Materials.AlbumResource albumResource = new Materials.AlbumResource();
+                                    albumResource.setName(materialsBean1.getName());
+                                    albumResource.setOrder(materialsBean1.getAlbum_index());
+                                    albumResource.setResourceStorageAddress(materialFolder.getAbsolutePath() + File.separator + materialsBean1.getFilename());
+                                    albumResourceList.add(albumResource);
+                                }
+                            }
+                        }
+                        materials.setAlbumResourceList(albumResourceList);
+                        materials.setOrder(materialsBean.getFile_index());
+                        materialsList.add(materials);
+                        break;
+                    case 1:
+                        //音频
+                        materials.setName(materialsBean.getName());
+                        materials.setMaterialType(Materials.MaterialType.AUDIO);
+                        materials.setResourceStorageAddress(materialFolder.getAbsolutePath() + File.separator + materialsBean.getFilename());
+                        materials.setOrder(materialsBean.getFile_index());
+                        materialsList.add(materials);
+                        break;
+                    case 2:
+                        //视频
+                        materials.setName(materialsBean.getName());
+                        materials.setMaterialType(Materials.MaterialType.VIDEO);
+                        materials.setResourceStorageAddress(materialFolder.getAbsolutePath() + File.separator + materialsBean.getFilename());
+                        materials.setOrder(materialsBean.getFile_index());
+                        materialsList.add(materials);
+                        break;
+                    case 3:
+                        //markdown内图片, do nothing
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+        }
+        return materialsList;
+    }
+
+    private void renderingMarkdown(final String markdown) {
         markdownTextView.setMovementMethod(LongPressLinkMovementMethod.getInstance());
         markdownTextView.post(new Runnable() {
             @Override
@@ -111,6 +203,13 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
                 markdownTextView.setText(spanned);
             }
         });
+    }
+
+    private String rebuildMarkdown(File materialFolder) {
+        String markdownReplace = "[$1](" + materialFolder.getAbsolutePath() + "/$2)";
+        final String markdown = bean.getContent().replaceAll("\\[(\\S+)]\\((\\S+)\\)", markdownReplace);
+        Log.e("FUCK:Markdown content", markdown);
+        return markdown;
     }
 
     public static Drawable drawableFromUrl(String url) throws IOException {

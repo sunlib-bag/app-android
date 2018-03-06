@@ -149,15 +149,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="40dp"
-                    android:nestedScrollingEnabled="false" />
-
+                    android:nestedScrollingEnabled="false"
+                    tools:targetApi="lollipop" />
             </LinearLayout>
-
-
         </android.support.v4.widget.NestedScrollView>
-
-
     </LinearLayout>
-
-
 </LinearLayout>
