@@ -25,8 +25,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -59,6 +57,12 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
     @BindView(R.id.course_act_textview2)
     TextView markdownTextView;
 
+    @BindView(R.id.course_act_textview3)
+    TextView sourceTextView;
+
+    @BindView(R.id.course_act_textview4)
+    TextView author;
+
     @Override
     protected int layoutId() {
         return R.layout.activity_course;
@@ -72,12 +76,18 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
         File jsonFile = getJsonFile();
         File materialFolder = getMaterialFolder();
         bean = deserializeJson(jsonFile);
+        courseNameTextView.setText(bean.getName());
+        sourceTextView.setText(bean.getSource());
+        author.setText(bean.getAuthor());
+        String markdownReplace = "[$1](" + materialFolder.getAbsolutePath() + "/$2)";
+        final String markdown = bean.getContent().replaceAll("\\[(\\S+)\\]\\((\\S+)\\)", markdownReplace);
+        Log.e("FUCK:Markdown content", markdown);
         markdownTextView.setMovementMethod(LongPressLinkMovementMethod.getInstance());
         markdownTextView.post(new Runnable() {
             @Override
             public void run() {
                 long time = System.nanoTime();
-                Spanned spanned = MarkDown.fromMarkdown(bean.getContent(), new Html.ImageGetter() {
+                Spanned spanned = MarkDown.fromMarkdown(markdown, new Html.ImageGetter() {
                     static final String TAG = "Markdown";
 
                     @Override
@@ -109,11 +119,14 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
 
         Bitmap x;
 
-        HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
-        connection.connect();
-        InputStream input = connection.getInputStream();
+//        HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+//        connection.connect();
+        Log.e("FUCK:URL", url);
+        File file = new File(url);
+        InputStream inputStream = new FileInputStream(file);
+//        InputStream input = connection.getInputStream();
 
-        x = BitmapFactory.decodeStream(input);
+        x = BitmapFactory.decodeStream(inputStream);
         return new BitmapDrawable(x);
     }
 

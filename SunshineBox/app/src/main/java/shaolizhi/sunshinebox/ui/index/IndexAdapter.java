@@ -281,7 +281,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
         }
 
         private File getRootFolder() {
-            File file = new File(Environment.getExternalStorageDirectory().getPath() + File.separator + "SunshineBox II");
+            File file = new File(Environment.getExternalStorageDirectory().getPath() + File.separator + "SunshineBox_II");
             if (!file.exists()) {
                 Log.e("Create Folder: ", String.valueOf(file.mkdirs()));
             }
