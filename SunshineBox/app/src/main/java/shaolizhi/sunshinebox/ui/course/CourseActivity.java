@@ -80,7 +80,7 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
         sourceTextView.setText(bean.getSource());
         author.setText(bean.getAuthor());
         String markdownReplace = "[$1](" + materialFolder.getAbsolutePath() + "/$2)";
-        final String markdown = bean.getContent().replaceAll("\\[(\\S+)\\]\\((\\S+)\\)", markdownReplace);
+        final String markdown = bean.getContent().replaceAll("\\[(\\S+)]\\((\\S+)\\)", markdownReplace);
         Log.e("FUCK:Markdown content", markdown);
         markdownTextView.setMovementMethod(LongPressLinkMovementMethod.getInstance());
         markdownTextView.post(new Runnable() {

@@ -22,15 +22,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_zzhoujay_markdown_markdown_1_0_5.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseBean.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_course.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_course.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -193,12 +186,12 @@
       <file leaf-file-name="CourseActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="83" column="49" lean-forward="true" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+            <state relative-caret-position="206">
+              <caret line="79" column="49" lean-forward="true" selection-start-line="79" selection-start-column="49" selection-end-line="79" selection-end-column="49" />
               <folding>
                 <element signature="e#1812#1813#0" expanded="true" />
                 <element signature="e#1859#1860#0" expanded="true" />
-                <element signature="class#2908:3879" expanded="false" />
+                <element signature="class#2906:3877" expanded="false" />
                 <element signature="method#drawableFromUrl#0;class#CourseActivity#0" expanded="false" />
                 <element signature="method#deserializeJson#0;class#CourseActivity#0" expanded="false" />
                 <element signature="method#getJsonFile#0;class#CourseActivity#0" expanded="false" />
@@ -3913,7 +3906,7 @@
     <property name="android.sdk.path" value="M:/development-software/Android/sdk" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Android/Markdown-master/markdown" />
-    <property name="device.picker.selection" value="SunshineBox_API_23" />
+    <property name="device.picker.selection" value="4DUSKNMFS4BA9LCY" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
@@ -4042,7 +4035,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520305150270" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520307162605" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -4089,7 +4082,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520305150270" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520307162605" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -4307,13 +4300,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511493005850</updated>
-    </task>
-    <task id="LOCAL-00077" summary="修改了BUG：WebView没内容就隐藏了吧，别在那占着茅坑不拉屎了">
-      <created>1515997371312</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1515997371312</updated>
     </task>
     <task id="LOCAL-00078" summary="调整了PhoneNumberVerifyActivity的UI">
       <created>1516175434701</created>
@@ -4651,7 +4637,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520016245934</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="完成了Markdown离线展示">
+      <created>1520305196281</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1520305196283</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TodoView">
@@ -4677,7 +4670,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.70203644" sideWeight="0.27147487" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34035656" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51731604" sideWeight="0.4964229" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51661307" sideWeight="0.4964229" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49343544" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9185423" sideWeight="0.49403816" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -4733,7 +4726,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="IndexActivity：调整颜色" />
     <MESSAGE value="IndexActivity：UI粗调" />
     <MESSAGE value="开启调试日志" />
     <MESSAGE value="阶段性工作，可以直接把LeanCloud中的内容展示" />
@@ -4758,7 +4750,8 @@
     <MESSAGE value="删除无用行" />
     <MESSAGE value="完成从文件中读取JSON文件并解析的工作" />
     <MESSAGE value="完成了Markdown展示并解析的工作" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了Markdown展示并解析的工作" />
+    <MESSAGE value="完成了Markdown离线展示" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了Markdown离线展示" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -5283,12 +5276,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="83" column="49" lean-forward="true" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+        <state relative-caret-position="206">
+          <caret line="79" column="49" lean-forward="true" selection-start-line="79" selection-start-column="49" selection-end-line="79" selection-end-column="49" />
           <folding>
             <element signature="e#1812#1813#0" expanded="true" />
             <element signature="e#1859#1860#0" expanded="true" />
-            <element signature="class#2908:3879" expanded="false" />
+            <element signature="class#2906:3877" expanded="false" />
             <element signature="method#drawableFromUrl#0;class#CourseActivity#0" expanded="false" />
             <element signature="method#deserializeJson#0;class#CourseActivity#0" expanded="false" />
             <element signature="method#getJsonFile#0;class#CourseActivity#0" expanded="false" />
