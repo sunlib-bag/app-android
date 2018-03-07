@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="shaolizhi.sunshinebox.ui.album.AlbumActivity">
+
+    <ImageView
+        android:id="@+id/album_act_imageview1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/album_act_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/album_act_view"
+        android:layout_alignParentEnd="true"
+        android:background="#64ffffff"
+        android:elevation="5dp"
+        android:text="@string/album_act_string1"
+        tools:targetApi="lollipop" />
+
+    <View
+        android:id="@+id/album_act_view"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerVertical="true" />
+
+    <Button
+        android:id="@+id/album_act_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/album_act_view"
+        android:layout_marginTop="30dp"
+        android:background="#64ffffff"
+        android:elevation="5dp"
+        android:text="@string/album_act_string2"
+        tools:targetApi="lollipop" />
+</RelativeLayout>

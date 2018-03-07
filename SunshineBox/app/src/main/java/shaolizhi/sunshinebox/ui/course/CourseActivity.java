@@ -42,6 +42,7 @@ import java.util.Objects;
 import butterknife.BindView;
 import butterknife.OnClick;
 import shaolizhi.sunshinebox.R;
+import shaolizhi.sunshinebox.ui.album.AlbumActivity;
 import shaolizhi.sunshinebox.ui.base.BaseActivity;
 import shaolizhi.sunshinebox.utils.IOUtils;
 
@@ -192,7 +193,7 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
                         List<Materials.AlbumResource> albumResourceList = new ArrayList<>();
                         for (CourseBean.MaterialsBean materialsBean1 : bean.getMaterials()) {
                             if (materialsBean1.getParent() != null) {
-                                if (Objects.equals(materialsBean1.getParent(), materialsBean.getFilename())) {
+                                if (Objects.equals(materialsBean1.getParent(), materialsBean.getId())) {
                                     Materials.AlbumResource albumResource = new Materials.AlbumResource();
                                     albumResource.setName(materialsBean1.getName());
                                     albumResource.setOrder(materialsBean1.getAlbum_index());
@@ -393,6 +394,6 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
 
     @Override
     public void openAlbum(Materials materials) {
-
+        startActivity(AlbumActivity.newIntent(this, materials));
     }
 }

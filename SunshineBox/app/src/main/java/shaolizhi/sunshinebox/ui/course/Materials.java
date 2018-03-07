@@ -1,5 +1,6 @@
 package shaolizhi.sunshinebox.ui.course;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -7,7 +8,7 @@ import java.util.List;
  * Perfect Code
  */
 
-public class Materials {
+public class Materials implements Serializable {
 
     @Override
     public String toString() {
@@ -74,7 +75,7 @@ public class Materials {
         this.order = order;
     }
 
-    public static class AlbumResource {
+    public static class AlbumResource implements Serializable {
         private String name;
         private String resourceStorageAddress;
         private int order;

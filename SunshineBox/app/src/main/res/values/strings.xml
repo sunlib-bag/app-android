@@ -70,5 +70,7 @@
 
     <!--CourseItem-->
     <string name="course_act_item_string1">课程类别图片</string>
+    <string name="album_act_string1">下一图</string>
+    <string name="album_act_string2">上一图</string>
 
 </resources>
