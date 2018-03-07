@@ -31,6 +31,7 @@
                 android:src="@drawable/ic_menu_black_24dp" />
 
             <TextView
+                android:id="@+id/index_act_textview5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"

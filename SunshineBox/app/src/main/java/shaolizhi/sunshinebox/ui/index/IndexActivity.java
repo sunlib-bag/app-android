@@ -1,8 +1,12 @@
 package shaolizhi.sunshinebox.ui.index;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -22,6 +26,25 @@ import shaolizhi.sunshinebox.ui.base.BaseActivity;
 import shaolizhi.sunshinebox.widget.NoScrollViewPager;
 
 public class IndexActivity extends BaseActivity {
+
+    private boolean isThereANet;
+    private NetworkChangeBroadcast netWorkChangeBroadcast;
+
+    public boolean isThereANet() {
+        return isThereANet;
+    }
+
+    public void setThereANet(boolean thereANet) {
+        isThereANet = thereANet;
+        if (thereANet) {
+            toolbarNameTextView.setText("阳光盒子");
+        } else {
+            toolbarNameTextView.setText("阳光盒子（离线模式）");
+        }
+    }
+
+    @BindView(R.id.index_act_textview5)
+    TextView toolbarNameTextView;
 
     @OnClick(R.id.index_act_linearlayout1)
     public void clickNursery() {
@@ -120,7 +143,10 @@ public class IndexActivity extends BaseActivity {
 
     @Override
     protected void resumed() {
-
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
+        netWorkChangeBroadcast = new NetworkChangeBroadcast();
+        registerReceiver(netWorkChangeBroadcast, intentFilter);
     }
 
     //------------------------------private method------------------------------------------------//
@@ -199,5 +225,49 @@ public class IndexActivity extends BaseActivity {
     //------------------------------static method-------------------------------------------------//
     public static Intent newIntent(Context packageContext) {
         return new Intent(packageContext, IndexActivity.class);
+    }
+
+    public static boolean isConnected(Context context) {
+        ConnectivityManager
+                cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = null;
+        if (cm != null) {
+            activeNetwork = cm.getActiveNetworkInfo();
+        }
+        return activeNetwork != null
+                && activeNetwork.isConnectedOrConnecting();
+    }
+
+    private class NetworkChangeBroadcast extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            boolean success = false;
+//            //获得网络连接服务
+//            ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(CONNECTIVITY_SERVICE);
+//            //获取wifi连接状态
+//            NetworkInfo.State state = null;
+//            if (connectivityManager != null) {
+//                state = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState();
+//            }
+//            //判断是否正在使用wifi网络
+//            if (state == NetworkInfo.State.CONNECTED) {
+//                success = true;
+//            }
+//            //获取4G状态
+//            if (connectivityManager != null) {
+//                state = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState();
+//            }
+//            //判断是否在使用4G网络
+//            if (state == NetworkInfo.State.CONNECTED) {
+//                success = true;
+//            }
+            success = isConnected(IndexActivity.this);
+            //如果没有连接成功
+            if (!success) {
+                setThereANet(false);
+            } else {
+                setThereANet(true);
+            }
+        }
     }
 }
