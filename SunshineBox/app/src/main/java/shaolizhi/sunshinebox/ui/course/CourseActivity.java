@@ -8,17 +8,23 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.text.Spanned;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.zzhoujay.markdown.MarkDown;
 import com.zzhoujay.markdown.method.LongPressLinkMovementMethod;
@@ -27,7 +33,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -37,10 +45,7 @@ import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.ui.base.BaseActivity;
 import shaolizhi.sunshinebox.utils.IOUtils;
 
-public class CourseActivity extends BaseActivity implements CourseContract.View {
-
-    private CourseContract.Presenter presenter;
-
+public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
     private static final String RESOURCE_STORAGE_ADDRESS = "resource storage address";
 
     private String resourceStorageAddress;
@@ -50,6 +55,8 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
     private String materialStorageAddress;
 
     private CourseBean bean;
+
+    private MediaPlayer mediaPlayer;
 
     @OnClick(R.id.course_act_imagebutton)
     public void back() {
@@ -68,6 +75,52 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
     @BindView(R.id.course_act_textview4)
     TextView author;
 
+    @BindView(R.id.course_act_cardview1)
+    CardView cardView;
+
+    @BindView(R.id.course_act_textview5)
+    TextView musicNameTextView;
+
+    @BindView(R.id.course_act_textview6)
+    TextView playbackProgressTextView;
+
+    @BindView(R.id.course_act_textview7)
+    TextView totalLengthOfMusicTextView;
+
+    @BindView(R.id.course_act_imageview2)
+    ImageView replayImageView;
+
+    @OnClick(R.id.course_act_imageview2)
+    public void clickReplayImageView() {
+        if (mediaPlayer.isPlaying()) {
+            mediaPlayer.seekTo(0);
+        }
+    }
+
+    @BindView(R.id.course_act_imageview1)
+    ImageView playOrPauseImageView;
+
+    @OnClick(R.id.course_act_imageview1)
+    public void clickPlayOrPauseImageView() {
+        if (!mediaPlayer.isPlaying()) {
+            //此时没有播放
+            mediaPlayer.start();
+            Glide.with(this).load(R.drawable.pause).into(playOrPauseImageView);
+        } else {
+            mediaPlayer.pause();
+            Glide.with(this).load(R.drawable.play).into(playOrPauseImageView);
+        }
+    }
+
+    @BindView(R.id.course_act_imageview3)
+    ImageView closeImageView;
+
+    @OnClick(R.id.course_act_imageview3)
+    public void clickCloseImageView() {
+        mediaPlayer.reset();
+        cardView.setVisibility(View.GONE);
+    }
+
     @BindView(R.id.course_act_recyclerview)
     RecyclerView recyclerView;
 
@@ -81,9 +134,10 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
     @Override
     protected void created(Bundle bundle) {
         //设置RecyclerView
-        courseAdapter = new CourseAdapter(this);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(courseAdapter);
+        setUpRecyclerView();
+
+        //创建MediaPlayer
+        mediaPlayer = new MediaPlayer();
 
         //获取resource的存储地址
         resourceStorageAddress = getResourceStorageAddress();
@@ -113,6 +167,12 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
 
         //加载数据
         courseAdapter.setMaterialData(materialsList);
+    }
+
+    private void setUpRecyclerView() {
+        courseAdapter = new CourseAdapter(this);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(courseAdapter);
     }
 
     @NonNull
@@ -289,8 +349,42 @@ public class CourseActivity extends BaseActivity implements CourseContract.View 
         return intent;
     }
 
+
     @Override
-    public void setUpView() {
+    public void playAudio(Materials materials) {
+        Uri uri = Uri.parse(materials.getResourceStorageAddress());
+        cardView.setVisibility(View.VISIBLE);
+        musicNameTextView.setText(materials.getName());
+        playbackProgressTextView.setText("00:00");
+        totalLengthOfMusicTextView.setText("00:00");
+
+        Glide.with(this).load(R.drawable.pause).into(playOrPauseImageView);
+        try {
+            mediaPlayer.setDataSource(String.valueOf(uri));
+            mediaPlayer.prepare();
+            mediaPlayer.start();
+
+            totalLengthOfMusicTextView.setText(getFormatTime(mediaPlayer.getDuration()));
+            playbackProgressTextView.setText(getFormatTime(mediaPlayer.getCurrentPosition()));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private String getFormatTime(int time) {
+        Date date = new Date(time);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("mm:ss");
+        return simpleDateFormat.format(date);
+    }
+
+    @Override
+    public void playVideo(Materials materials) {
+
+    }
+
+    @Override
+    public void openAlbum(Materials materials) {
 
     }
 }

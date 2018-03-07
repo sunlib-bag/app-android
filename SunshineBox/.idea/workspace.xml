@@ -21,9 +21,32 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="">
+    <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="UI上的小修改">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/pause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/play.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/replay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseMediaPlayer.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseContract.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CoursePrsenter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/book.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/shaol.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/shaol.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_course.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_course.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_course_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_course_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
@@ -36,74 +59,6 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="fragment_index.xml" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_index.xml">
-                <provider editor-type-id="android-designer2">
-                  <state />
-                </provider>
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="372">
-                    <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="IndexAdapter.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="40">
-                    <caret line="64" column="38" lean-forward="false" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
-                    <folding>
-                      <element signature="method#IndexAdapter#0;class#IndexAdapter#0" expanded="false" />
-                      <element signature="method#initObjectBox#0;class#IndexAdapter#0" expanded="false" />
-                      <element signature="class#IndexViewHolder#0;class#IndexAdapter#0" expanded="false" />
-                      <element signature="method#loadCourseName#0;class#IndexViewHolder#0;class#IndexAdapter#0" expanded="false" />
-                      <element signature="method#loadInformation#0;class#IndexViewHolder#0;class#IndexAdapter#0" expanded="false" />
-                      <element signature="method#loadCardBackground#0;class#IndexViewHolder#0;class#IndexAdapter#0" expanded="false" />
-                      <element signature="method#checkPermissions#0;class#IndexViewHolder#0;class#IndexAdapter#0" expanded="false" />
-                      <element signature="method#onClick#0;class#IndexViewHolder#0;class#IndexAdapter#0" expanded="false" />
-                      <element signature="method#downloadZip#0;class#IndexViewHolder#0;class#IndexAdapter#0" expanded="false" />
-                      <element signature="method#storageZip#0;class#IndexViewHolder#0;class#IndexAdapter#0" expanded="false" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="Materials.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/Materials.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="302">
-                    <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-                    <folding>
-                      <element signature="e#774#775#0" expanded="true" />
-                      <element signature="e#814#815#0" expanded="true" />
-                      <element signature="class#AlbumResource#0;class#Materials#0" expanded="false" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="IndexFragment.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1252">
-                    <caret line="70" column="13" lean-forward="false" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="ExternalProjectsData">
@@ -139,8 +94,8 @@
       <file leaf-file-name="IndexActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="71" column="26" lean-forward="false" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+            <state relative-caret-position="-1368">
+              <caret line="73" column="42" lean-forward="false" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
               <folding>
                 <element signature="method#clickNursery#0;class#IndexActivity#0" expanded="false" />
                 <element signature="method#clickMusic#0;class#IndexActivity#0" expanded="false" />
@@ -174,97 +129,9 @@
       <file leaf-file-name="CourseBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="112" column="24" lean-forward="false" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
-              <folding>
-                <element signature="e#2939#2940#0" expanded="true" />
-                <element signature="e#2964#2965#0" expanded="true" />
-                <element signature="e#3000#3001#0" expanded="true" />
-                <element signature="e#3028#3029#0" expanded="true" />
-                <element signature="e#3059#3060#0" expanded="true" />
-                <element signature="e#3086#3087#0" expanded="true" />
-                <element signature="e#3126#3127#0" expanded="true" />
-                <element signature="e#3158#3159#0" expanded="true" />
-                <element signature="e#3194#3195#0" expanded="true" />
-                <element signature="e#3229#3230#0" expanded="true" />
-                <element signature="e#3282#3283#0" expanded="true" />
-                <element signature="e#3330#3331#0" expanded="true" />
-                <element signature="e#3363#3364#0" expanded="true" />
-                <element signature="e#3392#3393#0" expanded="true" />
-                <element signature="e#3436#3437#0" expanded="true" />
-                <element signature="e#3472#3473#0" expanded="true" />
-                <element signature="e#3506#3507#0" expanded="true" />
-                <element signature="e#3536#3537#0" expanded="true" />
-                <element signature="e#3582#3583#0" expanded="true" />
-                <element signature="e#3620#3621#0" expanded="true" />
-                <element signature="e#3653#3654#0" expanded="true" />
-                <element signature="e#3682#3683#0" expanded="true" />
-                <element signature="e#3726#3727#0" expanded="true" />
-                <element signature="e#3762#3763#0" expanded="true" />
-                <element signature="e#3799#3800#0" expanded="true" />
-                <element signature="e#3826#3827#0" expanded="true" />
-                <element signature="e#3872#3873#0" expanded="true" />
-                <element signature="e#3904#3905#0" expanded="true" />
-                <element signature="e#3953#3954#0" expanded="true" />
-                <element signature="e#3985#3986#0" expanded="true" />
-                <element signature="e#4048#4049#0" expanded="true" />
-                <element signature="e#4090#4091#0" expanded="true" />
-                <element signature="e#5493#5494#0" expanded="true" />
-                <element signature="e#5527#5528#0" expanded="true" />
-                <element signature="e#5569#5570#0" expanded="true" />
-                <element signature="e#5607#5608#0" expanded="true" />
-                <element signature="e#5640#5641#0" expanded="true" />
-                <element signature="e#5673#5674#0" expanded="true" />
-                <element signature="e#5713#5714#0" expanded="true" />
-                <element signature="e#5749#5750#0" expanded="true" />
-                <element signature="e#5788#5789#0" expanded="true" />
-                <element signature="e#5827#5828#0" expanded="true" />
-                <element signature="e#5879#5880#0" expanded="true" />
-                <element signature="e#5927#5928#0" expanded="true" />
-                <element signature="e#5964#5965#0" expanded="true" />
-                <element signature="e#6001#6002#0" expanded="true" />
-                <element signature="e#6049#6050#0" expanded="true" />
-                <element signature="e#6093#6094#0" expanded="true" />
-                <element signature="e#6132#6133#0" expanded="true" />
-                <element signature="e#6174#6175#0" expanded="true" />
-                <element signature="e#6229#6230#0" expanded="true" />
-                <element signature="e#6283#6284#0" expanded="true" />
-                <element signature="e#6324#6325#0" expanded="true" />
-                <element signature="e#6365#6366#0" expanded="true" />
-                <element signature="e#6421#6422#0" expanded="true" />
-                <element signature="e#6473#6474#0" expanded="true" />
-                <element signature="e#6513#6514#0" expanded="true" />
-                <element signature="e#6553#6554#0" expanded="true" />
-                <element signature="e#6607#6608#0" expanded="true" />
-                <element signature="e#6657#6658#0" expanded="true" />
-                <element signature="e#6689#6690#0" expanded="true" />
-                <element signature="e#6724#6725#0" expanded="true" />
-                <element signature="e#6765#6766#0" expanded="true" />
-                <element signature="e#6805#6806#0" expanded="true" />
-                <element signature="e#6843#6844#0" expanded="true" />
-                <element signature="e#6884#6885#0" expanded="true" />
-                <element signature="e#6937#6938#0" expanded="true" />
-                <element signature="e#6989#6990#0" expanded="true" />
-                <element signature="e#7024#7025#0" expanded="true" />
-                <element signature="e#7059#7060#0" expanded="true" />
-                <element signature="e#7103#7104#0" expanded="true" />
-                <element signature="e#7143#7144#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_course_item.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_course_item.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-              <folding>
-                <element signature="e#581#614#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="310">
+              <caret line="121" column="51" lean-forward="false" selection-start-line="121" selection-start-column="51" selection-end-line="121" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -272,9 +139,17 @@
       <file leaf-file-name="IndexModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2454">
+            <state relative-caret-position="5456">
               <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#7218#7219#0" expanded="false" />
+                <element signature="e#7259#7260#0" expanded="false" />
+                <element signature="e#7299#7300#0" expanded="false" />
+                <element signature="e#7340#7341#0" expanded="false" />
+                <element signature="e#7380#7381#0" expanded="false" />
+                <element signature="e#7421#7422#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -282,14 +157,11 @@
       <file leaf-file-name="CourseActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="129" column="92" lean-forward="false" selection-start-line="129" selection-start-column="92" selection-end-line="129" selection-end-column="92" />
+            <state relative-caret-position="275">
+              <caret line="95" column="32" lean-forward="false" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
               <folding>
-                <element signature="e#2100#2101#0" expanded="true" />
-                <element signature="e#2147#2148#0" expanded="true" />
+                <element signature="method#getMaterialsList#0;class#CourseActivity#0" expanded="false" />
                 <element signature="method#renderingMarkdown#0;class#CourseActivity#0" expanded="false" />
-                <element signature="e#6715#8140#0" expanded="true" />
-                <element signature="e#8139#8140#0" expanded="true" />
                 <element signature="method#rebuildMarkdown#0;class#CourseActivity#0" expanded="false" />
                 <element signature="method#drawableFromUrl#0;class#CourseActivity#0" expanded="false" />
                 <element signature="method#deserializeJson#0;class#CourseActivity#0" expanded="false" />
@@ -297,47 +169,36 @@
                 <element signature="method#getJsonFile#0;class#CourseActivity#0" expanded="false" />
                 <element signature="method#getMaterialAddress#0;class#CourseActivity#0" expanded="false" />
                 <element signature="method#getJsonAddress#0;class#CourseActivity#0" expanded="false" />
-                <element signature="method#getResourceStorageAddress#0;class#CourseActivity#0" expanded="false" />
                 <element signature="method#resumed#0;class#CourseActivity#0" expanded="false" />
                 <element signature="method#newIntent#0;class#CourseActivity#0" expanded="false" />
-                <element signature="method#setUpView#0;class#CourseActivity#0" expanded="false" />
+                <element signature="method#getFormatTime#0;class#CourseActivity#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseAdapter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CourseMediaPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseMediaPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="61" column="49" lean-forward="false" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+            <state relative-caret-position="408">
+              <caret line="99" column="26" lean-forward="false" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#loadMaterialName#0;class#ViewHolder#0;class#CourseAdapter#0" expanded="false" />
+                <element signature="method#loadMaterialPicture#0;class#ViewHolder#0;class#CourseAdapter#0" expanded="false" />
                 <element signature="method#ViewHolder#0;class#ViewHolder#0;class#CourseAdapter#0" expanded="false" />
-                <element signature="method#CourseAdapter#0;class#CourseAdapter#0" expanded="false" />
                 <element signature="method#onBindViewHolder#0;class#CourseAdapter#0" expanded="false" />
                 <element signature="method#getItemCount#0;class#CourseAdapter#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_course.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_course.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="96" column="36" lean-forward="false" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
-              <folding>
-                <element signature="e#1182#1210#0" expanded="true" />
-                <element signature="e#2755#2779#0" expanded="true" />
-                <element signature="e#3659#3683#0" expanded="true" />
-                <element signature="e#4637#4670#0" expanded="true" />
-                <element signature="e#4711#4746#0" expanded="true" />
-                <element signature="e#4788#4823#0" expanded="true" />
-                <element signature="e#4863#4896#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -346,8 +207,8 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="61" column="45" lean-forward="false" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
+            <state relative-caret-position="2232">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -378,15 +239,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="activity_course.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_course.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="166" column="40" lean-forward="false" selection-start-line="166" selection-start-column="40" selection-end-line="166" selection-end-column="40" />
+              <folding>
+                <element signature="e#408#1757#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="resourceFile" />
         <option value="layoutResourceFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -3553,9 +3429,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/3b8df95724110238689e75015287ab68/res/values/values.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_fitness_center.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_forum.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_group_work.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_location_city.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_brush.xml" />
@@ -3586,24 +3459,27 @@
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/DownLoadZip.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/DownloadZip.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/DownloadTask.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseContract.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/utils/IOUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/markdown/LongPressLinkMovementMethod.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_index.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-v21/activity_course.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseRecyclerBean.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_course.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseBean.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/Materials.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_course_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CoursePrsenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CoursePresenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseContract.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseMediaPlayer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_course.xml" />
       </list>
     </option>
   </component>
@@ -3630,162 +3506,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sunshinebox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sunshinebox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sunshinebox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="course" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3956,14 +3676,170 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sunshinebox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sunshinebox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sunshinebox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="course" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="M:/development-software/Android/sdk" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Android/Markdown-master/markdown" />
-    <property name="device.picker.selection" value="SunshineBox_API_23" />
+    <property name="device.picker.selection" value="4DUSKNMFS4BA9LCY" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
@@ -4092,7 +3968,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520332856037" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520411030983" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -4139,7 +4015,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520332856037" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520411030983" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -4357,13 +4233,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511493005850</updated>
-    </task>
-    <task id="LOCAL-00080" summary="舍弃了MainActivity与SettingActivity">
-      <created>1516256729112</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1516256729112</updated>
     </task>
     <task id="LOCAL-00081" summary="添加了侧边菜单栏">
       <created>1516260470619</created>
@@ -4701,7 +4570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520332508917</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="UI上的小修改">
+      <created>1520332873418</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1520332873418</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TodoView">
@@ -4724,17 +4600,17 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.70203644" sideWeight="0.27147487" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30388978" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7012987" sideWeight="0.27147487" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6102107" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51661307" sideWeight="0.4964229" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51554126" sideWeight="0.4964229" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49343544" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6441586" sideWeight="0.49403816" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6439394" sideWeight="0.49403816" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.50656456" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3306321" sideWeight="0.495671" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32869634" sideWeight="0.495671" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -4783,7 +4659,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="开启调试日志" />
     <MESSAGE value="阶段性工作，可以直接把LeanCloud中的内容展示" />
     <MESSAGE value="做到了至关重要的“更新数据库操作”，这是整个“同步操作”的核心，由于本软件是一款追求速度的软件，故“更新数据库操作”我希望仔细的设计研究一下" />
     <MESSAGE value="IndexModel：完成了IndexModel中最关键的updateDatabase函数" />
@@ -4808,7 +4683,8 @@
     <MESSAGE value="完成了Markdown离线展示" />
     <MESSAGE value="小修改" />
     <MESSAGE value="完成了UI展示" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了UI展示" />
+    <MESSAGE value="UI上的小修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI上的小修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4820,37 +4696,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/ZipBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="31" column="7" lean-forward="false" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/index_act_headerlayout.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/apt/debug/shaolizhi/sunshinebox/ui/index/IndexActivity_ViewBinding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_child_care.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/utils/ActivityCollectorUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -4981,27 +4826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CoursePrsenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/utils/ZipUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1426">
@@ -5065,37 +4889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="713">
           <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-            <element signature="e#548#549#0" expanded="false" />
-            <element signature="e#582#583#0" expanded="false" />
-            <element signature="e#610#611#0" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-            <element signature="e#676#677#0" expanded="false" />
-            <element signature="e#724#725#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
-            <element signature="e#801#802#0" expanded="false" />
-            <element signature="e#834#835#0" expanded="false" />
-            <element signature="e#886#887#0" expanded="false" />
-            <element signature="e#930#931#0" expanded="false" />
-            <element signature="e#964#965#0" expanded="false" />
-            <element signature="e#994#995#0" expanded="false" />
-            <element signature="e#1040#1041#0" expanded="false" />
-            <element signature="e#1078#1079#0" expanded="false" />
-            <element signature="e#1111#1112#0" expanded="false" />
-            <element signature="e#1143#1144#0" expanded="false" />
-            <element signature="e#1190#1191#0" expanded="false" />
-            <element signature="e#1232#1233#0" expanded="false" />
-            <element signature="e#1267#1268#0" expanded="false" />
-            <element signature="e#1301#1302#0" expanded="false" />
-            <element signature="e#1352#1353#0" expanded="false" />
-            <element signature="e#1398#1399#0" expanded="false" />
-            <element signature="e#1443#1444#0" expanded="false" />
-            <element signature="e#1484#1485#0" expanded="false" />
-            <element signature="e#1661#1662#0" expanded="false" />
-            <element signature="e#1706#1707#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -5131,37 +4924,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-v21/activity_course.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="61" column="45" lean-forward="false" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
-          <folding />
+        <state relative-caret-position="5456">
+          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#7218#7219#0" expanded="false" />
+            <element signature="e#7259#7260#0" expanded="false" />
+            <element signature="e#7299#7300#0" expanded="false" />
+            <element signature="e#7340#7341#0" expanded="false" />
+            <element signature="e#7380#7381#0" expanded="false" />
+            <element signature="e#7421#7422#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-v21/activity_course.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_index.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="279">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#331#1202#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1252">
+          <caret line="70" column="13" lean-forward="false" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/Materials.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2454">
-          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+        <state relative-caret-position="302">
+          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_course_item.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="121" column="51" lean-forward="false" selection-start-line="121" selection-start-column="51" selection-end-line="121" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/background1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/book.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/game.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2232">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="71" column="26" lean-forward="false" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+        <state relative-caret-position="-1368">
+          <caret line="73" column="42" lean-forward="false" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
           <folding>
             <element signature="method#clickNursery#0;class#IndexActivity#0" expanded="false" />
             <element signature="method#clickMusic#0;class#IndexActivity#0" expanded="false" />
@@ -5176,15 +5029,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_index.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CoursePresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="10" column="58" lean-forward="false" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseMediaPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="99" column="26" lean-forward="false" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
           <folding>
-            <element signature="e#331#1202#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#loadMaterialName#0;class#ViewHolder#0;class#CourseAdapter#0" expanded="false" />
+            <element signature="method#loadMaterialPicture#0;class#ViewHolder#0;class#CourseAdapter#0" expanded="false" />
+            <element signature="method#ViewHolder#0;class#ViewHolder#0;class#CourseAdapter#0" expanded="false" />
+            <element signature="method#onBindViewHolder#0;class#CourseAdapter#0" expanded="false" />
+            <element signature="method#getItemCount#0;class#CourseAdapter#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -5212,136 +5099,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_course.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="96" column="36" lean-forward="false" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
-          <folding>
-            <element signature="e#1182#1210#0" expanded="true" />
-            <element signature="e#2755#2779#0" expanded="true" />
-            <element signature="e#3659#3683#0" expanded="true" />
-            <element signature="e#4637#4670#0" expanded="true" />
-            <element signature="e#4711#4746#0" expanded="true" />
-            <element signature="e#4788#4823#0" expanded="true" />
-            <element signature="e#4863#4896#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1252">
-          <caret line="70" column="13" lean-forward="false" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="112" column="24" lean-forward="false" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
-          <folding>
-            <element signature="e#2939#2940#0" expanded="true" />
-            <element signature="e#2964#2965#0" expanded="true" />
-            <element signature="e#3000#3001#0" expanded="true" />
-            <element signature="e#3028#3029#0" expanded="true" />
-            <element signature="e#3059#3060#0" expanded="true" />
-            <element signature="e#3086#3087#0" expanded="true" />
-            <element signature="e#3126#3127#0" expanded="true" />
-            <element signature="e#3158#3159#0" expanded="true" />
-            <element signature="e#3194#3195#0" expanded="true" />
-            <element signature="e#3229#3230#0" expanded="true" />
-            <element signature="e#3282#3283#0" expanded="true" />
-            <element signature="e#3330#3331#0" expanded="true" />
-            <element signature="e#3363#3364#0" expanded="true" />
-            <element signature="e#3392#3393#0" expanded="true" />
-            <element signature="e#3436#3437#0" expanded="true" />
-            <element signature="e#3472#3473#0" expanded="true" />
-            <element signature="e#3506#3507#0" expanded="true" />
-            <element signature="e#3536#3537#0" expanded="true" />
-            <element signature="e#3582#3583#0" expanded="true" />
-            <element signature="e#3620#3621#0" expanded="true" />
-            <element signature="e#3653#3654#0" expanded="true" />
-            <element signature="e#3682#3683#0" expanded="true" />
-            <element signature="e#3726#3727#0" expanded="true" />
-            <element signature="e#3762#3763#0" expanded="true" />
-            <element signature="e#3799#3800#0" expanded="true" />
-            <element signature="e#3826#3827#0" expanded="true" />
-            <element signature="e#3872#3873#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="e#3953#3954#0" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#4048#4049#0" expanded="true" />
-            <element signature="e#4090#4091#0" expanded="true" />
-            <element signature="e#5493#5494#0" expanded="true" />
-            <element signature="e#5527#5528#0" expanded="true" />
-            <element signature="e#5569#5570#0" expanded="true" />
-            <element signature="e#5607#5608#0" expanded="true" />
-            <element signature="e#5640#5641#0" expanded="true" />
-            <element signature="e#5673#5674#0" expanded="true" />
-            <element signature="e#5713#5714#0" expanded="true" />
-            <element signature="e#5749#5750#0" expanded="true" />
-            <element signature="e#5788#5789#0" expanded="true" />
-            <element signature="e#5827#5828#0" expanded="true" />
-            <element signature="e#5879#5880#0" expanded="true" />
-            <element signature="e#5927#5928#0" expanded="true" />
-            <element signature="e#5964#5965#0" expanded="true" />
-            <element signature="e#6001#6002#0" expanded="true" />
-            <element signature="e#6049#6050#0" expanded="true" />
-            <element signature="e#6093#6094#0" expanded="true" />
-            <element signature="e#6132#6133#0" expanded="true" />
-            <element signature="e#6174#6175#0" expanded="true" />
-            <element signature="e#6229#6230#0" expanded="true" />
-            <element signature="e#6283#6284#0" expanded="true" />
-            <element signature="e#6324#6325#0" expanded="true" />
-            <element signature="e#6365#6366#0" expanded="true" />
-            <element signature="e#6421#6422#0" expanded="true" />
-            <element signature="e#6473#6474#0" expanded="true" />
-            <element signature="e#6513#6514#0" expanded="true" />
-            <element signature="e#6553#6554#0" expanded="true" />
-            <element signature="e#6607#6608#0" expanded="true" />
-            <element signature="e#6657#6658#0" expanded="true" />
-            <element signature="e#6689#6690#0" expanded="true" />
-            <element signature="e#6724#6725#0" expanded="true" />
-            <element signature="e#6765#6766#0" expanded="true" />
-            <element signature="e#6805#6806#0" expanded="true" />
-            <element signature="e#6843#6844#0" expanded="true" />
-            <element signature="e#6884#6885#0" expanded="true" />
-            <element signature="e#6937#6938#0" expanded="true" />
-            <element signature="e#6989#6990#0" expanded="true" />
-            <element signature="e#7024#7025#0" expanded="true" />
-            <element signature="e#7059#7060#0" expanded="true" />
-            <element signature="e#7103#7104#0" expanded="true" />
-            <element signature="e#7143#7144#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/Materials.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding>
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#814#815#0" expanded="true" />
-            <element signature="class#AlbumResource#0;class#Materials#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="129" column="92" lean-forward="false" selection-start-line="129" selection-start-column="92" selection-end-line="129" selection-end-column="92" />
+        <state relative-caret-position="275">
+          <caret line="95" column="32" lean-forward="false" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
           <folding>
-            <element signature="e#2100#2101#0" expanded="true" />
-            <element signature="e#2147#2148#0" expanded="true" />
+            <element signature="method#getMaterialsList#0;class#CourseActivity#0" expanded="false" />
             <element signature="method#renderingMarkdown#0;class#CourseActivity#0" expanded="false" />
-            <element signature="e#6715#8140#0" expanded="true" />
-            <element signature="e#8139#8140#0" expanded="true" />
             <element signature="method#rebuildMarkdown#0;class#CourseActivity#0" expanded="false" />
             <element signature="method#drawableFromUrl#0;class#CourseActivity#0" expanded="false" />
             <element signature="method#deserializeJson#0;class#CourseActivity#0" expanded="false" />
@@ -5349,37 +5113,22 @@
             <element signature="method#getJsonFile#0;class#CourseActivity#0" expanded="false" />
             <element signature="method#getMaterialAddress#0;class#CourseActivity#0" expanded="false" />
             <element signature="method#getJsonAddress#0;class#CourseActivity#0" expanded="false" />
-            <element signature="method#getResourceStorageAddress#0;class#CourseActivity#0" expanded="false" />
             <element signature="method#resumed#0;class#CourseActivity#0" expanded="false" />
             <element signature="method#newIntent#0;class#CourseActivity#0" expanded="false" />
-            <element signature="method#setUpView#0;class#CourseActivity#0" expanded="false" />
+            <element signature="method#getFormatTime#0;class#CourseActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_course_item.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_course.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        <state relative-caret-position="402">
+          <caret line="166" column="40" lean-forward="false" selection-start-line="166" selection-start-column="40" selection-end-line="166" selection-end-column="40" />
           <folding>
-            <element signature="e#581#614#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="61" column="49" lean-forward="false" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#ViewHolder#0;class#ViewHolder#0;class#CourseAdapter#0" expanded="false" />
-            <element signature="method#CourseAdapter#0;class#CourseAdapter#0" expanded="false" />
-            <element signature="method#onBindViewHolder#0;class#CourseAdapter#0" expanded="false" />
-            <element signature="method#getItemCount#0;class#CourseAdapter#0" expanded="false" />
+            <element signature="e#408#1757#0" expanded="false" />
           </folding>
         </state>
       </provider>

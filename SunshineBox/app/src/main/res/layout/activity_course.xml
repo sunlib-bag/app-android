@@ -70,7 +70,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="32dp"
-                        android:text="@string/course_string1"
+                        android:text="@string/course_act_string2"
                         android:textColor="#666666"
                         android:textSize="17sp" />
 
@@ -89,7 +89,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="38dp"
                         android:layout_marginTop="32dp"
-                        android:text="@string/course_string2"
+                        android:text="@string/course_act_string4"
                         android:textColor="#666666"
                         android:textSize="17sp" />
 
@@ -123,35 +123,114 @@
 
         </ScrollView>
 
-        <android.support.v4.widget.NestedScrollView
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="11">
 
-            <LinearLayout
+            <android.support.v4.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:descendantFocusability="blocksDescendants"
-                android:orientation="vertical">
+                android:layout_height="match_parent">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="32dp"
-                    android:text="教学文件"
-                    android:textColor="#666666"
-                    android:textSize="17sp" />
-
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/course_act_recyclerview"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="40dp"
-                    android:nestedScrollingEnabled="false"
-                    tools:targetApi="lollipop" />
-            </LinearLayout>
-        </android.support.v4.widget.NestedScrollView>
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="32dp"
+                        android:text="@string/course_act_string3"
+                        android:textColor="#666666"
+                        android:textSize="17sp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/course_act_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="40dp"
+                        android:nestedScrollingEnabled="false"
+                        tools:targetApi="lollipop" />
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/course_act_cardview1"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/course_act_textview5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:textColor="#333333"
+                        android:textSize="17sp"
+                        tools:text="歌曲《头和肩膀膝盖脚》" />
+
+                    <TextView
+                        android:id="@+id/course_act_textview6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="48dp"
+                        android:textColor="#3b947f"
+                        android:textSize="15sp"
+                        tools:text="00:17" />
+
+                    <TextView
+                        android:id="@+id/course_act_textview7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="72dp"
+                        android:layout_marginTop="48dp"
+                        android:textColor="#999999"
+                        android:textSize="15sp"
+                        tools:text="02:53" />
+
+                    <ImageView
+                        android:id="@+id/course_act_imageview1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="119dp" />
+
+                    <ImageView
+                        android:id="@+id/course_act_imageview2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="76dp"
+                        android:background="@drawable/replay" />
+
+                    <ImageView
+                        android:id="@+id/course_act_imageview3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="33dp"
+                        android:background="@drawable/ic_close_black_24dp" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </FrameLayout>
+
     </LinearLayout>
 </LinearLayout>

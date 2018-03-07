@@ -16,7 +16,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import shaolizhi.sunshinebox.R;
-import shaolizhi.sunshinebox.utils.ToastUtils;
 
 
 /**
@@ -25,6 +24,8 @@ import shaolizhi.sunshinebox.utils.ToastUtils;
  */
 
 public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder> {
+
+    private CourseMediaPlayer courseMediaPlayer;
 
     private LayoutInflater layoutInflater;
 
@@ -93,13 +94,28 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
 
         @Override
         public void onClick(View v) {
-            ToastUtils.showToast(materials.getMaterialType().toString() + ": " + materials.getResourceStorageAddress());
+            switch (materials.getMaterialType()) {
+                case ALBUM:
+                    courseMediaPlayer.openAlbum(materials);
+                    break;
+                case AUDIO:
+                    courseMediaPlayer.playAudio(materials);
+                    break;
+                case VIDEO:
+                    courseMediaPlayer.playVideo(materials);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
     CourseAdapter(Context activity) {
         this.activity = activity;
         this.layoutInflater = LayoutInflater.from(activity);
+        if (activity instanceof CourseMediaPlayer) {
+            this.courseMediaPlayer = (CourseMediaPlayer) activity;
+        }
     }
 
     void setMaterialData(List<Materials> data) {
