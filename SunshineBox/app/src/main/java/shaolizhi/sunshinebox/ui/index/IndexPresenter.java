@@ -49,7 +49,8 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
 
     @Override
     public void requestDataFromNetFailure(AVException e) {
-        ToastUtils.showToast(e.getMessage());
+        ToastUtils.showToast("离线模式");
+        view.stopRefresh();
     }
 
     //3:request database

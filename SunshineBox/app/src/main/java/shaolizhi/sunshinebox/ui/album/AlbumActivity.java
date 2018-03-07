@@ -46,7 +46,7 @@ public class AlbumActivity extends BaseActivity {
     public void clickNextImageButton() {
         Log.e("AlbumActivity", "position" + getPosition());
         if (getPosition() == 0) {
-            ToastUtils.showToast("已经是第一站图片了！");
+            ToastUtils.showToast("已经是第一张图片了！");
         } else {
             setPosition(getPosition() - 1);
             showImageAndName(getPosition());

@@ -22,7 +22,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
@@ -239,7 +238,7 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
         markdownTextView.post(new Runnable() {
             @Override
             public void run() {
-                long time = System.nanoTime();
+//                long time = System.nanoTime();
                 Spanned spanned = MarkDown.fromMarkdown(markdown, new Html.ImageGetter() {
                     static final String TAG = "Markdown";
 
@@ -259,8 +258,8 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
                         return drawable;
                     }
                 }, markdownTextView);
-                long useTime = System.nanoTime() - time;
-                Toast.makeText(getApplicationContext(), "use time: " + useTime + "ns", Toast.LENGTH_LONG).show();
+//                long useTime = System.nanoTime() - time;
+//                Toast.makeText(getApplicationContext(), "use time: " + useTime + "ns", Toast.LENGTH_LONG).show();
                 markdownTextView.setText(spanned);
             }
         });

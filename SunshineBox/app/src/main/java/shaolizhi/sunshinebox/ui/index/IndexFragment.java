@@ -141,5 +141,4 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
     private void setUpRefreshLayout() {
         refreshLayout.setOnRefreshListener(this);
     }
-
 }
