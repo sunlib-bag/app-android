@@ -164,11 +164,14 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
             renderingMarkdown(markdown);
         }
 
-        //遍历Json, 获取List<Materials>
-        List<Materials> materialsList = getMaterialsList(materialFolder);
+        if (bean.getMaterials() != null) {
+            //遍历Json, 获取List<Materials>
+            List<Materials> materialsList = getMaterialsList(materialFolder);
+            //加载数据
+            courseAdapter.setMaterialData(materialsList);
+        }
 
-        //加载数据
-        courseAdapter.setMaterialData(materialsList);
+
     }
 
     private void setUpRecyclerView() {

@@ -24,9 +24,7 @@
     <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/NetworkStateGetter.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/NetworkStateHelper.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -167,11 +165,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CourseActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="164" column="9" lean-forward="false" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
+            <state relative-caret-position="721">
+              <caret line="167" column="39" lean-forward="false" selection-start-line="167" selection-start-column="39" selection-end-line="167" selection-end-column="39" />
               <folding>
                 <element signature="method#drawableFromUrl#0;class#CourseActivity#0" expanded="false" />
                 <element signature="method#getMaterialFolder#0;class#CourseActivity#0" expanded="false" />
@@ -207,11 +205,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexAdapter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="71" column="104" lean-forward="true" selection-start-line="71" selection-start-column="104" selection-end-line="71" selection-end-column="104" />
+            <state relative-caret-position="784">
+              <caret line="272" column="65" lean-forward="false" selection-start-line="272" selection-start-column="65" selection-end-line="272" selection-end-column="65" />
               <folding>
                 <element signature="method#initObjectBox#0;class#IndexAdapter#0" expanded="false" />
                 <element signature="method#setCourseData#0;class#IndexAdapter#0" expanded="false" />
@@ -3456,8 +3454,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/NetworkHelpler.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/NetworkStateHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java" />
       </list>
     </option>
   </component>
@@ -3973,7 +3971,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520443116015" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520444197371" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -4020,7 +4018,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520443116016" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520444197371" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -4238,13 +4236,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511493005850</updated>
-    </task>
-    <task id="LOCAL-00089" summary="PhoneNumberVerifyActivity：验证码输入检测规则改变">
-      <created>1517999946602</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1517999946602</updated>
     </task>
     <task id="LOCAL-00090" summary="PhoneNumberVerifyActivity：验证验证码功能重构完成">
       <created>1518000000931</created>
@@ -4582,7 +4573,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520441773407</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="1. 修复了无教案时会崩溃的BUG&#10;2. 增加了一个网络状态改变时的回调函数，日后好用它在网络情况变化时将下载任务取消">
+      <created>1520443233511</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1520443233511</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TodoView">
@@ -4601,7 +4599,7 @@
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7174393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298217" sideWeight="0.504329" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7002165" sideWeight="0.27147487" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.49403816" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.49403816" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -4664,7 +4662,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="修改了图片显示的BUG" />
     <MESSAGE value="重做了首页加载Fragment的能力:使用ViewPager代替了FrameLayout" />
     <MESSAGE value="修改了ViewPager的缓存数量，使得Fragment被初始化后不会被销毁" />
     <MESSAGE value="下载成功！又折在了运行时权限！妈的！" />
@@ -4689,7 +4686,8 @@
     <MESSAGE value="一些小的修改" />
     <MESSAGE value="添加了离线模式" />
     <MESSAGE value="修改了离线模式下的点击行为" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了离线模式下的点击行为" />
+    <MESSAGE value="1. 修复了无教案时会崩溃的BUG&#10;2. 增加了一个网络状态改变时的回调函数，日后好用它在网络情况变化时将下载任务取消" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 修复了无教案时会崩溃的BUG&#10;2. 增加了一个网络状态改变时的回调函数，日后好用它在网络情况变化时将下载任务取消" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -5161,28 +5159,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="164" column="9" lean-forward="false" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
-          <folding>
-            <element signature="method#drawableFromUrl#0;class#CourseActivity#0" expanded="false" />
-            <element signature="method#getMaterialFolder#0;class#CourseActivity#0" expanded="false" />
-            <element signature="method#getJsonFile#0;class#CourseActivity#0" expanded="false" />
-            <element signature="method#getMaterialAddress#0;class#CourseActivity#0" expanded="false" />
-            <element signature="method#getJsonAddress#0;class#CourseActivity#0" expanded="false" />
-            <element signature="method#resumed#0;class#CourseActivity#0" expanded="false" />
-            <element signature="method#newIntent#0;class#CourseActivity#0" expanded="false" />
-            <element signature="method#playAudio#0;class#CourseActivity#0" expanded="false" />
-            <element signature="method#getFormatTime#0;class#CourseActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="71" column="104" lean-forward="true" selection-start-line="71" selection-start-column="104" selection-end-line="71" selection-end-column="104" />
+        <state relative-caret-position="784">
+          <caret line="272" column="65" lean-forward="false" selection-start-line="272" selection-start-column="65" selection-end-line="272" selection-end-column="65" />
           <folding>
             <element signature="method#initObjectBox#0;class#IndexAdapter#0" expanded="false" />
             <element signature="method#setCourseData#0;class#IndexAdapter#0" expanded="false" />
@@ -5198,6 +5178,24 @@
             <element signature="e#7855#8241#0" expanded="true" />
             <element signature="e#8240#8241#0" expanded="true" />
             <element signature="method#storageZip#0;class#IndexViewHolder#0;class#IndexAdapter#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="167" column="39" lean-forward="false" selection-start-line="167" selection-start-column="39" selection-end-line="167" selection-end-column="39" />
+          <folding>
+            <element signature="method#drawableFromUrl#0;class#CourseActivity#0" expanded="false" />
+            <element signature="method#getMaterialFolder#0;class#CourseActivity#0" expanded="false" />
+            <element signature="method#getJsonFile#0;class#CourseActivity#0" expanded="false" />
+            <element signature="method#getMaterialAddress#0;class#CourseActivity#0" expanded="false" />
+            <element signature="method#getJsonAddress#0;class#CourseActivity#0" expanded="false" />
+            <element signature="method#resumed#0;class#CourseActivity#0" expanded="false" />
+            <element signature="method#newIntent#0;class#CourseActivity#0" expanded="false" />
+            <element signature="method#playAudio#0;class#CourseActivity#0" expanded="false" />
+            <element signature="method#getFormatTime#0;class#CourseActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>

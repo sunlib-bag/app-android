@@ -270,7 +270,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
 
                 @Override
                 public void onFailure(@NonNull Call<ResponseBody> call, @NonNull Throwable t) {
-
+                    downloadingTask.remove(course.getObjectId());
                 }
             });
         }
