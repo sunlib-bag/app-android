@@ -50,7 +50,7 @@ import shaolizhi.sunshinebox.utils.ToastUtils;
 
 public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHolder> {
 
-    private NetworkStateGetter networkStateGetter;
+    private NetworkStateHelper networkStateHelper;
 
     private final ApiService apiService = ServiceGenerator.createService(ApiService.class);
 
@@ -68,7 +68,18 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
 
     IndexAdapter(Context activity) {
         this.activity = activity;
-        networkStateGetter = (NetworkStateGetter) activity;
+        networkStateHelper = (NetworkStateHelper) activity;
+//        networkStateHelper.setNetworkChangedListener(new NetworkStateHelper.NetworkChangedListener() {
+//            @Override
+//            public void networkChanged(boolean networkState) {
+//                if (!networkState) {
+//                    if (downloadTask != null && downloadTask.getStatus() == AsyncTask.Status.RUNNING) {
+//                        downloadTask.cancel(true);
+//                        downloadingTask
+//                    }
+//                }
+//            }
+//        });
         layoutInflater = LayoutInflater.from(activity);
         downloadingTask = new HashMap<>();
         initObjectBox((Activity) activity);
@@ -198,7 +209,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
                     switch (course.getSituation()) {
                         case 0:
                             //资源尚未下载
-                            if (networkStateGetter.getNetworkState()) {
+                            if (networkStateHelper.getNetworkState()) {
                                 downloadZip(folder);
                             } else {
                                 ToastUtils.showToast("对不起，请联网后再下载课程");
@@ -206,7 +217,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
                             break;
                         case 1:
                             //资源已下载但有更新
-                            if (networkStateGetter.getNetworkState()) {
+                            if (networkStateHelper.getNetworkState()) {
                                 AlertDialogUtils.showAlertDialog((Activity) activity, "资源有更新", "是否更新资源？", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {

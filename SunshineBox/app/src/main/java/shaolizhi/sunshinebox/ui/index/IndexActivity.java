@@ -25,10 +25,10 @@ import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.ui.base.BaseActivity;
 import shaolizhi.sunshinebox.widget.NoScrollViewPager;
 
-public class IndexActivity extends BaseActivity implements NetworkStateGetter {
+public class IndexActivity extends BaseActivity implements NetworkStateHelper {
 
     private boolean isThereANet;
-    private NetworkChangeBroadcast netWorkChangeBroadcast;
+    NetworkChangedListener networkChangedListener;
 
     public boolean isThereANet() {
         return isThereANet;
@@ -145,7 +145,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateGetter {
     protected void resumed() {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
-        netWorkChangeBroadcast = new NetworkChangeBroadcast();
+        NetworkChangeBroadcast netWorkChangeBroadcast = new NetworkChangeBroadcast();
         registerReceiver(netWorkChangeBroadcast, intentFilter);
     }
 
@@ -199,6 +199,12 @@ public class IndexActivity extends BaseActivity implements NetworkStateGetter {
         return isThereANet();
     }
 
+    @Override
+    public void setNetworkChangedListener(NetworkChangedListener networkChangedListener) {
+        this.networkChangedListener = networkChangedListener;
+    }
+
+
     private class MyViewPagerAdapter extends FragmentPagerAdapter {
 
         MyViewPagerAdapter(FragmentManager fm) {
@@ -246,32 +252,19 @@ public class IndexActivity extends BaseActivity implements NetworkStateGetter {
     private class NetworkChangeBroadcast extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
-            boolean success = false;
-//            //获得网络连接服务
-//            ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(CONNECTIVITY_SERVICE);
-//            //获取wifi连接状态
-//            NetworkInfo.State state = null;
-//            if (connectivityManager != null) {
-//                state = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState();
-//            }
-//            //判断是否正在使用wifi网络
-//            if (state == NetworkInfo.State.CONNECTED) {
-//                success = true;
-//            }
-//            //获取4G状态
-//            if (connectivityManager != null) {
-//                state = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState();
-//            }
-//            //判断是否在使用4G网络
-//            if (state == NetworkInfo.State.CONNECTED) {
-//                success = true;
-//            }
+            boolean success;
             success = isConnected(IndexActivity.this);
             //如果没有连接成功
             if (!success) {
                 setThereANet(false);
+                if (networkChangedListener != null) {
+                    networkChangedListener.networkChanged(false);
+                }
             } else {
                 setThereANet(true);
+                if (networkChangedListener != null) {
+                    networkChangedListener.networkChanged(true);
+                }
             }
         }
     }

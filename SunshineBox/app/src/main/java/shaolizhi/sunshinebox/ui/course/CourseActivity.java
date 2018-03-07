@@ -159,8 +159,10 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
         author.setText(bean.getAuthor());
 
         //解析markdown
-        final String markdown = rebuildMarkdown(materialFolder);
-        renderingMarkdown(markdown);
+        if (bean.getContent() != null) {
+            final String markdown = rebuildMarkdown(materialFolder);
+            renderingMarkdown(markdown);
+        }
 
         //遍历Json, 获取List<Materials>
         List<Materials> materialsList = getMaterialsList(materialFolder);
