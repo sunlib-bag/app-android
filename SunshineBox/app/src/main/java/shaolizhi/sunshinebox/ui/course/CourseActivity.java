@@ -349,7 +349,6 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
         return intent;
     }
 
-
     @Override
     public void playAudio(Materials materials) {
         if (mediaPlayer.isPlaying()) {
@@ -383,7 +382,13 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
 
     @Override
     public void playVideo(Materials materials) {
-
+        if (mediaPlayer.isPlaying()) {
+            mediaPlayer.reset();
+        }
+        Uri uri = Uri.parse(materials.getResourceStorageAddress());
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setDataAndType(uri, "video/mp4");
+        startActivity(intent);
     }
 
     @Override
