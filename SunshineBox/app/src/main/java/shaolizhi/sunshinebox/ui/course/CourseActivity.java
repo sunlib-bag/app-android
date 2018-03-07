@@ -352,6 +352,9 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
 
     @Override
     public void playAudio(Materials materials) {
+        if (mediaPlayer.isPlaying()) {
+            mediaPlayer.reset();
+        }
         Uri uri = Uri.parse(materials.getResourceStorageAddress());
         cardView.setVisibility(View.VISIBLE);
         musicNameTextView.setText(materials.getName());
