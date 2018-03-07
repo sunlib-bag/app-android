@@ -1,12 +1,13 @@
 package shaolizhi.sunshinebox.ui.index;
 
+import android.util.Log;
+
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
 
 import java.util.List;
 
 import shaolizhi.sunshinebox.objectbox.courses.Course;
-import shaolizhi.sunshinebox.utils.ToastUtils;
 
 /**
  * Created by 邵励治 on 2018/2/21.
@@ -49,7 +50,7 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
 
     @Override
     public void requestDataFromNetFailure(AVException e) {
-        ToastUtils.showToast("离线模式");
+        Log.e("IndexPresenter", "requestDataFromNetFailure:" + e.getMessage());
         view.stopRefresh();
     }
 

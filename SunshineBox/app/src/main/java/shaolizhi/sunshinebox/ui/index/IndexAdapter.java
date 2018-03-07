@@ -50,6 +50,8 @@ import shaolizhi.sunshinebox.utils.ToastUtils;
 
 public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHolder> {
 
+    private NetworkStateGetter networkStateGetter;
+
     private final ApiService apiService = ServiceGenerator.createService(ApiService.class);
 
     private HashMap<String, String> downloadingTask;
@@ -66,6 +68,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
 
     IndexAdapter(Context activity) {
         this.activity = activity;
+        networkStateGetter = (NetworkStateGetter) activity;
         layoutInflater = LayoutInflater.from(activity);
         downloadingTask = new HashMap<>();
         initObjectBox((Activity) activity);
@@ -195,16 +198,29 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
                     switch (course.getSituation()) {
                         case 0:
                             //资源尚未下载
-                            downloadZip(folder);
+                            if (networkStateGetter.getNetworkState()) {
+                                downloadZip(folder);
+                            } else {
+                                ToastUtils.showToast("对不起，请联网后再下载课程");
+                            }
                             break;
                         case 1:
                             //资源已下载但有更新
-                            AlertDialogUtils.showAlertDialog((Activity) activity, "资源有更新", "是否更新资源？", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    downloadZip(folder);
-                                }
-                            });
+                            if (networkStateGetter.getNetworkState()) {
+                                AlertDialogUtils.showAlertDialog((Activity) activity, "资源有更新", "是否更新资源？", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        downloadZip(folder);
+                                    }
+                                }, new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        activity.startActivity(CourseActivity.newIntent(activity, course.getResourceStorageAddress()));
+                                    }
+                                });
+                            } else {
+                                activity.startActivity(CourseActivity.newIntent(activity, course.getResourceStorageAddress()));
+                            }
                             break;
                         case 2:
                             //资源已下载且没更新

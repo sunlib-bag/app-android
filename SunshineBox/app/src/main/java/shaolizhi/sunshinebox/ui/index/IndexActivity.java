@@ -25,7 +25,7 @@ import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.ui.base.BaseActivity;
 import shaolizhi.sunshinebox.widget.NoScrollViewPager;
 
-public class IndexActivity extends BaseActivity {
+public class IndexActivity extends BaseActivity implements NetworkStateGetter {
 
     private boolean isThereANet;
     private NetworkChangeBroadcast netWorkChangeBroadcast;
@@ -192,6 +192,11 @@ public class IndexActivity extends BaseActivity {
         MyViewPagerAdapter viewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager());
         noScrollViewPager.setAdapter(viewPagerAdapter);
         noScrollViewPager.setOffscreenPageLimit(3);
+    }
+
+    @Override
+    public boolean getNetworkState() {
+        return isThereANet();
     }
 
     private class MyViewPagerAdapter extends FragmentPagerAdapter {
