@@ -11,6 +11,8 @@ import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
@@ -37,6 +39,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -126,6 +130,10 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
 
     CourseAdapter courseAdapter;
 
+    private Timer timer;
+
+    private TimerTask timerTask;
+
     @Override
     protected int layoutId() {
         return R.layout.activity_course;
@@ -170,8 +178,6 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
             //加载数据
             courseAdapter.setMaterialData(materialsList);
         }
-
-
     }
 
     private void setUpRecyclerView() {
@@ -354,6 +360,16 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
         return intent;
     }
 
+    private Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if (msg.what == 100) {
+                playbackProgressTextView.setText(getFormatTime(mediaPlayer.getCurrentPosition()));
+            }
+        }
+    };
+
     @Override
     public void playAudio(Materials materials) {
         if (mediaPlayer.isPlaying()) {
@@ -366,14 +382,26 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
         totalLengthOfMusicTextView.setText("00:00");
 
         Glide.with(this).load(R.drawable.pause).into(playOrPauseImageView);
+
         try {
             mediaPlayer.setDataSource(String.valueOf(uri));
             mediaPlayer.prepare();
             mediaPlayer.start();
 
             totalLengthOfMusicTextView.setText(getFormatTime(mediaPlayer.getDuration()));
-            playbackProgressTextView.setText(getFormatTime(mediaPlayer.getCurrentPosition()));
 
+            if (timer == null) {
+                timer = new Timer();
+            }
+            if (timerTask == null) {
+                timerTask = new TimerTask() {
+                    @Override
+                    public void run() {
+                        handler.sendEmptyMessage(100);
+                    }
+                };
+            }
+            timer.schedule(timerTask, 0, 10);
         } catch (IOException | IllegalStateException e) {
             e.printStackTrace();
         }
