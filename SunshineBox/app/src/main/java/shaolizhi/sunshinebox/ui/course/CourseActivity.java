@@ -386,6 +386,16 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
     }
 
     @Override
+    protected void onDestroy() {
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+        super.onDestroy();
+    }
+
+    @Override
     public void playVideo(Materials materials) {
         if (mediaPlayer.isPlaying()) {
             mediaPlayer.reset();
