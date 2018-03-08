@@ -19,7 +19,7 @@ import shaolizhi.sunshinebox.widget.MyRefreshLayout;
  * Perfect Code
  */
 
-public class IndexFragment extends BaseFragment implements IndexContract.View, MyRefreshLayout.OnRefreshListener {
+public class IndexFragment extends BaseFragment implements IndexContract.View, MyRefreshLayout.OnRefreshListener, ClearDataHelper {
     @BindView(R.id.index_fgm_my_refreshlayout)
     MyRefreshLayout refreshLayout;
 
@@ -140,5 +140,10 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
 
     private void setUpRefreshLayout() {
         refreshLayout.setOnRefreshListener(this);
+    }
+
+    @Override
+    public void clearSuccess() {
+        presenter.tryToLoadDataIntoRecyclerView();
     }
 }

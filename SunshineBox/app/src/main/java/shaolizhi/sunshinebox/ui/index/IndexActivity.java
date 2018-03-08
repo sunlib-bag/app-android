@@ -2,33 +2,53 @@ package shaolizhi.sunshinebox.ui.index;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.io.File;
+
 import butterknife.BindView;
 import butterknife.OnClick;
+import io.objectbox.Box;
 import shaolizhi.sunshinebox.R;
+import shaolizhi.sunshinebox.objectbox.courses.Course;
+import shaolizhi.sunshinebox.objectbox.courses.CourseUtils;
 import shaolizhi.sunshinebox.ui.base.BaseActivity;
+import shaolizhi.sunshinebox.utils.AlertDialogUtils;
 import shaolizhi.sunshinebox.widget.NoScrollViewPager;
 
 public class IndexActivity extends BaseActivity implements NetworkStateHelper {
 
     private boolean isThereANet;
+
+    private Box<Course> courseBox;
+
+    private CourseUtils courseUtils;
+
     NetworkChangedListener networkChangedListener;
+
+    ClearDataHelper helper1;
+    ClearDataHelper helper2;
+    ClearDataHelper helper3;
+    ClearDataHelper helper4;
 
     public boolean isThereANet() {
         return isThereANet;
@@ -103,6 +123,9 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
     @BindView(R.id.index_act_toolbar)
     Toolbar toolbar;
 
+    @BindView(R.id.index_act_navigationview)
+    NavigationView navigationView;
+
     @BindView(R.id.index_act_viewpager)
     NoScrollViewPager noScrollViewPager;
 
@@ -136,9 +159,60 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
 
     @Override
     protected void created(Bundle bundle) {
+        initCourseBox();
         setUpTitle();
         setUpDrawerLayoutSwitchAnimator();
         setUpFragment();
+        navigationViewItemClickEvent();
+    }
+
+    public static void deleteDirWithFile(File dir) {
+        if (dir == null || !dir.exists() || !dir.isDirectory())
+            return;
+        for (File file : dir.listFiles()) {
+            if (file.isFile())
+                file.delete(); // 删除所有文件
+            else if (file.isDirectory())
+                deleteDirWithFile(file); // 递规的方式删除文件夹
+        }
+        dir.delete();// 删除目录本身
+    }
+
+    private void navigationViewItemClickEvent() {
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_send:
+                        AlertDialogUtils.showAlertDialog(IndexActivity.this, "确定重置软件", "这将会删除全部的本地文件", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                courseBox.removeAll();
+                                File file = new File(Environment.getExternalStorageDirectory().getPath() + File.separator + "SunshineBox_II");
+                                deleteDirWithFile(file);
+                                drawerLayout.closeDrawers();
+                                helper1.clearSuccess();
+                                helper2.clearSuccess();
+                                helper3.clearSuccess();
+                                helper4.clearSuccess();
+                            }
+                        }, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        });
+                        break;
+                }
+
+                return false;
+            }
+        });
+    }
+
+    private void initCourseBox() {
+        courseUtils = CourseUtils.getInstance();
+        courseBox = courseUtils.getCourseBox(this);
     }
 
     @Override
@@ -186,9 +260,13 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
 
     private void setUpFragment() {
         nurseryFragment = IndexFragment.newInstance(IndexContract.CourseType.NURSERY);
+        helper1 = nurseryFragment;
         musicFragment = IndexFragment.newInstance(IndexContract.CourseType.MUSIC);
+        helper2 = musicFragment;
         readingFragment = IndexFragment.newInstance(IndexContract.CourseType.READING);
+        helper3 = readingFragment;
         gameFragment = IndexFragment.newInstance(IndexContract.CourseType.GAME);
+        helper4 = gameFragment;
         MyViewPagerAdapter viewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager());
         noScrollViewPager.setAdapter(viewPagerAdapter);
         noScrollViewPager.setOffscreenPageLimit(3);
@@ -203,7 +281,6 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
     public void setNetworkChangedListener(NetworkChangedListener networkChangedListener) {
         this.networkChangedListener = networkChangedListener;
     }
-
 
     private class MyViewPagerAdapter extends FragmentPagerAdapter {
 

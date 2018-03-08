@@ -13,7 +13,7 @@ import shaolizhi.sunshinebox.objectbox.courses.Course;
  * Created by 邵励治 on 2018/2/21.
  */
 
-public class IndexPresenter implements IndexContract.Presenter, IndexContract.CallBack {
+public class IndexPresenter implements IndexContract.Presenter, IndexContract.CallBack{
 
     private IndexContract.View view;
 
@@ -66,4 +66,5 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
         view.loadDataToRecyclerView(dataFromDatabase);
         view.stopRefresh();
     }
+
 }
