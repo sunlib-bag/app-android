@@ -374,7 +374,7 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
             totalLengthOfMusicTextView.setText(getFormatTime(mediaPlayer.getDuration()));
             playbackProgressTextView.setText(getFormatTime(mediaPlayer.getCurrentPosition()));
 
-        } catch (IOException e) {
+        } catch (IOException | IllegalStateException e) {
             e.printStackTrace();
         }
     }
