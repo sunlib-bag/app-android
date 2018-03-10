@@ -21,7 +21,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.io.File;
 
@@ -30,7 +33,7 @@ import butterknife.OnClick;
 import io.objectbox.Box;
 import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
-import shaolizhi.sunshinebox.objectbox.courses.CourseUtils;
+import shaolizhi.sunshinebox.objectbox.courses.ObjectBoxUtils;
 import shaolizhi.sunshinebox.ui.base.BaseActivity;
 import shaolizhi.sunshinebox.utils.AlertDialogUtils;
 import shaolizhi.sunshinebox.widget.NoScrollViewPager;
@@ -41,14 +44,18 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
 
     private Box<Course> courseBox;
 
-    private CourseUtils courseUtils;
-
     NetworkChangedListener networkChangedListener;
 
     ClearDataHelper helper1;
     ClearDataHelper helper2;
     ClearDataHelper helper3;
     ClearDataHelper helper4;
+    ClearDataHelper helper5;
+    ClearDataHelper helper6;
+    ClearDataHelper helper7;
+    ClearDataHelper helper8;
+    ClearDataHelper helper9;
+
 
     public boolean isThereANet() {
         return isThereANet;
@@ -63,43 +70,79 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
         }
     }
 
-    @BindView(R.id.index_act_textview5)
+    @BindView(R.id.index_act_textview10)
     TextView toolbarNameTextView;
 
     @OnClick(R.id.index_act_linearlayout1)
     public void clickNursery() {
+        makeEveryBodyBlack();
         nurseryTextView.setTextColor(Color.parseColor("#f09038"));
-        musicTextView.setTextColor(Color.parseColor("#666666"));
-        readingTextView.setTextColor(Color.parseColor("#666666"));
-        gameTextView.setTextColor(Color.parseColor("#666666"));
+        Glide.with(this).load(R.drawable.ic_nursery_orange).into(nurseryImageView);
         noScrollViewPager.setCurrentItem(0);
     }
 
     @OnClick(R.id.index_act_linearlayout2)
     public void clickMusic() {
-        nurseryTextView.setTextColor(Color.parseColor("#666666"));
+        makeEveryBodyBlack();
         musicTextView.setTextColor(Color.parseColor("#f09038"));
-        readingTextView.setTextColor(Color.parseColor("#666666"));
-        gameTextView.setTextColor(Color.parseColor("#666666"));
+        Glide.with(this).load(R.drawable.ic_music_orange).into(musicImageView);
         noScrollViewPager.setCurrentItem(1);
     }
 
     @OnClick(R.id.index_act_linearlayout3)
     public void clickReading() {
-        nurseryTextView.setTextColor(Color.parseColor("#666666"));
-        musicTextView.setTextColor(Color.parseColor("#666666"));
+        makeEveryBodyBlack();
         readingTextView.setTextColor(Color.parseColor("#f09038"));
-        gameTextView.setTextColor(Color.parseColor("#666666"));
+        Glide.with(this).load(R.drawable.ic_reading_orange).into(readingImageView);
         noScrollViewPager.setCurrentItem(2);
     }
 
     @OnClick(R.id.index_act_linearlayout4)
     public void clickGame() {
-        nurseryTextView.setTextColor(Color.parseColor("#666666"));
-        musicTextView.setTextColor(Color.parseColor("#666666"));
-        readingTextView.setTextColor(Color.parseColor("#666666"));
+        makeEveryBodyBlack();
         gameTextView.setTextColor(Color.parseColor("#f09038"));
+        Glide.with(this).load(R.drawable.ic_game_orange).into(gameImageView);
         noScrollViewPager.setCurrentItem(3);
+    }
+
+    @OnClick(R.id.index_act_linearlayout5)
+    public void clickHealth() {
+        makeEveryBodyBlack();
+        healthTextView.setTextColor(Color.parseColor("#f09038"));
+        Glide.with(this).load(R.drawable.ic_health_orange).into(healthImageView);
+        noScrollViewPager.setCurrentItem(4);
+    }
+
+    @OnClick(R.id.index_act_linearlayout6)
+    public void clickLanguage() {
+        makeEveryBodyBlack();
+        languageTextView.setTextColor(Color.parseColor("#f09038"));
+        Glide.with(this).load(R.drawable.ic_language_orange).into(languageImageView);
+        noScrollViewPager.setCurrentItem(5);
+    }
+
+    @OnClick(R.id.index_act_linearlayout7)
+    public void clickSocial() {
+        makeEveryBodyBlack();
+        socialTextView.setTextColor(Color.parseColor("#f09038"));
+        Glide.with(this).load(R.drawable.ic_social_orange).into(socialImageView);
+        noScrollViewPager.setCurrentItem(6);
+    }
+
+    @OnClick(R.id.index_act_linearlayout8)
+    public void clickScience() {
+        makeEveryBodyBlack();
+        scienceTextView.setTextColor(Color.parseColor("#f09038"));
+        Glide.with(this).load(R.drawable.ic_science_orange).into(scienceImageView);
+        noScrollViewPager.setCurrentItem(7);
+    }
+
+    @OnClick(R.id.index_act_linearlayout9)
+    public void clickArt() {
+        makeEveryBodyBlack();
+        artTextView.setTextColor(Color.parseColor("#f09038"));
+        Glide.with(this).load(R.drawable.ic_art_orange).into(artImageView);
+        noScrollViewPager.setCurrentItem(8);
     }
 
     @BindView(R.id.index_act_textview1)
@@ -113,6 +156,48 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
 
     @BindView(R.id.index_act_textview4)
     TextView gameTextView;
+
+    @BindView(R.id.index_act_textview5)
+    TextView healthTextView;
+
+    @BindView(R.id.index_act_textview6)
+    TextView languageTextView;
+
+    @BindView(R.id.index_act_textview7)
+    TextView socialTextView;
+
+    @BindView(R.id.index_act_textview8)
+    TextView scienceTextView;
+
+    @BindView(R.id.index_act_textview9)
+    TextView artTextView;
+
+    @BindView(R.id.index_act_imageview1)
+    ImageView nurseryImageView;
+
+    @BindView(R.id.index_act_imageview2)
+    ImageView musicImageView;
+
+    @BindView(R.id.index_act_imageview3)
+    ImageView readingImageView;
+
+    @BindView(R.id.index_act_imageview4)
+    ImageView gameImageView;
+
+    @BindView(R.id.index_act_imageview5)
+    ImageView healthImageView;
+
+    @BindView(R.id.index_act_imageview6)
+    ImageView languageImageView;
+
+    @BindView(R.id.index_act_imageview7)
+    ImageView socialImageView;
+
+    @BindView(R.id.index_act_imageview8)
+    ImageView scienceImageView;
+
+    @BindView(R.id.index_act_imageview9)
+    ImageView artImageView;
 
     @BindView(R.id.index_act_drawerlayout)
     DrawerLayout drawerLayout;
@@ -137,6 +222,15 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
 
     IndexFragment gameFragment;
 
+    IndexFragment healthFragment;
+
+    IndexFragment languageFragment;
+
+    IndexFragment socialFragment;
+
+    IndexFragment scienceFragment;
+
+    IndexFragment artFragment;
 
     //-----------------------------click method---------------------------------------------------//
     @OnClick(R.id.index_act_imagebuttton1)
@@ -211,8 +305,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
     }
 
     private void initCourseBox() {
-        courseUtils = CourseUtils.getInstance();
-        courseBox = courseUtils.getCourseBox(this);
+        courseBox = ObjectBoxUtils.getCourseBox(this);
     }
 
     @Override
@@ -224,6 +317,27 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
     }
 
     //------------------------------private method------------------------------------------------//
+    private void makeEveryBodyBlack() {
+        nurseryTextView.setTextColor(Color.parseColor("#666666"));
+        musicTextView.setTextColor(Color.parseColor("#666666"));
+        readingTextView.setTextColor(Color.parseColor("#666666"));
+        gameTextView.setTextColor(Color.parseColor("#666666"));
+        healthTextView.setTextColor(Color.parseColor("#666666"));
+        languageTextView.setTextColor(Color.parseColor("#666666"));
+        socialTextView.setTextColor(Color.parseColor("#666666"));
+        scienceTextView.setTextColor(Color.parseColor("#666666"));
+        artTextView.setTextColor(Color.parseColor("#666666"));
+        Glide.with(this).load(R.drawable.ic_nursery_black).into(nurseryImageView);
+        Glide.with(this).load(R.drawable.ic_music_black).into(musicImageView);
+        Glide.with(this).load(R.drawable.ic_reading_black).into(readingImageView);
+        Glide.with(this).load(R.drawable.ic_game_black).into(gameImageView);
+        Glide.with(this).load(R.drawable.ic_health_black).into(healthImageView);
+        Glide.with(this).load(R.drawable.ic_language_black).into(languageImageView);
+        Glide.with(this).load(R.drawable.ic_social_black).into(socialImageView);
+        Glide.with(this).load(R.drawable.ic_science_black).into(scienceImageView);
+        Glide.with(this).load(R.drawable.ic_art_black).into(artImageView);
+    }
+
     private void setUpDrawerLayoutSwitchAnimator() {
         drawerLayout.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
@@ -259,17 +373,28 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
     }
 
     private void setUpFragment() {
-        nurseryFragment = IndexFragment.newInstance(IndexContract.CourseType.NURSERY);
+        nurseryFragment = IndexFragment.newInstance(IndexContract.FragmentType.NURSERY);
         helper1 = nurseryFragment;
-        musicFragment = IndexFragment.newInstance(IndexContract.CourseType.MUSIC);
+        musicFragment = IndexFragment.newInstance(IndexContract.FragmentType.MUSIC);
         helper2 = musicFragment;
-        readingFragment = IndexFragment.newInstance(IndexContract.CourseType.READING);
+        readingFragment = IndexFragment.newInstance(IndexContract.FragmentType.READING);
         helper3 = readingFragment;
-        gameFragment = IndexFragment.newInstance(IndexContract.CourseType.GAME);
+        gameFragment = IndexFragment.newInstance(IndexContract.FragmentType.GAME);
         helper4 = gameFragment;
+        healthFragment = IndexFragment.newInstance(IndexContract.FragmentType.HEALTHY);
+        helper5 = healthFragment;
+        languageFragment = IndexFragment.newInstance(IndexContract.FragmentType.LANGUAGE);
+        helper6 = languageFragment;
+        socialFragment = IndexFragment.newInstance(IndexContract.FragmentType.SOCIAL);
+        helper7 = socialFragment;
+        scienceFragment = IndexFragment.newInstance(IndexContract.FragmentType.SCIENCE);
+        helper8 = scienceFragment;
+        artFragment = IndexFragment.newInstance(IndexContract.FragmentType.ART);
+        helper9 = artFragment;
+
         MyViewPagerAdapter viewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager());
         noScrollViewPager.setAdapter(viewPagerAdapter);
-        noScrollViewPager.setOffscreenPageLimit(3);
+        noScrollViewPager.setOffscreenPageLimit(4);
     }
 
     @Override
@@ -299,6 +424,16 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
                     return readingFragment;
                 case 3:
                     return gameFragment;
+                case 4:
+                    return healthFragment;
+                case 5:
+                    return languageFragment;
+                case 6:
+                    return socialFragment;
+                case 7:
+                    return scienceFragment;
+                case 8:
+                    return artFragment;
                 default:
                     return null;
             }
@@ -306,7 +441,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
 
         @Override
         public int getCount() {
-            return 4;
+            return 9;
         }
     }
 

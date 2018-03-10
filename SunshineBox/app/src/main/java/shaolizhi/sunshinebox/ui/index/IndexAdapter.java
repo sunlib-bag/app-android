@@ -36,7 +36,7 @@ import retrofit2.Response;
 import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.data.ApiService;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
-import shaolizhi.sunshinebox.objectbox.courses.CourseUtils;
+import shaolizhi.sunshinebox.objectbox.courses.ObjectBoxUtils;
 import shaolizhi.sunshinebox.ui.course.CourseActivity;
 import shaolizhi.sunshinebox.utils.AlertDialogUtils;
 import shaolizhi.sunshinebox.utils.NewZipUtils;
@@ -86,8 +86,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
     }
 
     private void initObjectBox(Activity activity) {
-        CourseUtils courseUtils = CourseUtils.getInstance();
-        courseBox = courseUtils.getCourseBox(activity);
+        courseBox = ObjectBoxUtils.getCourseBox(activity);
     }
 
     boolean isDownloadNow() {
@@ -288,8 +287,11 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
         }
 
         private void upDateDatabase(File file) {
-            course.setResourceStorageAddress(file.getAbsolutePath());
-            course.setSituation(2);
+            try {
+                course.downloadSuccess(file.getAbsolutePath());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             courseBox.put(course);
         }
 

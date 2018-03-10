@@ -30,7 +30,7 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
 
     private IndexContract.Presenter presenter;
 
-    private IndexContract.CourseType courseType;
+    private IndexContract.FragmentType fragmentType;
 
     private void setUpRecyclerView() {
         indexAdapter = new IndexAdapter(mActivity);
@@ -39,8 +39,8 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
     }
 
     @Override
-    public IndexContract.CourseType getCourseType() {
-        return courseType;
+    public IndexContract.FragmentType getFragmentType() {
+        return fragmentType;
     }
 
     @Override
@@ -67,21 +67,36 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
         return (Activity) mActivity;
     }
 
-    static IndexFragment newInstance(IndexContract.CourseType courseType) {
+    static IndexFragment newInstance(IndexContract.FragmentType fragmentType) {
         IndexFragment indexFragment = new IndexFragment();
         Bundle args = new Bundle();
-        switch (courseType) {
+        switch (fragmentType) {
             case NURSERY:
-                args.putString("course_type", "nursery");
+                args.putString("fragment_type", "nursery");
                 break;
             case MUSIC:
-                args.putString("course_type", "music");
+                args.putString("fragment_type", "music");
                 break;
             case READING:
-                args.putString("course_type", "reading");
+                args.putString("fragment_type", "reading");
                 break;
             case GAME:
-                args.putString("course_type", "game");
+                args.putString("fragment_type", "game");
+                break;
+            case HEALTHY:
+                args.putString("fragment_type", "healthy");
+                break;
+            case LANGUAGE:
+                args.putString("fragment_type", "language");
+                break;
+            case SOCIAL:
+                args.putString("fragment_type", "social");
+                break;
+            case SCIENCE:
+                args.putString("fragment_type", "science");
+                break;
+            case ART:
+                args.putString("fragment_type", "art");
                 break;
         }
         indexFragment.setArguments(args);
@@ -95,21 +110,36 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
 
     @Override
     protected void created(Bundle bundle) {
-        switch (getArguments().getString("course_type")) {
+        switch (getArguments().getString("fragment_type")) {
             case "nursery":
-                courseType = IndexContract.CourseType.NURSERY;
+                fragmentType = IndexContract.FragmentType.NURSERY;
                 break;
             case "music":
-                courseType = IndexContract.CourseType.MUSIC;
+                fragmentType = IndexContract.FragmentType.MUSIC;
                 break;
             case "reading":
-                courseType = IndexContract.CourseType.READING;
+                fragmentType = IndexContract.FragmentType.READING;
                 break;
             case "game":
-                courseType = IndexContract.CourseType.GAME;
+                fragmentType = IndexContract.FragmentType.GAME;
+                break;
+            case "healthy":
+                fragmentType = IndexContract.FragmentType.HEALTHY;
+                break;
+            case "language":
+                fragmentType = IndexContract.FragmentType.LANGUAGE;
+                break;
+            case "social":
+                fragmentType = IndexContract.FragmentType.SOCIAL;
+                break;
+            case "science":
+                fragmentType = IndexContract.FragmentType.SCIENCE;
+                break;
+            case "art":
+                fragmentType = IndexContract.FragmentType.ART;
                 break;
             default:
-                courseType = null;
+                fragmentType = null;
                 break;
         }
     }

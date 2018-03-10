@@ -3,10 +3,10 @@ package shaolizhi.sunshinebox.ui.index;
 import android.app.Activity;
 
 import com.avos.avoscloud.AVException;
-import com.avos.avoscloud.AVObject;
 
 import java.util.List;
 
+import shaolizhi.sunshinebox.data.LessonLCBean;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
 import shaolizhi.sunshinebox.ui.base.BasePresenter;
 import shaolizhi.sunshinebox.ui.base.BaseView;
@@ -15,14 +15,14 @@ import shaolizhi.sunshinebox.ui.base.BaseView;
  * Created by shaol on 2018/2/21.
  */
 
-interface IndexContract {
-    enum CourseType {
-        NURSERY, MUSIC, READING, GAME
+public interface IndexContract {
+    public enum FragmentType {
+        NURSERY, MUSIC, READING, GAME, HEALTHY, LANGUAGE, SOCIAL, SCIENCE, ART
     }
 
     interface View extends BaseView {
 
-        CourseType getCourseType();
+        FragmentType getFragmentType();
 
         void loadDataToRecyclerView(List<Course> courseList);
 
@@ -38,20 +38,20 @@ interface IndexContract {
     }
 
     interface Model {
-        void requestDataFromNet(CourseType courseType);
+        void requestDataFromNet();
 
-        void updateDatabase(List<AVObject> dataFromNet, CourseType courseType);
+        void updateDatabase(List<LessonLCBean> netData);
 
-        void requestDataFromDatabase(CourseType courseType);
+        void requestDataFromDatabase(FragmentType fragmentType);
     }
 
     interface CallBack {
-        void requestDataFromNetSuccess(List<AVObject> dataFromNet, CourseType courseType);
+        void requestDataFromNetSuccess(List<LessonLCBean> netData);
 
         void requestDataFromNetFailure(AVException e);
 
         void updateDatabaseSuccess();
 
-        void requestDataFromDatabaseSuccess(List<Course> dataFromDatabase);
+        void requestDataFromDatabaseSuccess(List<Course> localData);
     }
 }
