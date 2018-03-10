@@ -3,23 +3,23 @@ package shaolizhi.sunshinebox.ui.index;
 import android.util.Log;
 
 import com.avos.avoscloud.AVException;
-import com.avos.avoscloud.AVObject;
 
 import java.util.List;
 
+import shaolizhi.sunshinebox.data.LessonLCBean;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
 
 /**
  * Created by 邵励治 on 2018/2/21.
  */
 
-public class IndexPresenter implements IndexContract.Presenter, IndexContract.CallBack{
+public class IndexPresenter implements IndexContract.Presenter, IndexContract.CallBack {
 
     private IndexContract.View view;
 
     private IndexContract.Model model;
 
-    private IndexContract.CourseType courseType;
+    private IndexContract.FragmentType fragmentType;
 
     IndexPresenter(IndexContract.View view) {
         this.view = view;
@@ -29,23 +29,23 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
     @Override
     public void start() {
         view.setUpView();
-        courseType = null;
+        fragmentType = null;
         tryToLoadDataIntoRecyclerView();
     }
 
     //1:request net
     @Override
     public void tryToLoadDataIntoRecyclerView() {
-        courseType = view.getCourseType();
-        model.requestDataFromDatabase(courseType);
+        fragmentType = view.getFragmentType();
+        model.requestDataFromDatabase(fragmentType);
         view.startRefresh();
-        model.requestDataFromNet(courseType);
+        model.requestDataFromNet();
     }
 
     //2:get data from net, update net-data to database
     @Override
-    public void requestDataFromNetSuccess(List<AVObject> dataFromNet, IndexContract.CourseType courseType) {
-        model.updateDatabase(dataFromNet, courseType);
+    public void requestDataFromNetSuccess(List<LessonLCBean> netData) {
+        model.updateDatabase(netData);
     }
 
     @Override
@@ -57,7 +57,7 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
     //3:request database
     @Override
     public void updateDatabaseSuccess() {
-        model.requestDataFromDatabase(courseType);
+        model.requestDataFromDatabase(fragmentType);
     }
 
     //4:get data from database, show it in user-interface
