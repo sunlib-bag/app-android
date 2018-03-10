@@ -8,6 +8,7 @@ import java.util.List;
 
 import shaolizhi.sunshinebox.data.LessonLCBean;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
+import shaolizhi.sunshinebox.objectbox.courses.Tag;
 import shaolizhi.sunshinebox.ui.base.BasePresenter;
 import shaolizhi.sunshinebox.ui.base.BaseView;
 
@@ -40,17 +41,27 @@ public interface IndexContract {
     interface Model {
         void requestDataFromNet();
 
-        void updateDatabase(List<LessonLCBean> netData);
+        void updateDatabaseCourse(List<LessonLCBean> netData);
+
+        void updateDatabaseTag(List<Tag> tagList);
+
+        void requestTagFromNet();
 
         void requestDataFromDatabase(FragmentType fragmentType);
     }
 
     interface CallBack {
+        void requestTagFromNetSuccess(List<Tag> tagList);
+
+        void requestTagFromNetFailure(AVException e);
+
         void requestDataFromNetSuccess(List<LessonLCBean> netData);
 
         void requestDataFromNetFailure(AVException e);
 
-        void updateDatabaseSuccess();
+        void updateDatabaseCourseSuccess();
+
+        void updateDatabaseTagSuccess();
 
         void requestDataFromDatabaseSuccess(List<Course> localData);
     }

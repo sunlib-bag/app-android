@@ -13,6 +13,7 @@ import io.objectbox.Box;
 import io.objectbox.BoxStore;
 import io.objectbox.query.Query;
 import io.objectbox.query.QueryBuilder;
+import shaolizhi.sunshinebox.data.API;
 import shaolizhi.sunshinebox.data.LessonLCBean;
 import shaolizhi.sunshinebox.ui.index.IndexContract;
 import shaolizhi.sunshinebox.utils.App;
@@ -34,6 +35,13 @@ public class ObjectBoxUtils {
         return boxStore.boxFor(Tag.class);
     }
 
+    /**
+     * 输入objectId，在数据库中查找是否有course的objectId与其相同，若有的话返回该course的id，若没有的话返回0
+     *
+     * @param objectId 需要查找的objectId
+     * @param activity 构建CourseBox用
+     * @return 0或course.id
+     */
     public static Long getCourseIdByObjectId(String objectId, Activity activity) {
         QueryBuilder<Course> builder = getCourseBox(activity).query();
         Query<Course> query = builder.equal(Course_.objectId, objectId).build();
@@ -155,39 +163,83 @@ public class ObjectBoxUtils {
     }
 
     public static List<Course> getCourseOrderByUpdateTime(IndexContract.FragmentType fragmentType, Activity activity) {
-        QueryBuilder<Course> builder = getCourseBox(activity).query();
-        Query<Course> query = null;
+        QueryBuilder<Course> courseBuilder = getCourseBox(activity).query();
+        QueryBuilder<Tag> tagBuilder = getTagBox(activity).query();
+        Query<Course> courseQuery;
+        Query<Tag> tagQuery;
+        List<Tag> tagData;
+        List<Course> courseData;
         switch (fragmentType) {
             case NURSERY:
-                builder.equal(Course_.subject, "nursery");
-                builder.order(Course_.updateAt);
-                query = builder.build();
-                return query.find();
+                courseBuilder.equal(Course_.subject, "nursery");
+                courseBuilder.order(Course_.updateAt);
+                courseQuery = courseBuilder.build();
+                return courseQuery.find();
             case MUSIC:
-                builder.equal(Course_.subject, "music");
-                builder.order(Course_.updateAt);
-                query = builder.build();
-                return query.find();
+                courseBuilder.equal(Course_.subject, "music");
+                courseBuilder.order(Course_.updateAt);
+                courseQuery = courseBuilder.build();
+                return courseQuery.find();
             case READING:
-                builder.equal(Course_.subject, "reading");
-                builder.order(Course_.updateAt);
-                query = builder.build();
-                return query.find();
+                courseBuilder.equal(Course_.subject, "reading");
+                courseBuilder.order(Course_.updateAt);
+                courseQuery = courseBuilder.build();
+                return courseQuery.find();
             case GAME:
-                builder.equal(Course_.subject, "game");
-                builder.order(Course_.updateAt);
-                query = builder.build();
-                return query.find();
+                courseBuilder.equal(Course_.subject, "game");
+                courseBuilder.order(Course_.updateAt);
+                courseQuery = courseBuilder.build();
+                return courseQuery.find();
             case HEALTHY:
-                return null;
+                tagBuilder.equal(Tag_.field, API.HEALTH);
+                tagQuery = tagBuilder.build();
+                tagData = tagQuery.find();
+                courseData = new ArrayList<>();
+                for (Tag tag : tagData) {
+                    Course course = tag.course.getTarget();
+                    courseData.add(course);
+                }
+                return courseData;
             case LANGUAGE:
-                return null;
+                tagBuilder.equal(Tag_.field, API.LANGUAGE);
+                tagQuery = tagBuilder.build();
+                tagData = tagQuery.find();
+                courseData = new ArrayList<>();
+                for (Tag tag : tagData) {
+                    Course course = tag.course.getTarget();
+                    courseData.add(course);
+                }
+                return courseData;
             case SOCIAL:
-                return null;
+                tagBuilder.equal(Tag_.field, API.SOCIAL);
+                tagQuery = tagBuilder.build();
+                tagData = tagQuery.find();
+                courseData = new ArrayList<>();
+                for (Tag tag : tagData) {
+                    Course course = tag.course.getTarget();
+                    courseData.add(course);
+                }
+                return courseData;
             case SCIENCE:
-                return null;
+                tagBuilder.equal(Tag_.field, API.SCIENCE);
+                tagQuery = tagBuilder.build();
+                tagData = tagQuery.find();
+                courseData = new ArrayList<>();
+                for (Tag tag : tagData) {
+                    Course course = tag.course.getTarget();
+                    courseData.add(course);
+                }
+                return courseData;
             case ART:
-                return null;
+                tagBuilder.equal(Tag_.field, API.ART);
+                tagQuery = tagBuilder.build();
+                tagData = tagQuery.find();
+                courseData = new ArrayList<>();
+                for (Tag tag : tagData) {
+                    Course course = tag.course.getTarget();
+                    courseData.add(course);
+                }
+                return courseData;
             default:
                 return null;
         }

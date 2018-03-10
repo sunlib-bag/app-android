@@ -8,6 +8,7 @@ import java.util.List;
 
 import shaolizhi.sunshinebox.data.LessonLCBean;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
+import shaolizhi.sunshinebox.objectbox.courses.Tag;
 
 /**
  * Created by 邵励治 on 2018/2/21.
@@ -45,7 +46,7 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
     //2:get data from net, update net-data to database
     @Override
     public void requestDataFromNetSuccess(List<LessonLCBean> netData) {
-        model.updateDatabase(netData);
+        model.updateDatabaseCourse(netData);
     }
 
     @Override
@@ -56,7 +57,24 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
 
     //3:request database
     @Override
-    public void updateDatabaseSuccess() {
+    public void updateDatabaseCourseSuccess() {
+        model.requestTagFromNet();
+    }
+
+
+    @Override
+    public void requestTagFromNetSuccess(List<Tag> tagList) {
+        model.updateDatabaseTag(tagList);
+    }
+
+    @Override
+    public void requestTagFromNetFailure(AVException e) {
+        Log.e("IndexPresenter", "requestTagFromNetFailure:" + e.getMessage());
+        view.stopRefresh();
+    }
+
+    @Override
+    public void updateDatabaseTagSuccess() {
         model.requestDataFromDatabase(fragmentType);
     }
 
@@ -66,5 +84,4 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
         view.loadDataToRecyclerView(dataFromDatabase);
         view.stopRefresh();
     }
-
 }
