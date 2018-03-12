@@ -1,5 +1,7 @@
 package shaolizhi.sunshinebox.ui.main;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.avos.avoscloud.AVUser;
@@ -40,5 +42,9 @@ public class MainActivity extends ActivationActivityManager {
     @Override
     protected void resumed() {
 
+    }
+
+    public static Intent newIntent(Context packageContext) {
+        return new Intent(packageContext, MainActivity.class);
     }
 }

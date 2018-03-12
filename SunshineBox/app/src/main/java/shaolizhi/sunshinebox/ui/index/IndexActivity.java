@@ -24,6 +24,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.avos.avoscloud.AVUser;
 import com.bumptech.glide.Glide;
 
 import java.io.File;
@@ -35,8 +36,11 @@ import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
 import shaolizhi.sunshinebox.objectbox.courses.ObjectBoxUtils;
 import shaolizhi.sunshinebox.ui.base.BaseActivity;
+import shaolizhi.sunshinebox.ui.main.MainActivity;
 import shaolizhi.sunshinebox.utils.AlertDialogUtils;
 import shaolizhi.sunshinebox.widget.NoScrollViewPager;
+
+import static shaolizhi.sunshinebox.R2.id.nav_manage;
 
 public class IndexActivity extends BaseActivity implements NetworkStateHelper {
 
@@ -291,6 +295,12 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
 
                             }
                         });
+                        break;
+                    case nav_manage:
+                        clearDatabaseAndData();
+                        AVUser.logOut();
+                        startActivity(MainActivity.newIntent(IndexActivity.this));
+                        IndexActivity.this.finish();
                         break;
                 }
 
