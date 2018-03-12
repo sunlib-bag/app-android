@@ -18,14 +18,12 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/teacher_community_tdc.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/teacher_community_tdc.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/objectbox/courses/ObjectBoxUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/objectbox/courses/ObjectBoxUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexPresenter.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexPresenter.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,6 +66,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="IndexActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="254" column="30" lean-forward="false" selection-start-line="254" selection-start-column="30" selection-end-line="254" selection-end-column="30" />
+              <folding>
+                <element signature="method#setThereANet#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#clickNursery#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#clickMusic#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#clickReading#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#clickGame#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#clickHealth#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#clickLanguage#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#clickSocial#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#clickScience#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#clickArt#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#drawerLayoutSwitch#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#deleteDirWithFile#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#navigationViewItemClickEvent#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#refreshIndexFragment#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#clearDatabaseAndData#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#resumed#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#makeEveryBodyBlack#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#setUpDrawerLayoutSwitchAnimator#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#setUpTitle#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#setUpFragment#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#setNetworkChangedListener#0;class#IndexActivity#0" expanded="false" />
+                <element signature="class#MyViewPagerAdapter#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#newIntent#0;class#IndexActivity#0" expanded="false" />
+                <element signature="method#isConnected#0;class#IndexActivity#0" expanded="false" />
+                <element signature="class#NetworkChangeBroadcast#0;class#IndexActivity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_index.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_index.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="533">
+              <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_act_headerlayout.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/index_act_headerlayout.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="626">
+              <caret line="30" column="52" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_home_page_drawer.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_home_page_drawer.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="IndexFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexFragment.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,16 +150,6 @@
                 <element signature="method#newInstance#0;class#IndexFragment#0" expanded="false" />
                 <element signature="method#created#0;class#IndexFragment#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhoneNumberVerifyActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="29" column="72" lean-forward="false" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="72" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -115,44 +178,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/main/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="15" column="3" lean-forward="false" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhoneNumberVerifyPresenter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyPresenter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2170">
-              <caret line="77" column="40" lean-forward="false" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
-              <folding>
-                <element signature="e#2137#2138#0" expanded="true" />
-                <element signature="e#2184#2185#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhoneNumberVerifyModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="75" column="42" lean-forward="false" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexPresenter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexPresenter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="87" column="8" lean-forward="false" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+            <state relative-caret-position="129">
+              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding>
                 <element signature="e#2534#2895#0" expanded="true" />
                 <element signature="e#2894#2895#0" expanded="true" />
@@ -3452,6 +3482,28 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SunshineBox" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -3483,124 +3535,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="sunshinebox" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sunshinebox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sunshinebox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sunshinebox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phone_number_verify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sunshinebox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SunshineBox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sunshinebox" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="courses" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -3758,7 +3692,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520844046388" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520844273759" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3806,7 +3740,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520844046388" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520844273759" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3989,7 +3923,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520844046389" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1520844273760" />
       </method>
     </configuration>
     <list size="1">
@@ -4027,13 +3961,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511493005850</updated>
-    </task>
-    <task id="LOCAL-00104" summary="阶段性工作，可以直接把LeanCloud中的内容展示">
-      <created>1519324448287</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1519324448288</updated>
     </task>
     <task id="LOCAL-00105" summary="做到了至关重要的“更新数据库操作”，这是整个“同步操作”的核心，由于本软件是一款追求速度的软件，故“更新数据库操作”我希望仔细的设计研究一下">
       <created>1519445621086</created>
@@ -4371,7 +4298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520842389708</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="课程展示按照createdAt排列">
+      <created>1520844096554</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1520844096554</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="TodoView">
@@ -4453,7 +4387,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="完成了UI展示" />
     <MESSAGE value="UI上的小修改" />
     <MESSAGE value="添加了音频播放功能，但是暂时没做进度条更新" />
     <MESSAGE value="修复了一个音频播放的BUG" />
@@ -4478,7 +4411,8 @@
     <MESSAGE value="登出功能" />
     <MESSAGE value="首页从方便测试用的IndexActivity改为MainActivity" />
     <MESSAGE value="1. 添加基本埋点&#10;2. 修复了BUG：在登录成功后没有关闭之前的一系列页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 添加基本埋点&#10;2. 修复了BUG：在登录成功后没有关闭之前的一系列页面" />
+    <MESSAGE value="课程展示按照createdAt排列" />
+    <option name="LAST_COMMIT_MESSAGE" value="课程展示按照createdAt排列" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4490,13 +4424,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/Materials.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="77" column="61" lean-forward="false" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/4.5.0/118d48d702114278de5af81fb21844cf91666d3d/glide-4.5.0-sources.jar!/com/bumptech/glide/RequestManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -4577,16 +4504,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
           <caret line="97" column="22" lean-forward="false" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_index.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -4717,10 +4634,10 @@
         <state relative-caret-position="374">
           <caret line="408" column="9" lean-forward="false" selection-start-line="408" selection-start-column="9" selection-end-line="408" selection-end-column="9" />
           <folding>
-            <element signature="e#8673#10104#0" expanded="true" />
-            <element signature="e#10103#10104#0" expanded="true" />
-            <element signature="e#12927#13276#0" expanded="true" />
-            <element signature="e#13275#13276#0" expanded="true" />
+            <element signature="e#8673#10104#0" expanded="false" />
+            <element signature="e#10103#10104#0" expanded="false" />
+            <element signature="e#12927#13276#0" expanded="false" />
+            <element signature="e#13275#13276#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4750,17 +4667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_home_page_drawer.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -4827,42 +4733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="258" column="43" lean-forward="false" selection-start-line="258" selection-start-column="43" selection-end-line="258" selection-end-column="43" />
-          <folding>
-            <element signature="method#setThereANet#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#clickNursery#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#clickMusic#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#clickReading#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#clickGame#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#clickHealth#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#clickLanguage#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#clickSocial#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#clickScience#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#clickArt#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#drawerLayoutSwitch#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#deleteDirWithFile#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#navigationViewItemClickEvent#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#refreshIndexFragment#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#clearDatabaseAndData#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#resumed#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#makeEveryBodyBlack#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#setUpDrawerLayoutSwitchAnimator#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#setUpTitle#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#setUpFragment#0;class#IndexActivity#0" expanded="false" />
-            <element signature="e#14813#14814#0" expanded="true" />
-            <element signature="e#14849#14850#0" expanded="true" />
-            <element signature="method#setNetworkChangedListener#0;class#IndexActivity#0" expanded="false" />
-            <element signature="class#MyViewPagerAdapter#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#newIntent#0;class#IndexActivity#0" expanded="false" />
-            <element signature="method#isConnected#0;class#IndexActivity#0" expanded="false" />
-            <element signature="class#NetworkChangeBroadcast#0;class#IndexActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/phone_number_verify/PhoneNumberVerifyContract.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -4884,8 +4754,8 @@
         <state relative-caret-position="2170">
           <caret line="77" column="40" lean-forward="false" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
           <folding>
-            <element signature="e#2137#2138#0" expanded="true" />
-            <element signature="e#2184#2185#0" expanded="true" />
+            <element signature="e#2137#2138#0" expanded="false" />
+            <element signature="e#2184#2185#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4959,12 +4829,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="87" column="8" lean-forward="false" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+        <state relative-caret-position="129">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding>
             <element signature="e#2534#2895#0" expanded="true" />
             <element signature="e#2894#2895#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/index/IndexActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="254" column="30" lean-forward="false" selection-start-line="254" selection-start-column="30" selection-end-line="254" selection-end-column="30" />
+          <folding>
+            <element signature="method#setThereANet#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#clickNursery#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#clickMusic#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#clickReading#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#clickGame#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#clickHealth#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#clickLanguage#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#clickSocial#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#clickScience#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#clickArt#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#drawerLayoutSwitch#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#deleteDirWithFile#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#navigationViewItemClickEvent#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#refreshIndexFragment#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#clearDatabaseAndData#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#resumed#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#makeEveryBodyBlack#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#setUpDrawerLayoutSwitchAnimator#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#setUpTitle#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#setUpFragment#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#setNetworkChangedListener#0;class#IndexActivity#0" expanded="false" />
+            <element signature="class#MyViewPagerAdapter#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#newIntent#0;class#IndexActivity#0" expanded="false" />
+            <element signature="method#isConnected#0;class#IndexActivity#0" expanded="false" />
+            <element signature="class#NetworkChangeBroadcast#0;class#IndexActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_home_page_drawer.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_index.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/index_act_headerlayout.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="30" column="52" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
