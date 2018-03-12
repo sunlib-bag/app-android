@@ -12,6 +12,7 @@ import shaolizhi.sunshinebox.objectbox.courses.Tag;
 
 /**
  * Created by 邵励治 on 2018/2/21.
+ * Perfect Code
  */
 
 public class IndexPresenter implements IndexContract.Presenter, IndexContract.CallBack {

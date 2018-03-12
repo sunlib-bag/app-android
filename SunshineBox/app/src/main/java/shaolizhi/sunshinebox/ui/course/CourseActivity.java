@@ -365,7 +365,9 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             if (msg.what == 100) {
-                playbackProgressTextView.setText(getFormatTime(mediaPlayer.getCurrentPosition()));
+                if (mediaPlayer != null) {
+                    playbackProgressTextView.setText(getFormatTime(mediaPlayer.getCurrentPosition()));
+                }
             }
         }
     };
