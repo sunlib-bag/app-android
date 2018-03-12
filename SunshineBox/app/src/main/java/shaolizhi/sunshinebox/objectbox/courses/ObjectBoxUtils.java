@@ -162,7 +162,7 @@ public class ObjectBoxUtils {
                 + "deleteList size: " + String.valueOf(deleteList.size());
     }
 
-    public static List<Course> getCourseOrderByUpdateTime(IndexContract.FragmentType fragmentType, Activity activity) {
+    public static List<Course> getCourseList(IndexContract.FragmentType fragmentType, Activity activity) {
         QueryBuilder<Course> courseBuilder = getCourseBox(activity).query();
         QueryBuilder<Tag> tagBuilder = getTagBox(activity).query();
         Query<Course> courseQuery;

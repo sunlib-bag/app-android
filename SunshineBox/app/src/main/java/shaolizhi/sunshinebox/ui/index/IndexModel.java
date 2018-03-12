@@ -146,7 +146,7 @@ class IndexModel implements IndexContract.Model {
 
     @Override
     public void requestDataFromDatabase(IndexContract.FragmentType fragmentType) {
-        List<Course> courseList = ObjectBoxUtils.getCourseOrderByUpdateTime(fragmentType, activity);
+        List<Course> courseList = ObjectBoxUtils.getCourseList(fragmentType, activity);
         callBack.requestDataFromDatabaseSuccess(courseList);
     }
 }

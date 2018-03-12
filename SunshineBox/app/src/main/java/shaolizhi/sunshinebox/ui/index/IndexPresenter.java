@@ -4,6 +4,9 @@ import android.util.Log;
 
 import com.avos.avoscloud.AVException;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 import shaolizhi.sunshinebox.data.LessonLCBean;
@@ -82,7 +85,21 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
     //4:get data from database, show it in user-interface
     @Override
     public void requestDataFromDatabaseSuccess(List<Course> dataFromDatabase) {
+        sortListByCreatedAt(dataFromDatabase);
         view.loadDataToRecyclerView(dataFromDatabase);
         view.stopRefresh();
+    }
+
+    private void sortListByCreatedAt(List<Course> dataFromDatabase) {
+        Collections.sort(dataFromDatabase, new Comparator<Course>() {
+            @Override
+            public int compare(Course o1, Course o2) {
+                Date date1 = o1.getCreatedAt();
+                Date date2 = o2.getCreatedAt();
+                Long time1 = date1.getTime();
+                Long time2 = date2.getTime();
+                return (int) (time1 - time2);
+            }
+        });
     }
 }
