@@ -59,16 +59,16 @@
         <activity
             android:name=".ui.phone_number_verify.PhoneNumberVerifyActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".ui.main.MainActivity" />
-        <activity android:name=".ui.index.IndexActivity">
+        <activity android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.course.CourseActivity"></activity>
-        <activity android:name=".ui.album.AlbumActivity"></activity>
+        <activity android:name=".ui.index.IndexActivity" />
+        <activity android:name=".ui.course.CourseActivity" />
+        <activity android:name=".ui.album.AlbumActivity" />
     </application>
 
 </manifest>
