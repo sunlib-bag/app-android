@@ -272,6 +272,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
         dir.delete();// 删除目录本身
     }
 
+
     private void navigationViewItemClickEvent() {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -281,14 +282,8 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
                         AlertDialogUtils.showAlertDialog(IndexActivity.this, "确定重置软件", "这将会删除全部的本地文件", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                courseBox.removeAll();
-                                File file = new File(Environment.getExternalStorageDirectory().getPath() + File.separator + "SunshineBox_II");
-                                deleteDirWithFile(file);
-                                drawerLayout.closeDrawers();
-                                helper1.clearSuccess();
-                                helper2.clearSuccess();
-                                helper3.clearSuccess();
-                                helper4.clearSuccess();
+                                clearDatabaseAndData();
+                                refreshIndexFragment();
                             }
                         }, new DialogInterface.OnClickListener() {
                             @Override
@@ -302,6 +297,26 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
                 return false;
             }
         });
+    }
+
+    private void refreshIndexFragment() {
+        helper1.clearSuccess();
+        helper2.clearSuccess();
+        helper3.clearSuccess();
+        helper4.clearSuccess();
+        helper5.clearSuccess();
+        helper6.clearSuccess();
+        helper7.clearSuccess();
+        helper8.clearSuccess();
+        helper9.clearSuccess();
+    }
+
+    private void clearDatabaseAndData() {
+        courseBox.removeAll();
+        ObjectBoxUtils.getTagBox(this).removeAll();
+        File file = new File(Environment.getExternalStorageDirectory().getPath() + File.separator + "SunshineBox_II");
+        deleteDirWithFile(file);
+        drawerLayout.closeDrawers();
     }
 
     private void initCourseBox() {
