@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.WindowManager;
 
+import com.avos.avoscloud.AVAnalytics;
+
 import butterknife.ButterKnife;
 import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.utils.ToastUtils;
@@ -51,9 +53,15 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (getRequestedOrientation() != ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
+        AVAnalytics.onResume(this);
         resumed();
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        AVAnalytics.onPause(this);
+    }
 
     public void showToastForRequestResult(@NonNull String flag) {
         switch (flag) {

@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.avos.avoscloud.AVAnalytics;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import shaolizhi.sunshinebox.R;
@@ -22,6 +24,8 @@ import shaolizhi.sunshinebox.utils.ToastUtils;
  */
 
 public abstract class BaseFragment extends Fragment {
+
+    protected String alias = this.getClass().getSimpleName();
 
     private Unbinder unbinder;
 
@@ -53,7 +57,14 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        AVAnalytics.onFragmentStart(alias);
         resumed();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        AVAnalytics.onFragmentEnd(alias);
     }
 
     @Override
