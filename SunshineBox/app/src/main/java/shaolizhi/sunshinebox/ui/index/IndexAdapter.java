@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.avos.avoscloud.AVAnalytics;
+import com.avos.avoscloud.AVUser;
 import com.bumptech.glide.Glide;
 
 import java.io.File;
@@ -226,21 +227,21 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
                                 }, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        AVAnalytics.onEvent(activity, "User: Open Lesson Count" + course.getCourseName(), course.getSubject());
+                                        AVAnalytics.onEvent(activity, "User: Open Lesson Count " + AVUser.getCurrentUser(), course.getCourseName());
                                         AVAnalytics.onEvent(activity, "Lesson: " + course.getCourseName(), course.getSubject());
                                         activity.startActivity(CourseActivity.newIntent(activity, course.getResourceStorageAddress()));
                                     }
                                 });
                             } else {
                                 AVAnalytics.onEvent(activity, "Lesson: " + course.getCourseName(), course.getSubject());
-                                AVAnalytics.onEvent(activity, "User: Open Lesson Count" + course.getCourseName(), course.getSubject());
+                                AVAnalytics.onEvent(activity, "User: Open Lesson Count " + AVUser.getCurrentUser(), course.getCourseName());
                                 activity.startActivity(CourseActivity.newIntent(activity, course.getResourceStorageAddress()));
                             }
                             break;
                         case 2:
                             //资源已下载且没更新
                             AVAnalytics.onEvent(activity, "Lesson: " + course.getCourseName(), course.getSubject());
-                            AVAnalytics.onEvent(activity, "User: Open Lesson Count" + course.getCourseName(), course.getSubject());
+                            AVAnalytics.onEvent(activity, "User: Open Lesson Count " + AVUser.getCurrentUser(), course.getCourseName());
                             activity.startActivity(CourseActivity.newIntent(activity, course.getResourceStorageAddress()));
                             break;
                     }
