@@ -24,6 +24,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVUser;
 import com.bumptech.glide.Glide;
 
@@ -257,6 +258,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
 
     @Override
     protected void created(Bundle bundle) {
+        AVAnalytics.onEvent(this, "User: Open App Count" + AVUser.getCurrentUser());
         initCourseBox();
         setUpTitle();
         setUpDrawerLayoutSwitchAnimator();
