@@ -227,21 +227,24 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
                                 }, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        AVAnalytics.onEvent(activity, "User: Open Lesson Count " + AVUser.getCurrentUser(), course.getCourseName());
-                                        AVAnalytics.onEvent(activity, "Lesson: " + course.getCourseName(), course.getSubject());
+                                        AVAnalytics.onEvent(activity, "单个课程被打开次数", course.getCourseName());
+                                        AVAnalytics.onEvent(activity, "用户打开课程数", AVUser.getCurrentUser().getMobilePhoneNumber());
+                                        AVAnalytics.onEvent(activity, "类目下课程打开数", course.getSubject());
                                         activity.startActivity(CourseActivity.newIntent(activity, course.getResourceStorageAddress()));
                                     }
                                 });
                             } else {
-                                AVAnalytics.onEvent(activity, "Lesson: " + course.getCourseName(), course.getSubject());
-                                AVAnalytics.onEvent(activity, "User: Open Lesson Count " + AVUser.getCurrentUser(), course.getCourseName());
+                                AVAnalytics.onEvent(activity, "单个课程被打开次数", course.getCourseName());
+                                AVAnalytics.onEvent(activity, "类目下课程打开数", course.getSubject());
+                                AVAnalytics.onEvent(activity, "用户打开课程数", AVUser.getCurrentUser().getMobilePhoneNumber());
                                 activity.startActivity(CourseActivity.newIntent(activity, course.getResourceStorageAddress()));
                             }
                             break;
                         case 2:
                             //资源已下载且没更新
-                            AVAnalytics.onEvent(activity, "Lesson: " + course.getCourseName(), course.getSubject());
-                            AVAnalytics.onEvent(activity, "User: Open Lesson Count " + AVUser.getCurrentUser(), course.getCourseName());
+                            AVAnalytics.onEvent(activity, "单个课程被打开次数", course.getCourseName());
+                            AVAnalytics.onEvent(activity, "用户打开课程数", AVUser.getCurrentUser().getMobilePhoneNumber());
+                            AVAnalytics.onEvent(activity, "类目下课程打开数", course.getSubject());
                             activity.startActivity(CourseActivity.newIntent(activity, course.getResourceStorageAddress()));
                             break;
                     }
@@ -250,6 +253,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
         }
 
         private void downloadZip(final File folder) {
+            AVAnalytics.onEvent(activity, "用户下载课程数", AVUser.getCurrentUser().getMobilePhoneNumber());
             downloadingTask.put(course.getObjectId(), "");
             Call<ResponseBody> call = apiService.downloadFileWithDynamicUrl(course.getResourcePackageUrl());
             call.enqueue(new Callback<ResponseBody>() {
