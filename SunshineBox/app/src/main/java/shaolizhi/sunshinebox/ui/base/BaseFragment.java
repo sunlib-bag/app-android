@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.avos.avoscloud.AVAnalytics;
+import com.avos.avoscloud.AVUser;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -24,6 +25,9 @@ import shaolizhi.sunshinebox.utils.ToastUtils;
  */
 
 public abstract class BaseFragment extends Fragment {
+
+    Long resumeTime;
+    Long pauseTime;
 
     protected String alias = this.getClass().getSimpleName();
 
@@ -57,6 +61,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        resumeTime = System.currentTimeMillis();
         AVAnalytics.onFragmentStart(alias);
         resumed();
     }
@@ -64,6 +69,10 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
+        pauseTime = System.currentTimeMillis();
+        if (resumeTime != 0) {
+            AVAnalytics.onEvent(mActivity, "单个用户使用时长", AVUser.getCurrentUser().getUsername(), (int) (pauseTime - resumeTime));
+        }
         AVAnalytics.onFragmentEnd(alias);
     }
 

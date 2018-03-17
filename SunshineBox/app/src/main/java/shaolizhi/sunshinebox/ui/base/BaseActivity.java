@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.WindowManager;
 
 import com.avos.avoscloud.AVAnalytics;
+import com.avos.avoscloud.AVUser;
 
 import butterknife.ButterKnife;
 import shaolizhi.sunshinebox.R;
@@ -24,6 +25,8 @@ import shaolizhi.sunshinebox.utils.ToastUtils;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
+    Long resumeTime;
+    Long pauseTime;
 
     protected abstract
     @LayoutRes
@@ -53,6 +56,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (getRequestedOrientation() != ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
+        resumeTime = System.currentTimeMillis();
         AVAnalytics.onResume(this);
         resumed();
     }
@@ -60,6 +64,10 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        pauseTime = System.currentTimeMillis();
+        if (resumeTime != 0) {
+            AVAnalytics.onEvent(this, "用户总使用时长", AVUser.getCurrentUser().getUsername(), (int) (pauseTime - resumeTime));
+        }
         AVAnalytics.onPause(this);
     }
 

@@ -258,7 +258,8 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
 
     @Override
     protected void created(Bundle bundle) {
-        AVAnalytics.onEvent(this, "User: Open App Count" + AVUser.getCurrentUser());
+        AVAnalytics.onEvent(this, "用户打开应用次数", AVUser.getCurrentUser().getUsername());
+
         initCourseBox();
         setUpTitle();
         setUpDrawerLayoutSwitchAnimator();

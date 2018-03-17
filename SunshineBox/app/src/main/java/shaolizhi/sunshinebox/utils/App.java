@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVOSCloud;
+import com.avos.avoscloud.AVUser;
 
 import io.objectbox.BoxStore;
 import io.objectbox.android.AndroidObjectBrowser;

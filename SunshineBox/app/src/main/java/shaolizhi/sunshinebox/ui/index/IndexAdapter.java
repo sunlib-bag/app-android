@@ -227,24 +227,24 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
                                 }, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        AVAnalytics.onEvent(activity, "CourseBeOpened", course.getCourseName());
-                                        AVAnalytics.onEvent(activity, "SubjectBeOpened", course.getSubject());
-                                        AVAnalytics.onEvent(activity, "UserOpenedCourse", AVUser.getCurrentUser().getMobilePhoneNumber());
+                                        AVAnalytics.onEvent(activity, "单个课程被打开次数", course.getCourseName());
+                                        AVAnalytics.onEvent(activity, "用户打开课程数", AVUser.getCurrentUser().getMobilePhoneNumber());
+                                        AVAnalytics.onEvent(activity, "类目下课程打开数", course.getSubject());
                                         activity.startActivity(CourseActivity.newIntent(activity, course.getResourceStorageAddress()));
                                     }
                                 });
                             } else {
-                                AVAnalytics.onEvent(activity, "CourseBeOpened", course.getCourseName());
-                                AVAnalytics.onEvent(activity, "SubjectBeOpened", course.getSubject());
-                                AVAnalytics.onEvent(activity, "UserOpenedCourse", AVUser.getCurrentUser().getMobilePhoneNumber());
+                                AVAnalytics.onEvent(activity, "单个课程被打开次数", course.getCourseName());
+                                AVAnalytics.onEvent(activity, "用户打开课程数", AVUser.getCurrentUser().getMobilePhoneNumber());
+                                AVAnalytics.onEvent(activity, "类目下课程打开数", course.getSubject());
                                 activity.startActivity(CourseActivity.newIntent(activity, course.getResourceStorageAddress()));
                             }
                             break;
                         case 2:
                             //资源已下载且没更新
-                            AVAnalytics.onEvent(activity, "CourseBeOpened", course.getCourseName());
-                            AVAnalytics.onEvent(activity, "SubjectBeOpened", course.getSubject());
-                            AVAnalytics.onEvent(activity, "UserOpenedCourse", AVUser.getCurrentUser().getMobilePhoneNumber());
+                            AVAnalytics.onEvent(activity, "单个课程被打开次数", course.getCourseName());
+                            AVAnalytics.onEvent(activity, "用户打开课程数", AVUser.getCurrentUser().getMobilePhoneNumber());
+                            AVAnalytics.onEvent(activity, "类目下课程打开数", course.getSubject());
                             activity.startActivity(CourseActivity.newIntent(activity, course.getResourceStorageAddress()));
                             break;
                     }
