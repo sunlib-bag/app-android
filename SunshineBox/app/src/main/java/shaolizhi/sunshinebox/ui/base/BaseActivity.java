@@ -66,7 +66,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onPause();
         pauseTime = System.currentTimeMillis();
         if (resumeTime != 0) {
-            AVAnalytics.onEvent(this, "用户总使用时长", AVUser.getCurrentUser().getUsername(), (int) (pauseTime - resumeTime));
+            if (AVUser.getCurrentUser() != null) {
+                AVAnalytics.onEvent(this, "用户总使用时长", AVUser.getCurrentUser().getUsername(), (int) (pauseTime - resumeTime));
+            }
         }
         AVAnalytics.onPause(this);
     }

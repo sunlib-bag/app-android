@@ -1,12 +1,12 @@
 package shaolizhi.sunshinebox.utils;
 
-import android.app.Application;
 import android.content.Context;
+import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
 import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVOSCloud;
-import com.avos.avoscloud.AVUser;
+import com.tencent.bugly.Bugly;
 
 import io.objectbox.BoxStore;
 import io.objectbox.android.AndroidObjectBrowser;
@@ -17,7 +17,7 @@ import shaolizhi.sunshinebox.objectbox.courses.MyObjectBox;
  * 由邵励治于2017/10/23创造.
  */
 
-public class App extends Application {
+public class App extends MultiDexApplication {
     public static Context mAppContext;
 
     private BoxStore boxStore;
@@ -37,6 +37,8 @@ public class App extends Application {
         AVAnalytics.enableCrashReport(this, true);
         //开启调试日志
         AVOSCloud.setDebugLogEnabled(true);
+
+        Bugly.init(getApplicationContext(), "40483fa79f", false);
     }
 
     public BoxStore getBoxStore() {
