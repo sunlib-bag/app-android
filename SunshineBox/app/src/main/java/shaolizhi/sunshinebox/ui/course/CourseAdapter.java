@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.avos.avoscloud.AVAnalytics;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
@@ -94,6 +95,8 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
 
         @Override
         public void onClick(View v) {
+            AVAnalytics.onEvent(activity, "资源被打开数");
+
             switch (materials.getMaterialType()) {
                 case ALBUM:
                     courseMediaPlayer.openAlbum(materials);

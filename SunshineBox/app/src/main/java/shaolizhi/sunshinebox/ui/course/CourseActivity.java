@@ -25,6 +25,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.avos.avoscloud.AVAnalytics;
+import com.avos.avoscloud.AVUser;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.zzhoujay.markdown.MarkDown;
@@ -141,6 +143,8 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
 
     @Override
     protected void created(Bundle bundle) {
+
+
         //设置RecyclerView
         setUpRecyclerView();
 
@@ -349,9 +353,23 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
         return getIntent().getStringExtra(RESOURCE_STORAGE_ADDRESS);
     }
 
+    Long resumeTime;
+    Long pauseTime;
+
     @Override
     protected void resumed() {
+        resumeTime = System.currentTimeMillis();
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        pauseTime = System.currentTimeMillis();
+        if (resumeTime != 0) {
+            if (AVUser.getCurrentUser() != null) {
+                AVAnalytics.onEvent(this, "浏览课程总时间", (int) (pauseTime - resumeTime));
+            }
+        }
     }
 
     public static Intent newIntent(Context packageContext, String resourceStorageAddress) {

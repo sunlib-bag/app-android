@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVUser;
 
 import shaolizhi.sunshinebox.R;
@@ -30,6 +31,7 @@ public class MainActivity extends ActivationActivityManager {
     private void automaticLogin() {
         if (AVUser.getCurrentUser() != null) {
             //已登录
+            AVAnalytics.onEvent(this, "使用时间段", AVUser.getCurrentUser().getUsername());
             startActivity(IndexActivity.newIntent(this));
             finish();
         } else {
