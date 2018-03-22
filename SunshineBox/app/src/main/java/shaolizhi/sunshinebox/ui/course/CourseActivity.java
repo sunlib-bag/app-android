@@ -23,6 +23,7 @@ import android.text.Spanned;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.avos.avoscloud.AVAnalytics;
@@ -121,6 +122,9 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
     @BindView(R.id.course_act_imageview3)
     ImageView closeImageView;
 
+    @BindView(R.id.course_act_scrollview)
+    ScrollView scrollView;
+
     @OnClick(R.id.course_act_imageview3)
     public void clickCloseImageView() {
         mediaPlayer.reset();
@@ -143,8 +147,6 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
 
     @Override
     protected void created(Bundle bundle) {
-
-
         //设置RecyclerView
         setUpRecyclerView();
 
@@ -264,7 +266,7 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
                         Drawable drawable;
                         try {
                             drawable = drawableFromUrl(source);
-                            drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+                            drawable.setBounds(0, 0, markdownTextView.getWidth() - 20, drawable.getIntrinsicHeight());
                         } catch (IOException e) {
                             Log.w(TAG, "can't get image", e);
                             drawable = new ColorDrawable(Color.LTGRAY);
