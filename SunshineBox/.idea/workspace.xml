@@ -24,7 +24,6 @@
     <list default="true" id="a3c9f46f-e8b1-4367-ac78-86162aa9a291" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_course.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_course.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -146,8 +145,8 @@
       <file leaf-file-name="CourseActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="268" column="85" lean-forward="false" selection-start-line="268" selection-start-column="85" selection-end-line="268" selection-end-column="85" />
+            <state relative-caret-position="98">
+              <caret line="63" column="28" lean-forward="true" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
               <folding>
                 <element signature="method#clickPlayOrPauseImageView#0;class#CourseActivity#0" expanded="false" />
                 <element signature="method#setUpRecyclerView#0;class#CourseActivity#0" expanded="false" />
@@ -3683,7 +3682,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521707890909" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521713434033" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3730,7 +3729,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521707890909" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521713434033" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3912,7 +3911,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521707890910" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1521713434035" />
       </method>
     </configuration>
     <list size="1">
@@ -3950,13 +3949,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511493005850</updated>
-    </task>
-    <task id="LOCAL-00113" summary="重做了首页加载Fragment的能力:使用ViewPager代替了FrameLayout">
-      <created>1519754526613</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1519754526613</updated>
     </task>
     <task id="LOCAL-00114" summary="修改了ViewPager的缓存数量，使得Fragment被初始化后不会被销毁">
       <created>1519755658121</created>
@@ -4294,7 +4286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521554432637</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="修复了MarkDown图片显示不全问题">
+      <created>1521707918663</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1521707918664</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TodoView">
@@ -4376,7 +4375,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="修改了离线模式下的点击行为" />
     <MESSAGE value="1. 修复了无教案时会崩溃的BUG&#10;2. 增加了一个网络状态改变时的回调函数，日后好用它在网络情况变化时将下载任务取消" />
     <MESSAGE value="CourseActivity: 修复了Material为空时会崩溃的BUG" />
     <MESSAGE value="添加了重置软件的按钮" />
@@ -4401,7 +4399,8 @@
     <MESSAGE value="添加了BUGLY的软件更新" />
     <MESSAGE value="添加了BUGLY的软件更新和解决了方法数超过64K的问题" />
     <MESSAGE value="添加了数据埋点：&#10;&#10;日活、周活、月活&#10;留存率&#10;每日使用时长&#10;使用时间段&#10;&#10;打开课程总数（LeanCloud自定义事件）&#10;各分类下打开数（LeanCloud自定义事件）&#10;单个课程打开次数（LeanCloud自定义事件）&#10;&#10;浏览课程总时间（LeanCloud自定义事件）&#10;每日平均打开资源（LeanCloud自定义事件）&#10;单个用户使用时长（LeanCloud自定义事件）&#10;&#10;单个用户打开课程数（LeanCloud自定义事件）&#10;单个用户打开应用数（LeanCloud自定义事件）" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了数据埋点：&#10;&#10;日活、周活、月活&#10;留存率&#10;每日使用时长&#10;使用时间段&#10;&#10;打开课程总数（LeanCloud自定义事件）&#10;各分类下打开数（LeanCloud自定义事件）&#10;单个课程打开次数（LeanCloud自定义事件）&#10;&#10;浏览课程总时间（LeanCloud自定义事件）&#10;每日平均打开资源（LeanCloud自定义事件）&#10;单个用户使用时长（LeanCloud自定义事件）&#10;&#10;单个用户打开课程数（LeanCloud自定义事件）&#10;单个用户打开应用数（LeanCloud自定义事件）" />
+    <MESSAGE value="修复了MarkDown图片显示不全问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复了MarkDown图片显示不全问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4834,8 +4833,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/shaolizhi/sunshinebox/ui/course/CourseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="268" column="85" lean-forward="false" selection-start-line="268" selection-start-column="85" selection-end-line="268" selection-end-column="85" />
+        <state relative-caret-position="98">
+          <caret line="63" column="28" lean-forward="true" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
           <folding>
             <element signature="method#clickPlayOrPauseImageView#0;class#CourseActivity#0" expanded="false" />
             <element signature="method#setUpRecyclerView#0;class#CourseActivity#0" expanded="false" />

@@ -67,7 +67,22 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
 
     @OnClick(R.id.course_act_imagebutton)
     public void back() {
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
         finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+        super.onBackPressed();
     }
 
     @BindView(R.id.course_act_textview1)
