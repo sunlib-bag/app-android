@@ -168,6 +168,12 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
         //创建MediaPlayer
         mediaPlayer = new MediaPlayer();
 
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Glide.with(CourseActivity.this).load(R.drawable.play).into(playOrPauseImageView);
+            }
+        });
         //获取resource的存储地址
         resourceStorageAddress = getResourceStorageAddress();
 
