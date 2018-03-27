@@ -26,7 +26,6 @@ import shaolizhi.sunshinebox.utils.ToastUtils;
 public abstract class BaseFragment extends Fragment {
 
 
-
     protected String alias = this.getClass().getSimpleName();
 
     private Unbinder unbinder;

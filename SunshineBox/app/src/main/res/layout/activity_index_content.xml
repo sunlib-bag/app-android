@@ -40,9 +40,36 @@
                 android:textColor="#000000"
                 android:textSize="21sp" />
 
+            <View
+                android:id="@+id/index_act_view1"
+                android:layout_width="102dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="17dp"
+                android:background="#e6e6e6" />
+
             <TextView
+                android:id="@+id/index_act_textview11"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="33dp"
+                android:text="刷新"
+                android:textColor="#333333"
+                android:textSize="19sp" />
+
+            <ImageView
+                android:id="@+id/index_act_imageview10"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="83dp"
+                android:background="@drawable/refresh" />
+
+
         </RelativeLayout>
 
     </android.support.v7.widget.Toolbar>

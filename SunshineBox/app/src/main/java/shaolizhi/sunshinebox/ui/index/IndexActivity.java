@@ -1,5 +1,7 @@
 package shaolizhi.sunshinebox.ui.index;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -18,8 +20,10 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.LinearInterpolator;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -43,7 +47,7 @@ import shaolizhi.sunshinebox.widget.NoScrollViewPager;
 
 import static shaolizhi.sunshinebox.R2.id.nav_manage;
 
-public class IndexActivity extends BaseActivity implements NetworkStateHelper {
+public class IndexActivity extends BaseActivity implements NetworkStateHelper, RefreshHelper {
 
     private boolean isThereANet;
 
@@ -60,6 +64,16 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
     ClearDataHelper helper7;
     ClearDataHelper helper8;
     ClearDataHelper helper9;
+
+    RefreshListener listener1;
+    RefreshListener listener2;
+    RefreshListener listener3;
+    RefreshListener listener4;
+    RefreshListener listener5;
+    RefreshListener listener6;
+    RefreshListener listener7;
+    RefreshListener listener8;
+    RefreshListener listener9;
 
 
     public boolean isThereANet() {
@@ -219,6 +233,49 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
     @BindView(R.id.index_act_viewpager)
     NoScrollViewPager noScrollViewPager;
 
+    @BindView(R.id.index_act_textview11)
+    TextView refreshTextView;
+
+    @BindView(R.id.index_act_view1)
+    View refreshView;
+
+    @OnClick(R.id.index_act_view1)
+    public void clickRefreshView() {
+        Log.e("IndexActivity", "clickRefreshView");
+        switch (noScrollViewPager.getCurrentItem()) {
+            case 0:
+                listener1.onRefresh();
+                break;
+            case 1:
+                listener2.onRefresh();
+                break;
+            case 2:
+                listener3.onRefresh();
+                break;
+            case 3:
+                listener4.onRefresh();
+                break;
+            case 4:
+                listener5.onRefresh();
+                break;
+            case 5:
+                listener6.onRefresh();
+                break;
+            case 6:
+                listener7.onRefresh();
+                break;
+            case 7:
+                listener8.onRefresh();
+                break;
+            case 8:
+                listener9.onRefresh();
+                break;
+        }
+    }
+
+    @BindView(R.id.index_act_imageview10)
+    ImageView refreshImageView;
+
     IndexFragment nurseryFragment;
 
     IndexFragment musicFragment;
@@ -239,7 +296,6 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
 
     //-----------------------------click method---------------------------------------------------//
     @OnClick(R.id.index_act_imagebuttton1)
-
     public void drawerLayoutSwitch() {
         int drawerLockMode = drawerLayout.getDrawerLockMode(GravityCompat.START);
         if (drawerLayout.isDrawerVisible(GravityCompat.START)
@@ -264,6 +320,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
         setUpDrawerLayoutSwitchAnimator();
         setUpFragment();
         navigationViewItemClickEvent();
+        animator = getAnimator(refreshImageView);
     }
 
     public static void deleteDirWithFile(File dir) {
@@ -402,22 +459,31 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
     private void setUpFragment() {
         nurseryFragment = IndexFragment.newInstance(IndexContract.FragmentType.NURSERY);
         helper1 = nurseryFragment;
+        listener1 = nurseryFragment;
         musicFragment = IndexFragment.newInstance(IndexContract.FragmentType.MUSIC);
         helper2 = musicFragment;
+        listener2 = musicFragment;
         readingFragment = IndexFragment.newInstance(IndexContract.FragmentType.READING);
         helper3 = readingFragment;
+        listener3 = readingFragment;
         gameFragment = IndexFragment.newInstance(IndexContract.FragmentType.GAME);
         helper4 = gameFragment;
+        listener4 = gameFragment;
         healthFragment = IndexFragment.newInstance(IndexContract.FragmentType.HEALTHY);
         helper5 = healthFragment;
+        listener5 = healthFragment;
         languageFragment = IndexFragment.newInstance(IndexContract.FragmentType.LANGUAGE);
         helper6 = languageFragment;
+        listener6 = languageFragment;
         socialFragment = IndexFragment.newInstance(IndexContract.FragmentType.SOCIAL);
         helper7 = socialFragment;
+        listener7 = socialFragment;
         scienceFragment = IndexFragment.newInstance(IndexContract.FragmentType.SCIENCE);
         helper8 = scienceFragment;
+        listener8 = scienceFragment;
         artFragment = IndexFragment.newInstance(IndexContract.FragmentType.ART);
         helper9 = artFragment;
+        listener9 = artFragment;
 
         MyViewPagerAdapter viewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager());
         noScrollViewPager.setAdapter(viewPagerAdapter);
@@ -432,6 +498,29 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
     @Override
     public void setNetworkChangedListener(NetworkChangedListener networkChangedListener) {
         this.networkChangedListener = networkChangedListener;
+    }
+
+    @Override
+    public void startRefresh() {
+        Log.e("IndexActivity", "startRefresh");
+        refreshView.setEnabled(false);
+        refreshTextView.setTextColor(Color.parseColor("#999999"));
+        Glide.with(IndexActivity.this).load(R.drawable.refresh_69).into(refreshImageView);
+        startRotating();
+    }
+
+    @Override
+    public void stopRefresh() {
+        Log.e("IndexActivity", "stopRefresh");
+        refreshView.setEnabled(true);
+        refreshTextView.setTextColor(Color.parseColor("#333333"));
+        stopRotating();
+        Glide.with(IndexActivity.this).load(R.drawable.refresh).into(refreshImageView);
+    }
+
+    @Override
+    public void netError() {
+
     }
 
     private class MyViewPagerAdapter extends FragmentPagerAdapter {
@@ -506,5 +595,27 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper {
                 }
             }
         }
+    }
+
+    ObjectAnimator animator;
+
+    private ObjectAnimator getAnimator(ImageView imageView) {
+        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(imageView, View.ROTATION, 0, 360);
+        objectAnimator.setRepeatCount(ValueAnimator.INFINITE);
+        objectAnimator.setDuration(1000);
+        objectAnimator.setInterpolator(new LinearInterpolator());
+        return objectAnimator;
+    }
+
+    private void startRotating() {
+        if (animator.isPaused()) {
+            animator.resume();
+        } else {
+            animator.start();
+        }
+    }
+
+    private void stopRotating() {
+        animator.pause();
     }
 }

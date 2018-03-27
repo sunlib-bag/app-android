@@ -12,16 +12,14 @@ import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
 import shaolizhi.sunshinebox.ui.base.BaseFragment;
 import shaolizhi.sunshinebox.utils.ToastUtils;
-import shaolizhi.sunshinebox.widget.MyRefreshLayout;
 
 /**
  * Created by 邵励治 on 2018/2/12.
  * Perfect Code
  */
 
-public class IndexFragment extends BaseFragment implements IndexContract.View, MyRefreshLayout.OnRefreshListener, ClearDataHelper {
-    @BindView(R.id.index_fgm_my_refreshlayout)
-    MyRefreshLayout refreshLayout;
+public class IndexFragment extends BaseFragment implements IndexContract.View, ClearDataHelper, RefreshListener {
+    RefreshHelper refreshHelper;
 
     @BindView(R.id.index_fgm_recyclerview)
     RecyclerView recyclerView;
@@ -50,15 +48,21 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
 
     @Override
     public void startRefresh() {
-        if (refreshLayout != null) {
-            refreshLayout.setRefreshing(true);
+//        if (refreshLayout != null) {
+//            refreshLayout.setRefreshing(true);
+//        }
+        if (refreshHelper != null) {
+            refreshHelper.startRefresh();
         }
     }
 
     @Override
     public void stopRefresh() {
-        if (refreshLayout != null) {
-            refreshLayout.setRefreshing(false);
+//        if (refreshLayout != null) {
+//            refreshLayout.setRefreshing(false);
+//        }
+        if (refreshHelper != null) {
+            refreshHelper.stopRefresh();
         }
     }
 
@@ -142,6 +146,8 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
                 fragmentType = null;
                 break;
         }
+        refreshHelper = (RefreshHelper) mActivity;
+
     }
 
     @Override
@@ -154,7 +160,6 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
 
     @Override
     public void setUpView() {
-        setUpRefreshLayout();
         setUpRecyclerView();
     }
 
@@ -168,9 +173,6 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, M
         }
     }
 
-    private void setUpRefreshLayout() {
-        refreshLayout.setOnRefreshListener(this);
-    }
 
     @Override
     public void clearSuccess() {
