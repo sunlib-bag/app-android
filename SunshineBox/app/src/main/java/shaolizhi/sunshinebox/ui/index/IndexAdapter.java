@@ -149,13 +149,13 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
         private void loadInformation(Course course) {
             switch (course.getSituation()) {
                 case 0:
-                    informationTextView.setText("资源未下载");
+                    informationTextView.setText("点击下载");
                     break;
                 case 1:
-                    informationTextView.setText("资源有更新");
+                    informationTextView.setText("点击更新");
                     break;
                 case 2:
-                    informationTextView.setText("资源已下载");
+                    informationTextView.setText("");
                     break;
             }
         }
@@ -163,16 +163,56 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
         private void loadCardBackground(Course course) {
             switch (course.getSubject()) {
                 case "nursery":
-                    Glide.with(activity).load(R.drawable.nursery).into(imageView);
+                    switch (course.getSituation()) {
+                        case 0:
+                            Glide.with(activity).load(R.drawable.nursery_gray).into(imageView);
+                            break;
+                        case 1:
+                            Glide.with(activity).load(R.drawable.nursery_gray).into(imageView);
+                            break;
+                        case 2:
+                            Glide.with(activity).load(R.drawable.nursery).into(imageView);
+                            break;
+                    }
                     break;
                 case "music":
-                    Glide.with(activity).load(R.drawable.music).into(imageView);
+                    switch (course.getSituation()) {
+                        case 0:
+                            Glide.with(activity).load(R.drawable.music_gray).into(imageView);
+                            break;
+                        case 1:
+                            Glide.with(activity).load(R.drawable.music_gray).into(imageView);
+                            break;
+                        case 2:
+                            Glide.with(activity).load(R.drawable.music).into(imageView);
+                            break;
+                    }
                     break;
                 case "reading":
-                    Glide.with(activity).load(R.drawable.reading).into(imageView);
+                    switch (course.getSituation()) {
+                        case 0:
+                            Glide.with(activity).load(R.drawable.reading_gray).into(imageView);
+                            break;
+                        case 1:
+                            Glide.with(activity).load(R.drawable.reading_gray).into(imageView);
+                            break;
+                        case 2:
+                            Glide.with(activity).load(R.drawable.reading).into(imageView);
+                            break;
+                    }
                     break;
                 case "game":
-                    Glide.with(activity).load(R.drawable.game).into(imageView);
+                    switch (course.getSituation()) {
+                        case 0:
+                            Glide.with(activity).load(R.drawable.game_gray).into(imageView);
+                            break;
+                        case 1:
+                            Glide.with(activity).load(R.drawable.game_gray).into(imageView);
+                            break;
+                        case 2:
+                            Glide.with(activity).load(R.drawable.game).into(imageView);
+                            break;
+                    }
                     break;
                 default:
                     break;
@@ -264,12 +304,29 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
                 public void onResponse(@NonNull Call<ResponseBody> call, @NonNull Response<ResponseBody> response) {
                     if (response.isSuccessful()) {
                         Log.e("IndexAdapter", "server contacted and has file");
+                        informationTextView.setText("等待下载中！");
                         downloadTask = new DownloadTask(response, course.getObjectId() + ".zip", folder, new DownloadTask.DownloadCallback() {
                             @Override
                             public void downloadSuccess(File file) {
                                 downloadingTask.remove(course.getObjectId());
                                 File outputFolder = decompressZip(file);
-                                informationTextView.setText("资源已下载");
+                                informationTextView.setText("");
+                                switch (course.getSubject()) {
+                                    case "nursery":
+                                        Glide.with(activity).load(R.drawable.nursery).into(imageView);
+                                        break;
+                                    case "music":
+                                        Glide.with(activity).load(R.drawable.music).into(imageView);
+                                        break;
+                                    case "reading":
+                                        Glide.with(activity).load(R.drawable.reading).into(imageView);
+                                        break;
+                                    case "game":
+                                        Glide.with(activity).load(R.drawable.game).into(imageView);
+                                        break;
+                                    default:
+                                        break;
+                                }
                                 upDateDatabase(outputFolder);
                             }
 
