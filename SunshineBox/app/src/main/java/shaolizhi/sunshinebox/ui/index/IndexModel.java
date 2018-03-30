@@ -1,11 +1,16 @@
 package shaolizhi.sunshinebox.ui.index;
 
 import android.app.Activity;
+import android.util.Log;
 
+import com.avos.avoscloud.AVCallback;
 import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVRole;
+import com.avos.avoscloud.AVUser;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import io.objectbox.Box;
 import shaolizhi.sunshinebox.data.API;
@@ -31,18 +36,54 @@ class IndexModel implements IndexContract.Model {
     }
 
     @Override
-    public void requestDataFromNet() {
-        API.getAllLesson(new API.QueryListener() {
+    public void requestRole() {
+        Log.e("FUCK", "requestRole");
+        AVUser.getCurrentUser().getRolesInBackground(new AVCallback<List<AVRole>>() {
             @Override
-            public void success(List<LessonLCBean> beanList) {
-                callBack.requestDataFromNetSuccess(beanList);
-            }
-
-            @Override
-            public void failure(AVException e) {
-                callBack.requestDataFromNetFailure(e);
+            protected void internalDone0(List<AVRole> avRoles, AVException e) {
+                boolean isEditor = false;
+                if (e == null) {
+                    for (AVRole avRole : avRoles) {
+                        if (Objects.equals(avRole.getObjectId(), "5ab6000d17d0096887783cd6") || Objects.equals(avRole.getObjectId(), "5ab6001dac502e57c949a142")) {
+                            isEditor = true;
+                            break;
+                        }
+                    }
+                    callBack.requestRoleSuccess(isEditor);
+                } else {
+                    callBack.requestRoleFailure(e);
+                }
             }
         });
+    }
+
+    @Override
+    public void requestDataFromNet(boolean isEditor) {
+        if (isEditor) {
+            API.getAllEditorLesson(new API.QueryListener() {
+                @Override
+                public void success(List<LessonLCBean> beanList) {
+                    callBack.requestDataFromNetSuccess(beanList);
+                }
+
+                @Override
+                public void failure(AVException e) {
+                    callBack.requestDataFromNetFailure(e);
+                }
+            });
+        } else {
+            API.getAllLesson(new API.QueryListener() {
+                @Override
+                public void success(List<LessonLCBean> beanList) {
+                    callBack.requestDataFromNetSuccess(beanList);
+                }
+
+                @Override
+                public void failure(AVException e) {
+                    callBack.requestDataFromNetFailure(e);
+                }
+            });
+        }
     }
 
     @Override
@@ -61,69 +102,135 @@ class IndexModel implements IndexContract.Model {
     }
 
     @Override
-    public void requestTagFromNet() {
+    public void requestTagFromNet(boolean isEditor) {
         final List<Tag> tagList = new ArrayList<>();
-        API.getLessonByTag(API.HEALTH, new API.QueryListener() {
-            @Override
-            public void success(List<LessonLCBean> beanList) {
-                List<Tag> tagList1 = createTagList(beanList, API.HEALTH, activity);
-                tagList.addAll(tagList1);
-                API.getLessonByTag(API.LANGUAGE, new API.QueryListener() {
-                    @Override
-                    public void success(List<LessonLCBean> beanList) {
-                        List<Tag> tagList2 = createTagList(beanList, API.LANGUAGE, activity);
-                        tagList.addAll(tagList2);
-                        API.getLessonByTag(API.SOCIAL, new API.QueryListener() {
-                            @Override
-                            public void success(List<LessonLCBean> beanList) {
-                                List<Tag> tagList3 = createTagList(beanList, API.SOCIAL, activity);
-                                tagList.addAll(tagList3);
-                                API.getLessonByTag(API.SCIENCE, new API.QueryListener() {
-                                    @Override
-                                    public void success(List<LessonLCBean> beanList) {
-                                        List<Tag> tagList4 = createTagList(beanList, API.SCIENCE, activity);
-                                        tagList.addAll(tagList4);
-                                        API.getLessonByTag(API.ART, new API.QueryListener() {
-                                            @Override
-                                            public void success(List<LessonLCBean> beanList) {
-                                                List<Tag> tagList5 = createTagList(beanList, API.ART, activity);
-                                                tagList.addAll(tagList5);
-                                                callBack.requestTagFromNetSuccess(tagList);
-                                            }
+        if (isEditor) {
+            API.getEditorLessonByTag(API.HEALTH, new API.QueryListener() {
+                @Override
+                public void success(List<LessonLCBean> beanList) {
+                    List<Tag> tagList1 = createTagList(beanList, API.HEALTH, activity);
+                    tagList.addAll(tagList1);
+                    API.getEditorLessonByTag(API.LANGUAGE, new API.QueryListener() {
+                        @Override
+                        public void success(List<LessonLCBean> beanList) {
+                            List<Tag> tagList2 = createTagList(beanList, API.LANGUAGE, activity);
+                            tagList.addAll(tagList2);
+                            API.getEditorLessonByTag(API.SOCIAL, new API.QueryListener() {
+                                @Override
+                                public void success(List<LessonLCBean> beanList) {
+                                    List<Tag> tagList3 = createTagList(beanList, API.SOCIAL, activity);
+                                    tagList.addAll(tagList3);
+                                    API.getEditorLessonByTag(API.SCIENCE, new API.QueryListener() {
+                                        @Override
+                                        public void success(List<LessonLCBean> beanList) {
+                                            List<Tag> tagList4 = createTagList(beanList, API.SCIENCE, activity);
+                                            tagList.addAll(tagList4);
+                                            API.getEditorLessonByTag(API.ART, new API.QueryListener() {
+                                                @Override
+                                                public void success(List<LessonLCBean> beanList) {
+                                                    List<Tag> tagList5 = createTagList(beanList, API.ART, activity);
+                                                    tagList.addAll(tagList5);
+                                                    callBack.requestTagFromNetSuccess(tagList);
+                                                }
 
-                                            @Override
-                                            public void failure(AVException e) {
-                                                callBack.requestTagFromNetFailure(e);
-                                            }
-                                        });
-                                    }
+                                                @Override
+                                                public void failure(AVException e) {
+                                                    callBack.requestTagFromNetFailure(e);
+                                                }
+                                            });
+                                        }
 
-                                    @Override
-                                    public void failure(AVException e) {
-                                        callBack.requestTagFromNetFailure(e);
-                                    }
-                                });
-                            }
+                                        @Override
+                                        public void failure(AVException e) {
+                                            callBack.requestTagFromNetFailure(e);
+                                        }
+                                    });
+                                }
 
-                            @Override
-                            public void failure(AVException e) {
-                                callBack.requestTagFromNetFailure(e);
-                            }
-                        });
-                    }
+                                @Override
+                                public void failure(AVException e) {
+                                    callBack.requestTagFromNetFailure(e);
+                                }
+                            });
+                        }
 
-                    @Override
-                    public void failure(AVException e) {
-                        callBack.requestTagFromNetFailure(e);
-                    }
-                });
-            }
+                        @Override
+                        public void failure(AVException e) {
+                            callBack.requestTagFromNetFailure(e);
+                        }
+                    });
+                }
 
-            @Override
-            public void failure(AVException e) {
-                callBack.requestTagFromNetFailure(e);
-            }
-        });
+                @Override
+                public void failure(AVException e) {
+                    callBack.requestTagFromNetFailure(e);
+                }
+            });
+        } else {
+            API.getLessonByTag(API.HEALTH, new API.QueryListener() {
+                @Override
+                public void success(List<LessonLCBean> beanList) {
+                    List<Tag> tagList1 = createTagList(beanList, API.HEALTH, activity);
+                    tagList.addAll(tagList1);
+                    API.getLessonByTag(API.LANGUAGE, new API.QueryListener() {
+                        @Override
+                        public void success(List<LessonLCBean> beanList) {
+                            List<Tag> tagList2 = createTagList(beanList, API.LANGUAGE, activity);
+                            tagList.addAll(tagList2);
+                            API.getLessonByTag(API.SOCIAL, new API.QueryListener() {
+                                @Override
+                                public void success(List<LessonLCBean> beanList) {
+                                    List<Tag> tagList3 = createTagList(beanList, API.SOCIAL, activity);
+                                    tagList.addAll(tagList3);
+                                    API.getLessonByTag(API.SCIENCE, new API.QueryListener() {
+                                        @Override
+                                        public void success(List<LessonLCBean> beanList) {
+                                            List<Tag> tagList4 = createTagList(beanList, API.SCIENCE, activity);
+                                            tagList.addAll(tagList4);
+                                            API.getLessonByTag(API.ART, new API.QueryListener() {
+                                                @Override
+                                                public void success(List<LessonLCBean> beanList) {
+                                                    List<Tag> tagList5 = createTagList(beanList, API.ART, activity);
+                                                    tagList.addAll(tagList5);
+                                                    callBack.requestTagFromNetSuccess(tagList);
+                                                }
+
+                                                @Override
+                                                public void failure(AVException e) {
+                                                    callBack.requestTagFromNetFailure(e);
+                                                }
+                                            });
+                                        }
+
+                                        @Override
+                                        public void failure(AVException e) {
+                                            callBack.requestTagFromNetFailure(e);
+                                        }
+                                    });
+                                }
+
+                                @Override
+                                public void failure(AVException e) {
+                                    callBack.requestTagFromNetFailure(e);
+                                }
+                            });
+                        }
+
+                        @Override
+                        public void failure(AVException e) {
+                            callBack.requestTagFromNetFailure(e);
+                        }
+                    });
+                }
+
+                @Override
+                public void failure(AVException e) {
+                    callBack.requestTagFromNetFailure(e);
+                }
+            });
+        }
+
+
     }
 
     private List<Tag> createTagList(List<LessonLCBean> netData, String tag, Activity activity) {

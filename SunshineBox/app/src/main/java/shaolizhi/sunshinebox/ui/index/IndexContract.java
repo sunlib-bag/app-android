@@ -39,18 +39,24 @@ public interface IndexContract {
     }
 
     interface Model {
-        void requestDataFromNet();
+        void requestRole();
+
+        void requestDataFromNet(boolean isEditor);
 
         void updateDatabaseCourse(List<LessonLCBean> netData);
 
         void updateDatabaseTag(List<Tag> tagList);
 
-        void requestTagFromNet();
+        void requestTagFromNet(boolean isEditor);
 
         void requestDataFromDatabase(FragmentType fragmentType);
     }
 
     interface CallBack {
+        void requestRoleSuccess(boolean isEditor);
+
+        void requestRoleFailure(AVException e);
+
         void requestTagFromNetSuccess(List<Tag> tagList);
 
         void requestTagFromNetFailure(AVException e);

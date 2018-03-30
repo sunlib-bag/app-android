@@ -45,6 +45,31 @@ public class API {
         });
     }
 
+    public static void getAllEditorLesson(final QueryListener queryListener) {
+        AVQuery<AVObject> query = new AVQuery<>("Lesson");
+        query.whereEqualTo("isChecked", 1);
+        query.include("staging_package");
+        query.include("subject");
+        query.orderByAscending("objectId");
+        query.findInBackground(new FindCallback<AVObject>() {
+            @Override
+            public void done(List<AVObject> list, AVException e) {
+                if (e == null) {
+                    List<EditorLessonLCBean> editorList = getEditorLessonLCBeanList(list);
+                    List<LessonLCBean> lessonLCBeans = new ArrayList<>();
+                    for (EditorLessonLCBean editorLessonLCBean : editorList) {
+                        LessonLCBean lessonLCBean = new LessonLCBean(editorLessonLCBean);
+                        lessonLCBeans.add(lessonLCBean);
+                    }
+                    queryListener.success(lessonLCBeans);
+                } else {
+                    queryListener.failure(e);
+                }
+            }
+        });
+    }
+
+
     /**
      * API2: 按领域查找Lesson表中的数据
      *
@@ -63,6 +88,30 @@ public class API {
             public void done(List<AVObject> list, AVException e) {
                 if (e == null) {
                     queryListener.success(getLessonLCBeanList(list));
+                } else {
+                    queryListener.failure(e);
+                }
+            }
+        });
+    }
+
+    public static void getEditorLessonByTag(@TAG String tag, final QueryListener queryListener) {
+        final AVQuery<AVObject> query = new AVQuery<>("Lesson");
+        query.whereEqualTo("isChecked", 1);
+        query.include("staging_package");
+        query.include("subject");
+        query.whereStartsWith("tags", tag);
+        query.findInBackground(new FindCallback<AVObject>() {
+            @Override
+            public void done(List<AVObject> list, AVException e) {
+                if (e == null) {
+                    List<EditorLessonLCBean> editorList = getEditorLessonLCBeanList(list);
+                    List<LessonLCBean> lessonLCBeans = new ArrayList<>();
+                    for (EditorLessonLCBean editorLessonLCBean : editorList) {
+                        LessonLCBean lessonLCBean = new LessonLCBean(editorLessonLCBean);
+                        lessonLCBeans.add(lessonLCBean);
+                    }
+                    queryListener.success(lessonLCBeans);
                 } else {
                     queryListener.failure(e);
                 }
@@ -97,6 +146,16 @@ public class API {
         for (AVObject avObject : list) {
             LessonLCBean lessonLCBean = new LessonLCBean(avObject);
             beans.add(lessonLCBean);
+        }
+        return beans;
+    }
+
+    @NonNull
+    private static List<EditorLessonLCBean> getEditorLessonLCBeanList(List<AVObject> list) {
+        List<EditorLessonLCBean> beans = new ArrayList<>();
+        for (AVObject avObject : list) {
+            EditorLessonLCBean editorLessonLCBean = new EditorLessonLCBean(avObject);
+            beans.add(editorLessonLCBean);
         }
         return beans;
     }

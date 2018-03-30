@@ -6,11 +6,10 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by 邵励治 on 2018/3/9.
+ * Created by 邵励治 on 2018/3/30.
  * Perfect Code
  */
-
-public class LessonLCBean {
+public class EditorLessonLCBean {
     public final static String NURSERY = "nursery";
     public final static String MUSIC = "music";
     public final static String READING = "reading";
@@ -31,11 +30,11 @@ public class LessonLCBean {
                 '}';
     }
 
-    public LessonLCBean(AVObject avObject) {
+    public EditorLessonLCBean(AVObject avObject) {
         objectId = avObject.getObjectId();
         isPublished = avObject.getBoolean("isPublished");
         tags = avObject.getList("tags");
-        zipPackageUrl = avObject.getAVFile("package").getUrl();
+        zipPackageUrl = avObject.getAVFile("staging_package").getUrl();
         name = avObject.getString("name");
         versionCode = avObject.getNumber("version_code").intValue();
         switch (avObject.getAVObject("subject").getObjectId()) {
@@ -54,18 +53,6 @@ public class LessonLCBean {
         }
         createdAt = avObject.getCreatedAt();
         updateAt = avObject.getUpdatedAt();
-    }
-
-    public LessonLCBean(EditorLessonLCBean editorLessonLCBean) {
-        objectId = editorLessonLCBean.getObjectId();
-        isPublished = editorLessonLCBean.getPublished();
-        tags = editorLessonLCBean.getTags();
-        zipPackageUrl = editorLessonLCBean.getZipPackageUrl();
-        name = editorLessonLCBean.getName();
-        versionCode = editorLessonLCBean.getVersionCode();
-        subject = editorLessonLCBean.getSubject();
-        createdAt = editorLessonLCBean.getCreatedAt();
-        updateAt = editorLessonLCBean.getUpdateAt();
     }
 
     private String objectId;

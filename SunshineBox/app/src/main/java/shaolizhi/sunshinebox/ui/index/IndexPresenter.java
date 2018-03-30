@@ -12,6 +12,7 @@ import java.util.List;
 import shaolizhi.sunshinebox.data.LessonLCBean;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
 import shaolizhi.sunshinebox.objectbox.courses.Tag;
+import shaolizhi.sunshinebox.utils.ToastUtils;
 
 /**
  * Created by 邵励治 on 2018/2/21.
@@ -26,6 +27,8 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
 
     private IndexContract.FragmentType fragmentType;
 
+    private Boolean isEditor;
+
     IndexPresenter(IndexContract.View view) {
         this.view = view;
         model = new IndexModel(this, view.getFuckingActivity());
@@ -35,7 +38,7 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
     public void start() {
         view.setUpView();
         fragmentType = null;
-        tryToLoadDataIntoRecyclerView();
+        model.requestRole();
     }
 
     //1:request net
@@ -44,7 +47,9 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
         fragmentType = view.getFragmentType();
         model.requestDataFromDatabase(fragmentType);
         view.startRefresh();
-        model.requestDataFromNet();
+        if (isEditor != null) {
+            model.requestDataFromNet(isEditor);
+        }
     }
 
     //2:get data from net, update net-data to database
@@ -62,9 +67,22 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
     //3:request database
     @Override
     public void updateDatabaseCourseSuccess() {
-        model.requestTagFromNet();
+        if (isEditor != null) {
+            model.requestTagFromNet(isEditor);
+        }
     }
 
+
+    @Override
+    public void requestRoleSuccess(boolean isEditor) {
+        this.isEditor = isEditor;
+        tryToLoadDataIntoRecyclerView();
+    }
+
+    @Override
+    public void requestRoleFailure(AVException e) {
+        ToastUtils.showToast(e.getMessage());
+    }
 
     @Override
     public void requestTagFromNetSuccess(List<Tag> tagList) {
