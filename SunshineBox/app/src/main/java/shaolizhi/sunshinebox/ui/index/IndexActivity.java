@@ -335,7 +335,6 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
         dir.delete();// 删除目录本身
     }
 
-
     private void navigationViewItemClickEvent() {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: cn.leancloud.android:avoscloud-sns-v4.6.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/avoscloud-sns-v4.6.4.aar/9d2840edbad0477b558800de3f85c3f4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/avoscloud-sns-v4.6.4.aar/9d2840edbad0477b558800de3f85c3f4/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
