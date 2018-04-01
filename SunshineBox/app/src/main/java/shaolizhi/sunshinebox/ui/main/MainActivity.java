@@ -4,8 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.avos.avoscloud.AVAnalytics;
+import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVUser;
+
+import java.util.Calendar;
 
 import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.ui.index.IndexActivity;
@@ -31,7 +33,9 @@ public class MainActivity extends ActivationActivityManager {
     private void automaticLogin() {
         if (AVUser.getCurrentUser() != null) {
             //已登录
-            AVAnalytics.onEvent(this, "使用时间段", AVUser.getCurrentUser().getUsername());
+            Calendar calendar = Calendar.getInstance();
+            AVObject userAction = new AVObject("UserAction");
+            userAction.put("useTimePeriod", calendar.get(Calendar.HOUR));
             startActivity(IndexActivity.newIntent(this));
             finish();
         } else {
