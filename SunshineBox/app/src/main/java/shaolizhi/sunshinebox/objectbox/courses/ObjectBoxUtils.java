@@ -169,79 +169,82 @@ public class ObjectBoxUtils {
         Query<Tag> tagQuery;
         List<Tag> tagData;
         List<Course> courseData;
-        switch (fragmentType) {
-            case NURSERY:
-                courseBuilder.equal(Course_.subject, "nursery");
-                courseBuilder.order(Course_.updateAt);
-                courseQuery = courseBuilder.build();
-                return courseQuery.find();
-            case MUSIC:
-                courseBuilder.equal(Course_.subject, "music");
-                courseBuilder.order(Course_.updateAt);
-                courseQuery = courseBuilder.build();
-                return courseQuery.find();
-            case READING:
-                courseBuilder.equal(Course_.subject, "reading");
-                courseBuilder.order(Course_.updateAt);
-                courseQuery = courseBuilder.build();
-                return courseQuery.find();
-            case GAME:
-                courseBuilder.equal(Course_.subject, "game");
-                courseBuilder.order(Course_.updateAt);
-                courseQuery = courseBuilder.build();
-                return courseQuery.find();
-            case HEALTHY:
-                tagBuilder.equal(Tag_.field, API.HEALTH);
-                tagQuery = tagBuilder.build();
-                tagData = tagQuery.find();
-                courseData = new ArrayList<>();
-                for (Tag tag : tagData) {
-                    Course course = tag.course.getTarget();
-                    courseData.add(course);
-                }
-                return courseData;
-            case LANGUAGE:
-                tagBuilder.equal(Tag_.field, API.LANGUAGE);
-                tagQuery = tagBuilder.build();
-                tagData = tagQuery.find();
-                courseData = new ArrayList<>();
-                for (Tag tag : tagData) {
-                    Course course = tag.course.getTarget();
-                    courseData.add(course);
-                }
-                return courseData;
-            case SOCIAL:
-                tagBuilder.equal(Tag_.field, API.SOCIAL);
-                tagQuery = tagBuilder.build();
-                tagData = tagQuery.find();
-                courseData = new ArrayList<>();
-                for (Tag tag : tagData) {
-                    Course course = tag.course.getTarget();
-                    courseData.add(course);
-                }
-                return courseData;
-            case SCIENCE:
-                tagBuilder.equal(Tag_.field, API.SCIENCE);
-                tagQuery = tagBuilder.build();
-                tagData = tagQuery.find();
-                courseData = new ArrayList<>();
-                for (Tag tag : tagData) {
-                    Course course = tag.course.getTarget();
-                    courseData.add(course);
-                }
-                return courseData;
-            case ART:
-                tagBuilder.equal(Tag_.field, API.ART);
-                tagQuery = tagBuilder.build();
-                tagData = tagQuery.find();
-                courseData = new ArrayList<>();
-                for (Tag tag : tagData) {
-                    Course course = tag.course.getTarget();
-                    courseData.add(course);
-                }
-                return courseData;
-            default:
-                return null;
+        if (fragmentType != null) {
+            switch (fragmentType) {
+                case NURSERY:
+                    courseBuilder.equal(Course_.subject, "nursery");
+                    courseBuilder.order(Course_.updateAt);
+                    courseQuery = courseBuilder.build();
+                    return courseQuery.find();
+                case MUSIC:
+                    courseBuilder.equal(Course_.subject, "music");
+                    courseBuilder.order(Course_.updateAt);
+                    courseQuery = courseBuilder.build();
+                    return courseQuery.find();
+                case READING:
+                    courseBuilder.equal(Course_.subject, "reading");
+                    courseBuilder.order(Course_.updateAt);
+                    courseQuery = courseBuilder.build();
+                    return courseQuery.find();
+                case GAME:
+                    courseBuilder.equal(Course_.subject, "game");
+                    courseBuilder.order(Course_.updateAt);
+                    courseQuery = courseBuilder.build();
+                    return courseQuery.find();
+                case HEALTHY:
+                    tagBuilder.equal(Tag_.field, API.HEALTH);
+                    tagQuery = tagBuilder.build();
+                    tagData = tagQuery.find();
+                    courseData = new ArrayList<>();
+                    for (Tag tag : tagData) {
+                        Course course = tag.course.getTarget();
+                        courseData.add(course);
+                    }
+                    return courseData;
+                case LANGUAGE:
+                    tagBuilder.equal(Tag_.field, API.LANGUAGE);
+                    tagQuery = tagBuilder.build();
+                    tagData = tagQuery.find();
+                    courseData = new ArrayList<>();
+                    for (Tag tag : tagData) {
+                        Course course = tag.course.getTarget();
+                        courseData.add(course);
+                    }
+                    return courseData;
+                case SOCIAL:
+                    tagBuilder.equal(Tag_.field, API.SOCIAL);
+                    tagQuery = tagBuilder.build();
+                    tagData = tagQuery.find();
+                    courseData = new ArrayList<>();
+                    for (Tag tag : tagData) {
+                        Course course = tag.course.getTarget();
+                        courseData.add(course);
+                    }
+                    return courseData;
+                case SCIENCE:
+                    tagBuilder.equal(Tag_.field, API.SCIENCE);
+                    tagQuery = tagBuilder.build();
+                    tagData = tagQuery.find();
+                    courseData = new ArrayList<>();
+                    for (Tag tag : tagData) {
+                        Course course = tag.course.getTarget();
+                        courseData.add(course);
+                    }
+                    return courseData;
+                case ART:
+                    tagBuilder.equal(Tag_.field, API.ART);
+                    tagQuery = tagBuilder.build();
+                    tagData = tagQuery.find();
+                    courseData = new ArrayList<>();
+                    for (Tag tag : tagData) {
+                        Course course = tag.course.getTarget();
+                        courseData.add(course);
+                    }
+                    return courseData;
+                default:
+                    return null;
+            }
         }
+        return new ArrayList<>();
     }
 }
