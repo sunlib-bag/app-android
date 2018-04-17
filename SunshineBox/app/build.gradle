@@ -1,7 +1,12 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
 apply plugin: 'io.objectbox'
-
+apply plugin: 'bugly'
+bugly {
+    appId = '40483fa79f' // 注册时分配的App ID
+    appKey = '7fac028e-c73e-4425-b7ea-fbe42231cf3f' // 注册时分配的App Key
+    debug = true
+}
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -35,11 +40,16 @@ android {
         abortOnError false
     }
     buildToolsVersion '27.0.3'
+    externalNativeBuild {
+        cmake {
+            path 'CMakeLists.txt'
+        }
+    }
 }
 
 dependencies {
-    compile 'com.android.support:multidex:1.0.3'
 
+    compile 'com.android.support:multidex:1.0.3'
     compile 'com.tencent.bugly:crashreport_upgrade:1.3.4'
     //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
     compile 'com.tencent.bugly:nativecrashreport:3.3.1'

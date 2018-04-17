@@ -50,6 +50,7 @@ import butterknife.OnClick;
 import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.ui.album.AlbumActivity;
 import shaolizhi.sunshinebox.ui.base.BaseActivity;
+import shaolizhi.sunshinebox.ui.video.VideoActivity;
 import shaolizhi.sunshinebox.utils.IOUtils;
 
 public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
@@ -472,9 +473,13 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
             mediaPlayer.reset();
         }
         Uri uri = Uri.parse(materials.getResourceStorageAddress());
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setDataAndType(uri, "video/mp4");
+        Intent intent = VideoActivity.newIntent(this, materials.getResourceStorageAddress());
         startActivity(intent);
+
+//        Intent intent = new Intent(Intent.ACTION_VIEW);
+//        intent.setDataAndType(uri, "video/mp4");
+//        startActivity(intent);
+
     }
 
     @Override

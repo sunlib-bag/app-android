@@ -30,6 +30,8 @@ public class MainActivity extends ActivationActivityManager {
         automaticLogin();
     }
 
+
+
     private void automaticLogin() {
         if (AVUser.getCurrentUser() != null) {
             //已登录

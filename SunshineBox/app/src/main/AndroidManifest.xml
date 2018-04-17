@@ -69,6 +69,7 @@
         <activity android:name=".ui.index.IndexActivity" />
         <activity android:name=".ui.course.CourseActivity" />
         <activity android:name=".ui.album.AlbumActivity" />
+        <activity android:name=".ui.video.VideoActivity" />
     </application>
 
 </manifest>

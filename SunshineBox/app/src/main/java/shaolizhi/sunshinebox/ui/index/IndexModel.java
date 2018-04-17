@@ -59,6 +59,7 @@ class IndexModel implements IndexContract.Model {
 
     @Override
     public void requestDataFromNet(boolean isEditor) {
+
         if (isEditor) {
             API.getAllEditorLesson(new API.QueryListener() {
                 @Override
