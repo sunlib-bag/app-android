@@ -41,6 +41,7 @@ import shaolizhi.sunshinebox.R;
 import shaolizhi.sunshinebox.objectbox.courses.Course;
 import shaolizhi.sunshinebox.objectbox.courses.ObjectBoxUtils;
 import shaolizhi.sunshinebox.ui.base.BaseActivity;
+import shaolizhi.sunshinebox.ui.main.MainActivity;
 import shaolizhi.sunshinebox.utils.AlertDialogUtils;
 import shaolizhi.sunshinebox.widget.NoScrollViewPager;
 
@@ -354,10 +355,10 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
                         });
                         break;
                     case nav_manage:
-//                        clearDatabaseAndData();
-//                        AVUser.logOut();
-//                        startActivity(MainActivity.newIntent(IndexActivity.this));
-//                        IndexActivity.this.finish();
+                        clearDatabaseAndData();
+                        AVUser.logOut();
+                        startActivity(MainActivity.newIntent(IndexActivity.this));
+                        IndexActivity.this.finish();
                         break;
                 }
 
