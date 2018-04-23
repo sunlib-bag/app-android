@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SunshineBox</string>
+    <string name="app_name">阳光盒子</string>
 
     <!--BaseActivity and BaseFragment-->
     <string name="base_string1">服务器错误，请稍后再试</string>
