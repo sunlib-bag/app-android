@@ -165,52 +165,52 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
                 case "nursery":
                     switch (course.getSituation()) {
                         case 0:
-                            Glide.with(activity).load(R.drawable.nursery_gray).into(imageView);
+                            Glide.with(activity.getApplicationContext()).load(R.drawable.nursery_gray).into(imageView);
                             break;
                         case 1:
-                            Glide.with(activity).load(R.drawable.nursery_gray).into(imageView);
+                            Glide.with(activity.getApplicationContext()).load(R.drawable.nursery_gray).into(imageView);
                             break;
                         case 2:
-                            Glide.with(activity).load(R.drawable.nursery).into(imageView);
+                            Glide.with(activity.getApplicationContext()).load(R.drawable.nursery).into(imageView);
                             break;
                     }
                     break;
                 case "music":
                     switch (course.getSituation()) {
                         case 0:
-                            Glide.with(activity).load(R.drawable.music_gray).into(imageView);
+                            Glide.with(activity.getApplicationContext()).load(R.drawable.music_gray).into(imageView);
                             break;
                         case 1:
-                            Glide.with(activity).load(R.drawable.music_gray).into(imageView);
+                            Glide.with(activity.getApplicationContext()).load(R.drawable.music_gray).into(imageView);
                             break;
                         case 2:
-                            Glide.with(activity).load(R.drawable.music).into(imageView);
+                            Glide.with(activity.getApplicationContext()).load(R.drawable.music).into(imageView);
                             break;
                     }
                     break;
                 case "reading":
                     switch (course.getSituation()) {
                         case 0:
-                            Glide.with(activity).load(R.drawable.reading_gray).into(imageView);
+                            Glide.with(activity.getApplicationContext()).load(R.drawable.reading_gray).into(imageView);
                             break;
                         case 1:
-                            Glide.with(activity).load(R.drawable.reading_gray).into(imageView);
+                            Glide.with(activity.getApplicationContext()).load(R.drawable.reading_gray).into(imageView);
                             break;
                         case 2:
-                            Glide.with(activity).load(R.drawable.reading).into(imageView);
+                            Glide.with(activity.getApplicationContext()).load(R.drawable.reading).into(imageView);
                             break;
                     }
                     break;
                 case "game":
                     switch (course.getSituation()) {
                         case 0:
-                            Glide.with(activity).load(R.drawable.game_gray).into(imageView);
+                            Glide.with(activity.getApplicationContext()).load(R.drawable.game_gray).into(imageView);
                             break;
                         case 1:
-                            Glide.with(activity).load(R.drawable.game_gray).into(imageView);
+                            Glide.with(activity.getApplicationContext()).load(R.drawable.game_gray).into(imageView);
                             break;
                         case 2:
-                            Glide.with(activity).load(R.drawable.game).into(imageView);
+                            Glide.with(activity.getApplicationContext()).load(R.drawable.game).into(imageView);
                             break;
                     }
                     break;
@@ -313,16 +313,16 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.IndexViewHol
                                 informationTextView.setText("");
                                 switch (course.getSubject()) {
                                     case "nursery":
-                                        Glide.with(activity).load(R.drawable.nursery).into(imageView);
+                                        Glide.with(activity.getApplicationContext()).load(R.drawable.nursery).into(imageView);
                                         break;
                                     case "music":
-                                        Glide.with(activity).load(R.drawable.music).into(imageView);
+                                        Glide.with(activity.getApplicationContext()).load(R.drawable.music).into(imageView);
                                         break;
                                     case "reading":
-                                        Glide.with(activity).load(R.drawable.reading).into(imageView);
+                                        Glide.with(activity.getApplicationContext()).load(R.drawable.reading).into(imageView);
                                         break;
                                     case "game":
-                                        Glide.with(activity).load(R.drawable.game).into(imageView);
+                                        Glide.with(activity.getApplicationContext()).load(R.drawable.game).into(imageView);
                                         break;
                                     default:
                                         break;

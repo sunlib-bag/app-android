@@ -52,6 +52,7 @@ import shaolizhi.sunshinebox.ui.album.AlbumActivity;
 import shaolizhi.sunshinebox.ui.base.BaseActivity;
 import shaolizhi.sunshinebox.ui.video.VideoActivity;
 import shaolizhi.sunshinebox.utils.IOUtils;
+import shaolizhi.sunshinebox.utils.ToastUtils;
 
 public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
     private static final String RESOURCE_STORAGE_ADDRESS = "resource storage address";
@@ -189,22 +190,28 @@ public class CourseActivity extends BaseActivity implements CourseMediaPlayer {
         //解析JSON到bean中
         bean = deserializeJson(jsonFile);
 
-        //读取bean中的内容到UI上
-        courseNameTextView.setText(bean.getName());
-        sourceTextView.setText(bean.getSource());
-        author.setText(bean.getAuthor());
+        if (bean == null) {
+            //SHOULD NOT BE HERE
+            ToastUtils.showToast("读取失败！请尝试重置软件！按钮在首页的侧边栏里！");
+            Log.e("CourseActivity", "解析压缩包内JSON失败");
+        } else {
+            //读取bean中的内容到UI上
+            courseNameTextView.setText(bean.getName());
+            sourceTextView.setText(bean.getSource());
+            author.setText(bean.getAuthor());
 
-        //解析markdown
-        if (bean.getContent() != null) {
-            final String markdown = rebuildMarkdown(materialFolder);
-            renderingMarkdown(markdown);
-        }
+            //解析markdown
+            if (bean.getContent() != null) {
+                final String markdown = rebuildMarkdown(materialFolder);
+                renderingMarkdown(markdown);
+            }
 
-        if (bean.getMaterials() != null) {
-            //遍历Json, 获取List<Materials>
-            List<Materials> materialsList = getMaterialsList(materialFolder);
-            //加载数据
-            courseAdapter.setMaterialData(materialsList);
+            if (bean.getMaterials() != null) {
+                //遍历Json, 获取List<Materials>
+                List<Materials> materialsList = getMaterialsList(materialFolder);
+                //加载数据
+                courseAdapter.setMaterialData(materialsList);
+            }
         }
     }
 

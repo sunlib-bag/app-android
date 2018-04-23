@@ -143,7 +143,7 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, C
                 fragmentType = IndexContract.FragmentType.ART;
                 break;
             default:
-                fragmentType = null;
+                fragmentType = IndexContract.FragmentType.NURSERY;
                 break;
         }
         refreshHelper = (RefreshHelper) mActivity;
