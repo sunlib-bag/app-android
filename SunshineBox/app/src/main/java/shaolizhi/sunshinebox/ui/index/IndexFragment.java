@@ -169,6 +169,9 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, C
             stopRefresh();
             ToastUtils.showToast("请等待下载完成后再进行更新操作");
         } else {
+            if (presenter == null) {
+                presenter = new IndexPresenter(this);
+            }
             presenter.tryToLoadDataIntoRecyclerView();
         }
     }
@@ -176,6 +179,9 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, C
 
     @Override
     public void clearSuccess() {
+        if (presenter == null) {
+            presenter = new IndexPresenter(this);
+        }
         presenter.tryToLoadDataIntoRecyclerView();
     }
 }

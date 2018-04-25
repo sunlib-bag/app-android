@@ -26,7 +26,8 @@ import shaolizhi.sunshinebox.utils.App;
 public class ObjectBoxUtils {
 
     public static Box<Course> getCourseBox(Activity activity) {
-        BoxStore boxStore = ((App) activity.getApplication()).getBoxStore();
+
+        BoxStore boxStore = App.getBoxStore();
         return boxStore.boxFor(Course.class);
     }
 

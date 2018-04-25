@@ -20,7 +20,7 @@ import shaolizhi.sunshinebox.objectbox.courses.MyObjectBox;
 public class App extends MultiDexApplication {
     public static Context mAppContext;
 
-    private BoxStore boxStore;
+    private static BoxStore boxStore;
 
     @Override
     public void onCreate() {
@@ -41,7 +41,7 @@ public class App extends MultiDexApplication {
         Bugly.init(getApplicationContext(), "40483fa79f", false);
     }
 
-    public BoxStore getBoxStore() {
+    public static BoxStore getBoxStore() {
         return boxStore;
     }
 }

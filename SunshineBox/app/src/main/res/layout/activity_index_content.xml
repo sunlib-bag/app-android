@@ -115,7 +115,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:contentDescription="@string/index_act_string10"
-                    android:src="@drawable/ic_nursery_orange" />
+                    android:background="@drawable/ic_nursery_orange" />
 
                 <TextView
                     android:id="@+id/index_act_textview1"
@@ -142,7 +142,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:contentDescription="@string/index_act_string11"
-                    android:src="@drawable/ic_music_black" />
+                    android:background="@drawable/ic_music_black" />
 
                 <TextView
                     android:id="@+id/index_act_textview2"
@@ -169,7 +169,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:contentDescription="@string/index_act_string12"
-                    android:src="@drawable/ic_reading_black" />
+                    android:background="@drawable/ic_reading_black" />
 
                 <TextView
                     android:id="@+id/index_act_textview3"
@@ -196,7 +196,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:contentDescription="@string/index_act_string13"
-                    android:src="@drawable/ic_game_black" />
+                    android:background="@drawable/ic_game_black" />
 
                 <TextView
                     android:id="@+id/index_act_textview4"
@@ -234,7 +234,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:contentDescription="@string/index_act_string15"
-                    android:src="@drawable/ic_health_black" />
+                    android:background="@drawable/ic_health_black" />
 
                 <TextView
                     android:id="@+id/index_act_textview5"
@@ -261,7 +261,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:contentDescription="@string/index_act_string16"
-                    android:src="@drawable/ic_language_black" />
+                    android:background="@drawable/ic_language_black" />
 
                 <TextView
                     android:id="@+id/index_act_textview6"
@@ -288,7 +288,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:contentDescription="@string/index_act_string17"
-                    android:src="@drawable/ic_social_black" />
+                    android:background="@drawable/ic_social_black" />
 
                 <TextView
                     android:id="@+id/index_act_textview7"
@@ -315,7 +315,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:contentDescription="@string/index_act_string18"
-                    android:src="@drawable/ic_science_black" />
+                    android:background="@drawable/ic_science_black" />
 
                 <TextView
                     android:id="@+id/index_act_textview8"
@@ -342,7 +342,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:contentDescription="@string/index_act_string19"
-                    android:src="@drawable/ic_art_black" />
+                    android:background="@drawable/ic_art_black" />
 
                 <TextView
                     android:id="@+id/index_act_textview9"

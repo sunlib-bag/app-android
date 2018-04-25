@@ -30,7 +30,6 @@ import android.widget.TextView;
 
 import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVUser;
-import com.bumptech.glide.Glide;
 
 import java.io.File;
 
@@ -96,7 +95,8 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
     public void clickNursery() {
         makeEveryBodyBlack();
         nurseryTextView.setTextColor(Color.parseColor("#f09038"));
-        Glide.with(getApplicationContext()).load(R.drawable.ic_nursery_orange).into(nurseryImageView);
+        nurseryImageView.setBackground(getResources().getDrawable(R.drawable.ic_nursery_orange));
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_nursery_orange).into(nurseryImageView);
         noScrollViewPager.setCurrentItem(0);
     }
 
@@ -104,7 +104,8 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
     public void clickMusic() {
         makeEveryBodyBlack();
         musicTextView.setTextColor(Color.parseColor("#f09038"));
-        Glide.with(getApplicationContext()).load(R.drawable.ic_music_orange).into(musicImageView);
+        musicImageView.setBackground(getResources().getDrawable(R.drawable.ic_music_orange));
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_music_orange).into(musicImageView);
         noScrollViewPager.setCurrentItem(1);
     }
 
@@ -112,7 +113,8 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
     public void clickReading() {
         makeEveryBodyBlack();
         readingTextView.setTextColor(Color.parseColor("#f09038"));
-        Glide.with(getApplicationContext()).load(R.drawable.ic_reading_orange).into(readingImageView);
+        readingImageView.setBackground(getResources().getDrawable(R.drawable.ic_reading_orange));
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_reading_orange).into(readingImageView);
         noScrollViewPager.setCurrentItem(2);
     }
 
@@ -120,7 +122,8 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
     public void clickGame() {
         makeEveryBodyBlack();
         gameTextView.setTextColor(Color.parseColor("#f09038"));
-        Glide.with(getApplicationContext()).load(R.drawable.ic_game_orange).into(gameImageView);
+        gameImageView.setBackground(getResources().getDrawable(R.drawable.ic_game_orange));
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_game_orange).into(gameImageView);
         noScrollViewPager.setCurrentItem(3);
     }
 
@@ -128,7 +131,8 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
     public void clickHealth() {
         makeEveryBodyBlack();
         healthTextView.setTextColor(Color.parseColor("#f09038"));
-        Glide.with(getApplicationContext()).load(R.drawable.ic_health_orange).into(healthImageView);
+        healthImageView.setBackground(getResources().getDrawable(R.drawable.ic_health_orange));
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_health_orange).into(healthImageView);
         noScrollViewPager.setCurrentItem(4);
     }
 
@@ -136,7 +140,8 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
     public void clickLanguage() {
         makeEveryBodyBlack();
         languageTextView.setTextColor(Color.parseColor("#f09038"));
-        Glide.with(getApplicationContext()).load(R.drawable.ic_language_orange).into(languageImageView);
+        languageImageView.setBackground(getResources().getDrawable(R.drawable.ic_language_orange));
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_language_orange).into(languageImageView);
         noScrollViewPager.setCurrentItem(5);
     }
 
@@ -144,7 +149,8 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
     public void clickSocial() {
         makeEveryBodyBlack();
         socialTextView.setTextColor(Color.parseColor("#f09038"));
-        Glide.with(getApplicationContext()).load(R.drawable.ic_social_orange).into(socialImageView);
+        socialImageView.setBackground(getResources().getDrawable(R.drawable.ic_social_orange));
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_social_orange).into(socialImageView);
         noScrollViewPager.setCurrentItem(6);
     }
 
@@ -152,7 +158,8 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
     public void clickScience() {
         makeEveryBodyBlack();
         scienceTextView.setTextColor(Color.parseColor("#f09038"));
-        Glide.with(getApplicationContext()).load(R.drawable.ic_science_orange).into(scienceImageView);
+        scienceImageView.setBackground(getResources().getDrawable(R.drawable.ic_science_orange));
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_science_orange).into(scienceImageView);
         noScrollViewPager.setCurrentItem(7);
     }
 
@@ -160,7 +167,8 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
     public void clickArt() {
         makeEveryBodyBlack();
         artTextView.setTextColor(Color.parseColor("#f09038"));
-        Glide.with(getApplicationContext()).load(R.drawable.ic_art_orange).into(artImageView);
+        artImageView.setBackground(getResources().getDrawable(R.drawable.ic_art_orange));
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_art_orange).into(artImageView);
         noScrollViewPager.setCurrentItem(8);
     }
 
@@ -410,15 +418,25 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
         socialTextView.setTextColor(Color.parseColor("#666666"));
         scienceTextView.setTextColor(Color.parseColor("#666666"));
         artTextView.setTextColor(Color.parseColor("#666666"));
-        Glide.with(getApplicationContext()).load(R.drawable.ic_nursery_black).into(nurseryImageView);
-        Glide.with(getApplicationContext()).load(R.drawable.ic_music_black).into(musicImageView);
-        Glide.with(getApplicationContext()).load(R.drawable.ic_reading_black).into(readingImageView);
-        Glide.with(getApplicationContext()).load(R.drawable.ic_game_black).into(gameImageView);
-        Glide.with(getApplicationContext()).load(R.drawable.ic_health_black).into(healthImageView);
-        Glide.with(getApplicationContext()).load(R.drawable.ic_language_black).into(languageImageView);
-        Glide.with(getApplicationContext()).load(R.drawable.ic_social_black).into(socialImageView);
-        Glide.with(getApplicationContext()).load(R.drawable.ic_science_black).into(scienceImageView);
-        Glide.with(getApplicationContext()).load(R.drawable.ic_art_black).into(artImageView);
+        nurseryImageView.setBackground(getResources().getDrawable(R.drawable.ic_nursery_black));
+        musicImageView.setBackground(getResources().getDrawable(R.drawable.ic_music_black));
+        readingImageView.setBackground(getResources().getDrawable(R.drawable.ic_reading_black));
+        gameImageView.setBackground(getResources().getDrawable(R.drawable.ic_game_black));
+        healthImageView.setBackground(getResources().getDrawable(R.drawable.ic_health_black));
+        languageImageView.setBackground(getResources().getDrawable(R.drawable.ic_language_black));
+        socialImageView.setBackground(getResources().getDrawable(R.drawable.ic_social_black));
+        scienceImageView.setBackground(getResources().getDrawable(R.drawable.ic_science_black));
+        artImageView.setBackground(getResources().getDrawable(R.drawable.ic_art_black));
+
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_nursery_black).into(nurseryImageView);
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_music_black).into(musicImageView);
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_reading_black).into(readingImageView);
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_game_black).into(gameImageView);
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_health_black).into(healthImageView);
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_language_black).into(languageImageView);
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_social_black).into(socialImageView);
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_science_black).into(scienceImageView);
+//        Glide.with(getApplicationContext()).load(R.drawable.ic_art_black).into(artImageView);
     }
 
     private void setUpDrawerLayoutSwitchAnimator() {
@@ -504,7 +522,8 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
         Log.e("IndexActivity", "startRefresh");
         refreshView.setEnabled(false);
         refreshTextView.setTextColor(Color.parseColor("#999999"));
-        Glide.with(getApplicationContext()).load(R.drawable.refresh_69).into(refreshImageView);
+        refreshImageView.setBackground(getResources().getDrawable(R.drawable.refresh_69));
+//        Glide.with(getApplicationContext()).load(R.drawable.refresh_69).into(refreshImageView);
         startRotating();
     }
 
@@ -514,14 +533,10 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
         refreshView.setEnabled(true);
         refreshTextView.setTextColor(Color.parseColor("#333333"));
         stopRotating();
-        Glide.with(getApplicationContext()).load(R.drawable.refresh).into(refreshImageView);
+        refreshImageView.setBackground(getResources().getDrawable(R.drawable.refresh));
+//        Glide.with(getApplicationContext()).load(R.drawable.refresh).into(refreshImageView);
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Glide.with(getApplicationContext()).pauseRequests();
-    }
 
     @Override
     public void netError() {
