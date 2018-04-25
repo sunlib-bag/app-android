@@ -52,6 +52,12 @@ public class IndexPresenter implements IndexContract.Presenter, IndexContract.Ca
         }
     }
 
+    @Override
+    public void tryToLoadLocalData() {
+        view.startRefresh();
+        model.requestDataFromDatabase(fragmentType);
+    }
+
     //2:get data from net, update net-data to database
     @Override
     public void requestDataFromNetSuccess(List<LessonLCBean> netData) {

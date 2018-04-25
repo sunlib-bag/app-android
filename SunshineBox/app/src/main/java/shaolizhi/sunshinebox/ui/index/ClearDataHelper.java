@@ -7,4 +7,6 @@ package shaolizhi.sunshinebox.ui.index;
 
 public interface ClearDataHelper {
     void clearSuccess();
+
+    void requestDatabase();
 }

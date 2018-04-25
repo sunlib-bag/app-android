@@ -36,6 +36,8 @@ public interface IndexContract {
 
     interface Presenter extends BasePresenter {
         void tryToLoadDataIntoRecyclerView();
+
+        void tryToLoadLocalData();
     }
 
     interface Model {

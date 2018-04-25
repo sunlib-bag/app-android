@@ -31,7 +31,9 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, C
     private IndexContract.FragmentType fragmentType;
 
     private void setUpRecyclerView() {
-        indexAdapter = new IndexAdapter(mActivity);
+        if (indexAdapter == null) {
+            indexAdapter = new IndexAdapter(mActivity);
+        }
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 4));
         recyclerView.setAdapter(indexAdapter);
     }
@@ -43,6 +45,9 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, C
 
     @Override
     public void loadDataToRecyclerView(List<Course> courseList) {
+        if (indexAdapter == null) {
+            indexAdapter = new IndexAdapter(mActivity);
+        }
         indexAdapter.setCourseData(courseList);
     }
 
@@ -183,5 +188,10 @@ public class IndexFragment extends BaseFragment implements IndexContract.View, C
             presenter = new IndexPresenter(this);
         }
         presenter.tryToLoadDataIntoRecyclerView();
+    }
+
+    @Override
+    public void requestDatabase() {
+        presenter.tryToLoadLocalData();
     }
 }

@@ -98,6 +98,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
         nurseryImageView.setBackground(getResources().getDrawable(R.drawable.ic_nursery_orange));
 //        Glide.with(getApplicationContext()).load(R.drawable.ic_nursery_orange).into(nurseryImageView);
         noScrollViewPager.setCurrentItem(0);
+        helper1.requestDatabase();
     }
 
     @OnClick(R.id.index_act_linearlayout2)
@@ -107,6 +108,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
         musicImageView.setBackground(getResources().getDrawable(R.drawable.ic_music_orange));
 //        Glide.with(getApplicationContext()).load(R.drawable.ic_music_orange).into(musicImageView);
         noScrollViewPager.setCurrentItem(1);
+        helper2.requestDatabase();
     }
 
     @OnClick(R.id.index_act_linearlayout3)
@@ -116,6 +118,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
         readingImageView.setBackground(getResources().getDrawable(R.drawable.ic_reading_orange));
 //        Glide.with(getApplicationContext()).load(R.drawable.ic_reading_orange).into(readingImageView);
         noScrollViewPager.setCurrentItem(2);
+        helper3.requestDatabase();
     }
 
     @OnClick(R.id.index_act_linearlayout4)
@@ -125,6 +128,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
         gameImageView.setBackground(getResources().getDrawable(R.drawable.ic_game_orange));
 //        Glide.with(getApplicationContext()).load(R.drawable.ic_game_orange).into(gameImageView);
         noScrollViewPager.setCurrentItem(3);
+        helper4.requestDatabase();
     }
 
     @OnClick(R.id.index_act_linearlayout5)
@@ -134,6 +138,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
         healthImageView.setBackground(getResources().getDrawable(R.drawable.ic_health_orange));
 //        Glide.with(getApplicationContext()).load(R.drawable.ic_health_orange).into(healthImageView);
         noScrollViewPager.setCurrentItem(4);
+        helper5.requestDatabase();
     }
 
     @OnClick(R.id.index_act_linearlayout6)
@@ -143,6 +148,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
         languageImageView.setBackground(getResources().getDrawable(R.drawable.ic_language_orange));
 //        Glide.with(getApplicationContext()).load(R.drawable.ic_language_orange).into(languageImageView);
         noScrollViewPager.setCurrentItem(5);
+        helper6.requestDatabase();
     }
 
     @OnClick(R.id.index_act_linearlayout7)
@@ -152,6 +158,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
         socialImageView.setBackground(getResources().getDrawable(R.drawable.ic_social_orange));
 //        Glide.with(getApplicationContext()).load(R.drawable.ic_social_orange).into(socialImageView);
         noScrollViewPager.setCurrentItem(6);
+        helper7.requestDatabase();
     }
 
     @OnClick(R.id.index_act_linearlayout8)
@@ -161,6 +168,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
         scienceImageView.setBackground(getResources().getDrawable(R.drawable.ic_science_orange));
 //        Glide.with(getApplicationContext()).load(R.drawable.ic_science_orange).into(scienceImageView);
         noScrollViewPager.setCurrentItem(7);
+        helper8.requestDatabase();
     }
 
     @OnClick(R.id.index_act_linearlayout9)
@@ -170,6 +178,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
         artImageView.setBackground(getResources().getDrawable(R.drawable.ic_art_orange));
 //        Glide.with(getApplicationContext()).load(R.drawable.ic_art_orange).into(artImageView);
         noScrollViewPager.setCurrentItem(8);
+        helper9.requestDatabase();
     }
 
     @BindView(R.id.index_act_textview1)
@@ -353,7 +362,7 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 clearDatabaseAndData();
-                                refreshIndexFragment();
+                                refreshIndexFragment(noScrollViewPager.getCurrentItem());
                             }
                         }, new DialogInterface.OnClickListener() {
                             @Override
@@ -375,16 +384,45 @@ public class IndexActivity extends BaseActivity implements NetworkStateHelper, R
         });
     }
 
-    private void refreshIndexFragment() {
-        helper1.clearSuccess();
-        helper2.clearSuccess();
-        helper3.clearSuccess();
-        helper4.clearSuccess();
-        helper5.clearSuccess();
-        helper6.clearSuccess();
-        helper7.clearSuccess();
-        helper8.clearSuccess();
-        helper9.clearSuccess();
+    private void refreshIndexFragment(int currentItem) {
+        switch (currentItem) {
+            case 0:
+                helper1.clearSuccess();
+                break;
+            case 1:
+                helper2.clearSuccess();
+                break;
+            case 2:
+                helper3.clearSuccess();
+                break;
+            case 3:
+                helper4.clearSuccess();
+                break;
+            case 4:
+                helper5.clearSuccess();
+                break;
+            case 5:
+                helper6.clearSuccess();
+                break;
+            case 6:
+                helper7.clearSuccess();
+                break;
+            case 7:
+                helper8.clearSuccess();
+                break;
+            case 8:
+                helper9.clearSuccess();
+                break;
+        }
+//        helper1.clearSuccess();
+//        helper2.clearSuccess();
+//        helper3.clearSuccess();
+//        helper4.clearSuccess();
+//        helper5.clearSuccess();
+//        helper6.clearSuccess();
+//        helper7.clearSuccess();
+//        helper8.clearSuccess();
+//        helper9.clearSuccess();
     }
 
     private void clearDatabaseAndData() {

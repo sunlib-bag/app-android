@@ -256,5 +256,6 @@ class IndexModel implements IndexContract.Model {
     public void requestDataFromDatabase(IndexContract.FragmentType fragmentType) {
         List<Course> courseList = ObjectBoxUtils.getCourseList(fragmentType, activity);
         callBack.requestDataFromDatabaseSuccess(courseList);
+
     }
 }
